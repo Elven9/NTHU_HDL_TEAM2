@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB2/binaryToGrey/Lab2_Team2_Binary_to_Grey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Binary_to_Grey
+INFO: [VRFC 10-311] analyzing module Xor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB2/binaryToGrey/Lab2_Team2_Binary_to_Grey_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NOR_Implement_t
