@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw2_new/Lab1_TeamX_Decoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw2_new/Decoder_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DecoderTest
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw2_new/hw2_new.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

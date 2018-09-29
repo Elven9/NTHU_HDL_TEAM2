@@ -1,0 +1,12 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 0f302cefef664833b225d407387bd545 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Comparator_t_behav xil_defaultlib.Comparator_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port a_eq_b on this module [C:/Users/elven/Desktop/Hardware Design Lab/NTHU-HDL-LAB1/3 bit comparator/3 bit comparator.srcs/sources_1/new/Comparator_t.v:12]
+ERROR: [VRFC 10-426] cannot find port a_gt_b on this module [C:/Users/elven/Desktop/Hardware Design Lab/NTHU-HDL-LAB1/3 bit comparator/3 bit comparator.srcs/sources_1/new/Comparator_t.v:11]
+ERROR: [VRFC 10-426] cannot find port a_lt_b on this module [C:/Users/elven/Desktop/Hardware Design Lab/NTHU-HDL-LAB1/3 bit comparator/3 bit comparator.srcs/sources_1/new/Comparator_t.v:10]
+ERROR: [VRFC 10-2063] Module <Less> not found while processing module instance <less_gate1> [C:/Users/elven/Desktop/Hardware Design Lab/NTHU-HDL-LAB1/3 bit comparator/3 bit comparator.srcs/sources_1/imports/Source File/Lab1_Team2_Comparator_3bits.v:15]
+ERROR: [VRFC 10-2063] Module <Greater> not found while processing module instance <greater_gate1> [C:/Users/elven/Desktop/Hardware Design Lab/NTHU-HDL-LAB1/3 bit comparator/3 bit comparator.srcs/sources_1/imports/Source File/Lab1_Team2_Comparator_3bits.v:27]
+ERROR: [VRFC 10-2063] Module <Equal> not found while processing module instance <equal_gate1> [C:/Users/elven/Desktop/Hardware Design Lab/NTHU-HDL-LAB1/3 bit comparator/3 bit comparator.srcs/sources_1/imports/Source File/Lab1_Team2_Comparator_3bits.v:39]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

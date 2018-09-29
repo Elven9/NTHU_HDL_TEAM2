@@ -1,0 +1,266 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Sep 19 22:44:03 2018
+# Process ID: 9072
+# Current directory: C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7036 C:\Users\Administrator\verilog\NTHU-HDL-LAB1\hw1\hw1.xpr
+# Log file: C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/vivado.log
+# Journal file: C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Administrator/verilog/hw1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Mux_8bits_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Mux_8bits_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Mux_1bit_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_8bits_t
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_8bits
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2458] undeclared symbol nSel, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:24]
+INFO: [VRFC 10-2458] undeclared symbol topStream, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:25]
+INFO: [VRFC 10-2458] undeclared symbol bottomStream, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:26]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3632e0ac12534784b15bf36548ffa85f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Mux_8bits_t_behav xil_defaultlib.Mux_8bits_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Mux_8bits
+Compiling module xil_defaultlib.Mux_8bits_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Mux_8bits_t_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim/xsim.dir/Mux_8bits_t_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim/xsim.dir/Mux_8bits_t_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Sep 19 22:44:30 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Sep 19 22:44:30 2018...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 784.871 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Mux_8bits_t_behav -key {Behavioral:sim_1:Functional:Mux_8bits_t} -tclbatch {Mux_8bits_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Mux_8bits_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Mux_8bits_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 815.543 ; gain = 30.672
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Mux_8bits_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Mux_8bits_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Mux_1bit_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_8bits_t
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_8bits
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2458] undeclared symbol nSel, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:24]
+INFO: [VRFC 10-2458] undeclared symbol topStream, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:25]
+INFO: [VRFC 10-2458] undeclared symbol bottomStream, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:26]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3632e0ac12534784b15bf36548ffa85f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Mux_8bits_t_behav xil_defaultlib.Mux_8bits_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 8 for port f [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Mux_1bit_t.v:13]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Mux_8bits
+Compiling module xil_defaultlib.Mux_8bits_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Mux_8bits_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Mux_8bits_t_behav -key {Behavioral:sim_1:Functional:Mux_8bits_t} -tclbatch {Mux_8bits_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Mux_8bits_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 9 ns : File "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Mux_1bit_t.v" Line 20
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Mux_8bits_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 833.727 ; gain = 2.668
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Mux_8bits_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Mux_8bits_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Mux_1bit_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_8bits_t
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_8bits
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2458] undeclared symbol nSel, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:24]
+INFO: [VRFC 10-2458] undeclared symbol topStream, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:25]
+INFO: [VRFC 10-2458] undeclared symbol bottomStream, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:26]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3632e0ac12534784b15bf36548ffa85f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Mux_8bits_t_behav xil_defaultlib.Mux_8bits_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Mux_8bits
+Compiling module xil_defaultlib.Mux_8bits_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Mux_8bits_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Mux_8bits_t_behav -key {Behavioral:sim_1:Functional:Mux_8bits_t} -tclbatch {Mux_8bits_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Mux_8bits_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 65 ns : File "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Mux_1bit_t.v" Line 20
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Mux_8bits_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Mux_8bits_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Mux_8bits_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Mux_1bit_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_8bits_t
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mux_8bits
+INFO: [VRFC 10-311] analyzing module Selector
+INFO: [VRFC 10-2458] undeclared symbol nSel, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:24]
+INFO: [VRFC 10-2458] undeclared symbol topStream, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:25]
+INFO: [VRFC 10-2458] undeclared symbol bottomStream, assumed default net type wire [C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/Lab1_TeamX_Mux_8bits.v:26]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3632e0ac12534784b15bf36548ffa85f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Mux_8bits_t_behav xil_defaultlib.Mux_8bits_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Selector
+Compiling module xil_defaultlib.Mux_8bits
+Compiling module xil_defaultlib.Mux_8bits_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Mux_8bits_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/verilog/NTHU-HDL-LAB1/hw1/hw1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Mux_8bits_t_behav -key {Behavioral:sim_1:Functional:Mux_8bits_t} -tclbatch {Mux_8bits_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Mux_8bits_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Mux_8bits_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
