@@ -16,7 +16,7 @@ module Decode_and_Execute (op_code, rs, rt, rd);
     Carry_Look_Ahead_Adder gate11(.a(rs), .b(rt), .cin(1'b0), .sum(func1_rd));
     // 001
     not gate21 [3:0] (func2_not_rt, rt);
-    Carry_Look_Ahead_Adder gate22(.a(rs), .b(func2_not_rt), .cin(1'b0), .sum(func2_rd));
+    Carry_Look_Ahead_Adder gate22(.a(rs), .b(func2_not_rt), .cin(1'b1), .sum(func2_rd));
     // 010
     Carry_Look_Ahead_Adder gate31(.a(rs), .b(4'b1), .cin(1'b0), .sum(func3_rd));
     // 011
@@ -57,7 +57,7 @@ module Mux_8bit (sel, in1, in2, in3, in4, in5, in6, in7, in8, out);
     not gate_not2(nSel_1, sel[1]);
     not gate_not3(nSel_0, sel[0]);
 
-    // Mux operation.
+    // Mux operation. 
     and gate_and1(out1, nSel_0, nSel_1, nSel_2, in1);
     and gate_and2(out2, sel[0], nSel_1, nSel_2, in2);
     and gate_and3(out3, nSel_0, sel[1], nSel_2, in3);
