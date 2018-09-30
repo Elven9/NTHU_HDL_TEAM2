@@ -58,7 +58,7 @@ module Segment_7_bit_display (Sel, Port);
     and gate_E_1(wire_E_1, not_d, Sel[0]);
     and gate_E_2(wire_E_2, not_c, not_b, Sel[0]);
     and gate_E_3(wire_E_3, not_d, Sel[2], not_b);
-    or gate_E_6(Port[4], wire_E_1, wire_E_2, wire_E_3);
+    or gate_E_4(Port[4], wire_E_1, wire_E_2, wire_E_3);
 
     // Port F.
     and gate_F_1(wire_F_1, Sel[3], Sel[2], not_b, Sel[0]);
