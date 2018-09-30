@@ -44,9 +44,9 @@ module Decode_and_Execute (op_code, rs, rt, rd);
 
     // Mux Definition
     Mux_8bit gate_mux1(op_code, func1_rd[0], func2_rd[0], func3_rd[0], func4_rd[0], func5_rd[0], func6_rd[0], func7_rd[0], func8_rd[0], rd[0]);
-    Mux_8bit gate_mux1(op_code, func1_rd[1], func2_rd[1], func3_rd[1], func4_rd[1], func5_rd[1], func6_rd[1], func7_rd[1], func8_rd[1], rd[1]);
-    Mux_8bit gate_mux1(op_code, func1_rd[2], func2_rd[2], func3_rd[2], func4_rd[2], func5_rd[2], func6_rd[2], func7_rd[2], func8_rd[2], rd[2]);
-    Mux_8bit gate_mux1(op_code, func1_rd[3], func2_rd[3], func3_rd[3], func4_rd[3], func5_rd[3], func6_rd[3], func7_rd[3], func8_rd[3], rd[3]);
+    Mux_8bit gate_mux2(op_code, func1_rd[1], func2_rd[1], func3_rd[1], func4_rd[1], func5_rd[1], func6_rd[1], func7_rd[1], func8_rd[1], rd[1]);
+    Mux_8bit gate_mux3(op_code, func1_rd[2], func2_rd[2], func3_rd[2], func4_rd[2], func5_rd[2], func6_rd[2], func7_rd[2], func8_rd[2], rd[2]);
+    Mux_8bit gate_mux4(op_code, func1_rd[3], func2_rd[3], func3_rd[3], func4_rd[3], func5_rd[3], func6_rd[3], func7_rd[3], func8_rd[3], rd[3]);
 
 endmodule
 
