@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../Carry_Look_Ahead_Adder.srcs/sources_1/imports/Source File/7-segement-module.v" \
 "../../../../Carry_Look_Ahead_Adder.srcs/sources_1/imports/Source Code/Lab2_TeamX_Carry_Look_Ahead_Adder.v" \
 "../../../../Carry_Look_Ahead_Adder.srcs/sources_1/imports/Source Code/Lab2_TeamX_Carry_Look_Ahead_Adder_t.v" \
 

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1538308008">
+  <File Type="BITSTR-BMM" Name="RippleCarryAdder_t_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="RippleCarryAdder_t_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="RippleCarryAdder_t_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="RippleCarryAdder_t_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="RippleCarryAdder_t.tcl"/>
+  <File Type="OPT-TIMING" Name="RippleCarryAdder_t_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="RippleCarryAdder_t_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="RippleCarryAdder_t_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="RippleCarryAdder_t_reports.tcl"/>
+  <File Type="OPT-DRC" Name="RippleCarryAdder_t_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="RippleCarryAdder_t.hwdef"/>
+  <File Type="PWROPT-DCP" Name="RippleCarryAdder_t_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="RippleCarryAdder_t_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="RippleCarryAdder_t_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="RippleCarryAdder_t_placed.dcp"/>
+  <File Type="PLACE-IO" Name="RippleCarryAdder_t_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="RippleCarryAdder_t_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="RippleCarryAdder_t_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="RippleCarryAdder_t_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="RippleCarryAdder_t_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="RippleCarryAdder_t_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="RippleCarryAdder_t_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="RippleCarryAdder_t.bgn"/>
+  <File Type="PLACE-TIMING" Name="RippleCarryAdder_t_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="RippleCarryAdder_t_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="RippleCarryAdder_t.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="RippleCarryAdder_t_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="RippleCarryAdder_t_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="RippleCarryAdder_t_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="RippleCarryAdder_t.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="RippleCarryAdder_t_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="RippleCarryAdder_t_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="RippleCarryAdder_t_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="RippleCarryAdder_t_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="RippleCarryAdder_t_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="RippleCarryAdder_t_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="RippleCarryAdder_t.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="RippleCarryAdder_t_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="RippleCarryAdder_t.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="RippleCarryAdder_t_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="RippleCarryAdder_t_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="RippleCarryAdder_t.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="RippleCarryAdder_t_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="RippleCarryAdder_t_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="RippleCarryAdder_t_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="RippleCarryAdder_t_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="RippleCarryAdder_t_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="RippleCarryAdder_t_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="RippleCarryAdder_t_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="RippleCarryAdder_t_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="RippleCarryAdder_t_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="RippleCarryAdder_t_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="RippleCarryAdder_t_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="RippleCarryAdder_t_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="RippleCarryAdder_t_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="RippleCarryAdder_t_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="RippleCarryAdder_t_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="RippleCarryAdder_t_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="RippleCarryAdder_t_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="RippleCarryAdder_t_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="RippleCarryAdder_t_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="RippleCarryAdder_t.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="RippleCarryAdder_t_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="RippleCarryAdder_t.rbt"/>
+  <File Type="BITSTR-NKY" Name="RippleCarryAdder_t.nky"/>
+  <File Type="BG-DRC" Name="RippleCarryAdder_t.drc"/>
+  <File Type="RDI-RDI" Name="RippleCarryAdder_t.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/Source File/7-segement-module.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Source File/7-segement-module.v"/>
+        <Attr Name="ImportTime" Val="1538301869"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Source Code/Lab2_TeamX_Carry_Look_Ahead_Adder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../NTHU-HDL-LAB2/Source Code/Lab2_TeamX_Carry_Look_Ahead_Adder.v"/>
+        <Attr Name="ImportTime" Val="1538211457"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Source Code/Lab2_TeamX_Carry_Look_Ahead_Adder_t.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../NTHU-HDL-LAB2/Source Code/Lab2_TeamX_Carry_Look_Ahead_Adder_t.v"/>
+        <Attr Name="ImportTime" Val="1538211467"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="RippleCarryAdder_t"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/CarryLookAheadAdder_xdc.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/CarryLookAheadAdder_xdc.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

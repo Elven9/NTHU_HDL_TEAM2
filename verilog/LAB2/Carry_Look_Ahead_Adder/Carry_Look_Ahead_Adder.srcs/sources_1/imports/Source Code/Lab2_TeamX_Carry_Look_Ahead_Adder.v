@@ -29,7 +29,7 @@ module Carry_Look_Ahead_Adder (a, b, cin, cout, sum);
         Carry_Look_Ahead_Adder_Single_Adder gate2(.in1(a[1]), .in2(b[1]), .cin(c1), .p(p[1]), .g(g[1]), .sum(sum[1]));
         Carry_Look_Ahead_Adder_Single_Adder gate3(.in1(a[2]), .in2(b[2]), .cin(c2), .p(p[2]), .g(g[2]), .sum(sum[2]));
         Carry_Look_Ahead_Adder_Single_Adder gate4(.in1(a[3]), .in2(b[3]), .cin(c3), .p(p[3]), .g(g[3]), .sum(sum[3]));
-
+        
 endmodule
 
 module Carry_Look_Ahead_Adder_Single_Adder (in1, in2, cin, p, g, sum);

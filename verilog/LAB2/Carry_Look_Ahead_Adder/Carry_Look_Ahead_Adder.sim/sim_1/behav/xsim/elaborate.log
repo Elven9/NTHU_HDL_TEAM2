@@ -5,12 +5,14 @@ Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB2/Carry_Look_Ahead_Adder/Carry_Look_Ahead_Adder.srcs/sources_1/imports/Source File/7-segement-module.v" Line 1. Module Segment_7_bit_display doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Carry_Look_Ahead_Adder_Cout_Modu...
 Compiling module xil_defaultlib.XOR
 Compiling module xil_defaultlib.Carry_Look_Ahead_Adder_Single_Ad...
 Compiling module xil_defaultlib.Carry_Look_Ahead_Adder
+Compiling module xil_defaultlib.Segment_7_bit_display
 Compiling module xil_defaultlib.RippleCarryAdder_t
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot RippleCarryAdder_t_behav
