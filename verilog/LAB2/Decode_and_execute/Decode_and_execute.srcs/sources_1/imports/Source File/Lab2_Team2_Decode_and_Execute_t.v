@@ -15,7 +15,7 @@ module DecoderTest;
   initial begin
     rs = 2;
     rt = 4;
-    repeat (2 ** 3) begin
+    repeat (7) begin
       #1 code = code + 1'b1;
     end
     #1 $finish;

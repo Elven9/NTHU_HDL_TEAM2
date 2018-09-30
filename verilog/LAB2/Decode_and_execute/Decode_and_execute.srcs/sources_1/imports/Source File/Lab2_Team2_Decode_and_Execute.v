@@ -20,15 +20,9 @@ module Decode_and_Execute (op_code, rs, rt, rd);
     // 010
     Carry_Look_Ahead_Adder gate31(.a(rs), .b(4'b1), .cin(1'b0), .sum(func3_rd));
     // 011
-    NOR gate41(.in1(rs[0]), .in2(rt[0]), .out(func4_rd[0]));
-    NOR gate42(.in1(rs[1]), .in2(rt[1]), .out(func4_rd[1]));
-    NOR gate43(.in1(rs[2]), .in2(rt[2]), .out(func4_rd[2]));
-    NOR gate44(.in1(rs[3]), .in2(rt[3]), .out(func4_rd[3]));
+    nor gate41 [3:0](func4_rd, rs, rt);
     // 100
-    NAND gate51(.in1(rs[0]), .in2(rt[0]), .out(func5_rd[0]));
-    NAND gate52(.in1(rs[1]), .in2(rt[1]), .out(func5_rd[1]));
-    NAND gate53(.in1(rs[2]), .in2(rt[2]), .out(func5_rd[2]));
-    NAND gate54(.in1(rs[3]), .in2(rt[3]), .out(func5_rd[3]));
+    nand gate51 [3:0] (func5_rd, rs, rt);
     // 101
     and gate61(func6_rd[0], 1'b1, rs[2]);
     and gate62(func6_rd[1], 1'b1, rs[3]);
@@ -61,7 +55,7 @@ module Mux_8bit (sel, in1, in2, in3, in4, in5, in6, in7, in8, out);
     // Not operation.
     not gate_not1(nSel_2, sel[2]);
     not gate_not2(nSel_1, sel[1]);
-    not gate_not3(nSel_0, sel[2]);
+    not gate_not3(nSel_0, sel[0]);
 
     // Mux operation.
     and gate_and1(out1, nSel_0, nSel_1, nSel_2, in1);
@@ -173,32 +167,6 @@ module XOR (in1, in2, out);
     or gate5(out, and1, and2);
 
 endmodule
-
-module NAND (in1, in2, out);
-    input in1, in2;
-    output out;
-
-    wire and_out;
-    and gate1(and_out, in1, in2);
-    not gate2(out, and_out);
-
-endmodule // NANDin1, in2, out
-
-module NOR (in1, in2, out);
-    input in1, in2;
-    output out;
-
-    wire nand_a, nand_b;
-    wire nand_ab;
-
-    NAND gate1(.in1(in1), .in2(in1), .out(nand_a));
-    NAND gate4(.in1(in2), .in2(in2), .out(nand_b));
-    NAND gate3(.in1(nand_a), .in2(nand_b), .out(nand_ab));
-    NAND gate2(.in1(nand_ab), .in2(nand_ab), .out(out));
-
-endmodule
-
-`timescale 1ns/1ps
 
 module Multiplier (a, b, p);
   input [4-1:0] a, b;

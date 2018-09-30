@@ -11,8 +11,6 @@ Compiling module xil_defaultlib.Carry_Look_Ahead_Adder_Cout_Modu...
 Compiling module xil_defaultlib.XOR
 Compiling module xil_defaultlib.Carry_Look_Ahead_Adder_Single_Ad...
 Compiling module xil_defaultlib.Carry_Look_Ahead_Adder
-Compiling module xil_defaultlib.NAND
-Compiling module xil_defaultlib.NOR
 Compiling module xil_defaultlib.Adder
 Compiling module xil_defaultlib.Multiplier
 Compiling module xil_defaultlib.Mux_8bit
