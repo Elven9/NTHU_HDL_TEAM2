@@ -12,13 +12,13 @@ module Segment_7_bit_display (Sel, Port);
     wire not_d, not_c, not_b, not_a;
 
     // Port Wire Declariton.
-    wire wire_A_1, wire_A_2, wire_A_3;
+    wire wire_A_1, wire_A_2, wire_A_3, wire_A_4;
     wire wire_B_1, wire_B_2, wire_B_3, wire_B_4, wire_B_5;
-    wire wire_C_1, wire_C_2, wire_C_3, wire_C_4;
+    wire wire_C_1, wire_C_2, wire_C_3;
     wire wire_D_1, wire_D_2, wire_D_3, wire_D_4;
     wire wire_E_1, wire_E_2, wire_E_3;
     wire wire_F_1, wire_F_2, wire_F_3, wire_F_4;
-    wire wire_G_1, wire_G_2, wire_G_3;
+    wire wire_G_1, wire_G_2, wire_G_3, wire_G_4;
 
     // Not Setting.
     not gate_not_1(not_d, Sel[3]);
@@ -30,22 +30,22 @@ module Segment_7_bit_display (Sel, Port);
     and gateA_1(wire_A_1, Sel[3], not_c, Sel[1], Sel[0]);
     and gateA_2(wire_A_2, Sel[3], Sel[2], not_b, Sel[0]);
     and gateA_3(wire_A_3, not_d, Sel[2], not_b, not_a);
-    or gateA_4(Port[0], wire_A_1, wire_A_2, wire_A_3);
+    and gateA_4(wire_A_4, not_d, not_c, not_b, Sel[0]);
+    or gateA_5(Port[0], wire_A_1, wire_A_2, wire_A_3, wire_A_4);
 
     // Port B.
     and gateB_1(wire_B_1, Sel[3], Sel[1], Sel[0]);
     and gateB_2(wire_B_2, Sel[3], Sel[2], Sel[1]);
     and gateB_3(wire_B_3, Sel[2], Sel[1], not_a);
     and gateB_4(wire_B_4, not_d, Sel[2], not_b, Sel[0]);
-    and gateB_5(wire_B_5, Sel[3], Sel[2], Sel[0]);
+    and gateB_5(wire_B_5, Sel[3], Sel[2], not_a);
     or gateB_6(Port[1], wire_B_1, wire_B_2, wire_B_3, wire_B_4, wire_B_5);
 
     // Port C.
-    and gateC_1(wire_C_1, Sel[3], Sel[2], not_b, not_a);
-    and gateC_2(wire_C_2, Sel[3], Sel[2], Sel[1], Sel[0]);
-    and gateC_3(wire_C_3, not_d, not_c, not_b, Sel[0]);
-    and gateC_4(wire_C_4, not_d, not_c, Sel[1], not_a);
-    or gateC_5(Port[2], wire_C_1, wire_C_2, wire_C_3, wire_C_4);
+    and gateC_1(wire_C_1, Sel[3], Sel[2], Sel[1]);
+    and gateC_2(wire_C_2, Sel[3], Sel[2], not_a);
+    and gateC_3(wire_C_3, not_d, not_c, Sel[1], not_a);
+    or gateC_4(Port[2], wire_C_1, wire_C_2, wire_C_3);
 
     // Port D.
     and gateD_1(wire_D_1, Sel[2], Sel[1], Sel[0]);
@@ -70,7 +70,8 @@ module Segment_7_bit_display (Sel, Port);
     // Port G.
     and gate_G_1(wire_G_1, not_d, not_c, not_b);
     and gate_G_2(wire_G_2, not_d, Sel[2], Sel[1], Sel[0]);
-    and gate_G_3(wire_G_3, Sel[3], Sel[2], Sel[1], not_a);
-    or gate_G_4(Port[6], wire_G_1, wire_G_2, wire_G_3);
+    and gate_G_3(wire_G_3, Sel[3], Sel[2], not_b, not_a);
+    and gate_G_4(wire_G_4, not_d, not_c, not_a);
+    or gate_G_4(Port[6], wire_G_1, wire_G_2, wire_G_3, wire_G_4);
 
 endmodule // Segment_7_bit_display
