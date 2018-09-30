@@ -49,7 +49,7 @@ module Segment_7_bit_display (Sel, Port);
 
     // Port D.
     and gateD_1(wire_D_1, Sel[2], Sel[1], Sel[0]);
-    and gateD_2(wire_D_2, not_d, Sel[2], Sel[1], Sel[0]);
+    and gateD_2(wire_D_2, not_d, Sel[2], not_b, not_a);
     and gateD_3(wire_D_3, not_d, not_c, not_b, Sel[0]);
     and gateD_4(wire_D_4, Sel[3], not_c, Sel[1], not_a);
     or gate_D_5(Port[3], wire_D_1, wire_D_2, wire_D_3, wire_D_4);
