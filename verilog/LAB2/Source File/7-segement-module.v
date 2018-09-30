@@ -18,7 +18,7 @@ module Segment_7_bit_display (Sel, Port);
     wire wire_D_1, wire_D_2, wire_D_3, wire_D_4;
     wire wire_E_1, wire_E_2, wire_E_3;
     wire wire_F_1, wire_F_2, wire_F_3, wire_F_4;
-    wire wire_G_1, wire_G_2, wire_G_3, wire_G_4;
+    wire wire_G_1, wire_G_2, wire_G_3;
 
     // Not Setting.
     not gate_not_1(not_d, Sel[3]);
@@ -71,7 +71,6 @@ module Segment_7_bit_display (Sel, Port);
     and gate_G_1(wire_G_1, not_d, not_c, not_b);
     and gate_G_2(wire_G_2, not_d, Sel[2], Sel[1], Sel[0]);
     and gate_G_3(wire_G_3, Sel[3], Sel[2], not_b, not_a);
-    and gate_G_4(wire_G_4, not_d, not_c, not_a);
-    or gate_G_5(Port[6], wire_G_1, wire_G_2, wire_G_3, wire_G_4);
+    or gate_G_4(Port[6], wire_G_1, wire_G_2, wire_G_3);
 
 endmodule // Segment_7_bit_display
