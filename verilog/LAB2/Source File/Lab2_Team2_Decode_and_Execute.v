@@ -192,7 +192,7 @@ module NOR (in1, in2, out);
     wire nand_ab;
 
     NAND gate1(.in1(in1), .in2(in1), .out(nand_a));
-    NAND gate2(.in1(in2), .in2(in2), .out(nand_b));
+    NAND gate4(.in1(in2), .in2(in2), .out(nand_b));
     NAND gate3(.in1(nand_a), .in2(nand_b), .out(nand_ab));
     NAND gate2(.in1(nand_ab), .in2(nand_ab), .out(out));
 
