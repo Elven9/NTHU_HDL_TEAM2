@@ -3,7 +3,7 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 3d248f1a08784bfcb25f38627f98891f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot NOR_Implement_t_behav xil_defaultlib.NOR_Implement_t xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port a [C:/Users/Administrator/verilog/NTHU-HDL-LAB2/binaryToGrey/Lab2_Team2_Binary_to_Grey.v:10]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port a [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB2/binaryToGrey/Lab2_Team2_Binary_to_Grey.v:10]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

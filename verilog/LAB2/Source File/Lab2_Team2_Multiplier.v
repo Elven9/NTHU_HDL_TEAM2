@@ -53,8 +53,8 @@ module Adder(a, b, cin, cout, sum);
   wire xor1;
   wire and1, and2, and3;
 
-  XOR gate1(.in1(a), .in2(b), .out(xor1));
-  XOR gate2(.in1(xor1), .in2(cin), .out(sum));
+  Xor gate1(.a(a), .b(b), .out(xor1));
+  Xor gate2(.a(xor1), .b(cin), .out(sum));
 
   and gate3(and1, a, b);
   and gate4(and2, a, cin);
@@ -63,18 +63,18 @@ module Adder(a, b, cin, cout, sum);
   or gate6(cout, and1, and2, and3);
 endmodule
 
-module XOR (in1, in2, out);
-  input in1, in2;
+module Xor (a, b, out);
+  input a, b;
   output out;
 
-  wire not1, not2;
+  wire nA, nB;
   wire and1, and2;
 
-  not gate1(not1, in1);
-  not gate2(not2, in2);
+  not gate1(nA, a);
+  not gate2(nB, b);
 
-  and gate3(and1, not1, in2);
-  and gate4(and2, in1, not2);
+  and gate3(and1, nA, b);
+  and gate4(and2, a, nB);
 
   or gate5(out, and1, and2);
 endmodule
