@@ -7,7 +7,7 @@ module DecoderTest;
 
   Decode_and_Execute test (
       .op_code(code),
-      .rs(rs),
+      .rs(rs), 
       .rt(rt),
       .rd(rd)
       );
