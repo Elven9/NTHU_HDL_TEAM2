@@ -2,3 +2,6 @@ Running: xsim.dir/RippleCarryAdder_t_behav/xsimk.exe -simmode gui -wdb RippleCar
 Design successfully loaded
 Design Loading Memory Usage: 5012 KB (Peak: 5012 KB)
 Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 5604 KB (Peak: 5604 KB)
+Simulation CPU Usage: 61 ms
