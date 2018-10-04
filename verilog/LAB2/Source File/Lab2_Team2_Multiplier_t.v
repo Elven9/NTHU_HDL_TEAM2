@@ -16,7 +16,6 @@ module Multiplier_t;
   initial begin
     repeat (2**8) begin
       #1 begin
-        isValid = 0;
         if (a == 4'd15) begin
           a = 4'd0;
           b = b + 1;
@@ -25,7 +24,10 @@ module Multiplier_t;
       end
       #1 begin
         if (a*b == p) isValid = 1;
-        else isValid = 0;
+        else begin
+          isValid = 0;
+          $display("Error Calculating a=%d  b=%d  moduleOut=%d", a, b, p);
+        end
       end
     end
     #1 $finish;

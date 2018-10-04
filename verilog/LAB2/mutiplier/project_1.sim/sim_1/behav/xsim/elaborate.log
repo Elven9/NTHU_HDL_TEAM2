@@ -3,15 +3,15 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 0e69b00a679b4dd8b735a3b6fe210f81 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Multiplier_t_behav xil_defaultlib.Multiplier_t xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port cin [C:/Users/Administrator/verilog/NTHU-HDL-LAB2/mutiplier/Lab2_Team2_Multiplier.v:17]
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port cin [C:/Users/Administrator/verilog/NTHU-HDL-LAB2/mutiplier/Lab2_Team2_Multiplier.v:23]
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port cin [C:/Users/Administrator/verilog/NTHU-HDL-LAB2/mutiplier/Lab2_Team2_Multiplier.v:31]
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port b [C:/Users/Administrator/verilog/NTHU-HDL-LAB2/mutiplier/Lab2_Team2_Multiplier.v:36]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port cin [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB2/mutiplier/Lab2_Team2_Multiplier.v:17]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port cin [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB2/mutiplier/Lab2_Team2_Multiplier.v:23]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port cin [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB2/mutiplier/Lab2_Team2_Multiplier.v:31]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port b [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB2/mutiplier/Lab2_Team2_Multiplier.v:36]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.XOR
+Compiling module xil_defaultlib.Xor
 Compiling module xil_defaultlib.Adder
 Compiling module xil_defaultlib.Multiplier
 Compiling module xil_defaultlib.Multiplier_t

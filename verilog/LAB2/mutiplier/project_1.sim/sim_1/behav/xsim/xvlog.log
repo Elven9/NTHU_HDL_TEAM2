@@ -1,6 +1,6 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB2/mutiplier/Lab2_Team2_Multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB2/mutiplier/Lab2_Team2_Multiplier.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Multiplier
 INFO: [VRFC 10-311] analyzing module Adder
-INFO: [VRFC 10-311] analyzing module XOR
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU-HDL-LAB2/mutiplier/Lab2_Team2_Multiplier_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Xor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB2/mutiplier/Lab2_Team2_Multiplier_t.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Multiplier_t
