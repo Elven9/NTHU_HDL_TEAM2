@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module RippleCarryAdder_t(a, b, Port, Dp, control);
+module RippleCarryAdder_FPGA(a, b, Port, Dp, control);
 output [6:0] Port;
 output Dp;
 output [3:0] control;
