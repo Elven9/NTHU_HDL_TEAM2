@@ -1,0 +1,152 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Oct 19 13:35:08 2018
+# Process ID: 6032
+# Current directory: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12140 C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB3\memory\project_1.xpr
+# Log file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/vivado.log
+# Journal file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
+ERROR: [VRFC 10-1412] syntax error near always [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v:18]
+ERROR: [VRFC 10-2790] Verilog 2000 keyword always used in incorrect context [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v:18]
+ERROR: [VRFC 10-2787] module memory_t ignored due to previous errors [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v:3]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto d1a85f64bc2f4c37bbe64726eadc31bb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot memory_t_behav xil_defaultlib.memory_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port data on this module [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v:13]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+CRITICAL WARNING: [Common 17-183] Failed to open handle elaborate.log. Please check access permission of directory 'C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB3\memory\project_1.sim\sim_1\behav\xsim'. You should restart the application from a writable working directory.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s) while executing 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/elaborate.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+CRITICAL WARNING: [Common 17-183] Failed to open handle elaborate.log. Please check access permission of directory 'C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB3\memory\project_1.sim\sim_1\behav\xsim'. You should restart the application from a writable working directory.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s) while executing 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/elaborate.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+CRITICAL WARNING: [Common 17-183] Failed to open handle elaborate.log. Please check access permission of directory 'C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB3\memory\project_1.sim\sim_1\behav\xsim'. You should restart the application from a writable working directory.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s) while executing 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/elaborate.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+CRITICAL WARNING: [Common 17-183] Failed to open handle elaborate.log. Please check access permission of directory 'C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB3\memory\project_1.sim\sim_1\behav\xsim'. You should restart the application from a writable working directory.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s) while executing 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/elaborate.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 19 13:39:09 2018...

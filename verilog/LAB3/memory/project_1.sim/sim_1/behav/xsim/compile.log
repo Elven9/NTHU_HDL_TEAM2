@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
