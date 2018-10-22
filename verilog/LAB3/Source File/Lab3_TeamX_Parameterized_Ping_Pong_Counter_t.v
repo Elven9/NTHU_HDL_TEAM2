@@ -23,8 +23,17 @@ module Parameterized_Ping_Pong_Counter_t ();
     initial begin
         clk = 0;
         rst_n = 1;
+        max = 15;
+        min = 0;
+        flip = 0;
         #3 rst_n = 0;
         #4 rst_n = 1;
+        #1 begin
+            flip = 1;
+        end
+        #2 begin
+            flip = 0;
+        end
         #100 $finish;
     end
 
