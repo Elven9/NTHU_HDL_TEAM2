@@ -1,16 +1,16 @@
-`timescale .5s/1ps
+`timescale 1s/1ps
 
 module Parameterized_Ping_Pong_Counter_t ();
 
     reg clk;
-    reg rst_n, enable, flip,
+    reg rst_n, enable, flip;
     reg [3:0] max, min;
     wire direction;
     wire [3:0] out;
 
     Parameterized_Ping_Pong_Counter gate1(.clk(clk),
                                           .rst_n(rst_n),
-                                          .enable(.enable),
+                                          .enable(enable),
                                           .flip(flip),
                                           .max(max),
                                           .min(min),
@@ -26,9 +26,10 @@ module Parameterized_Ping_Pong_Counter_t ();
         max = 15;
         min = 0;
         flip = 0;
+        enable = 1;
         #3 rst_n = 0;
         #4 rst_n = 1;
-        #1 begin
+        #51 begin
             flip = 1;
         end
         #2 begin

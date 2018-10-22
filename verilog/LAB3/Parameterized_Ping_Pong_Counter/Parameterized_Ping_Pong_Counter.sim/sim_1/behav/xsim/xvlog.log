@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter_t

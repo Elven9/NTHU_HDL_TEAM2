@@ -15,7 +15,7 @@ module Parameterized_Ping_Pong_Counter (clk, rst_n, enable, flip, max, min, dire
     always @ ( posedge clk ) begin
         if (rst_n == 0) begin
             counter <= min;
-            dir <= dir;
+            dir <= 0;
         end
         else begin
             counter <= next_counter;
@@ -27,14 +27,13 @@ module Parameterized_Ping_Pong_Counter (clk, rst_n, enable, flip, max, min, dire
         next_counter = counter;
         next_dir = dir;
         if (max > min && enable) begin
-            if (flip == 1 || counter == max || counter == min) begin
+            if (flip == 1 || (counter == max && dir == 0) || (counter == min && dir == 1)) begin
                 next_dir = !dir;
-                next_counter = next_dir ? counter - 1 : counter + 1;
             end
             else begin
                 next_dir = dir;
-                next_counter = counter;
             end
+            next_counter = next_dir ? counter - 1 : counter + 1;
         end
         else begin
             next_counter = counter;
