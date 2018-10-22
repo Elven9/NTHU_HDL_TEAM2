@@ -17,7 +17,6 @@ module Parameterized_Ping_Pong_Counter_t ();
                                           .direction(direction),
                                           .out(out));
 
-
     always #(1)clk = ~clk;
 
     initial begin
