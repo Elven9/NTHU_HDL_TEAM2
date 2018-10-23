@@ -11,15 +11,16 @@ module Memory (clk, ren, wen, addr, din, dout);
 
   always @ ( posedge clk ) begin
     if (ren == 1'b0) begin
-      $display("addr: %d ,dout: %d", addr, mem[addr]);
       dout <= mem[addr];
     end
-    else if (ren == 1'b1 && wen == 1'b0) begin
-      mem[addr] <= din;
-      dout <= 8'd0;
-    end
     else begin
-      dout <= 8'd0;
+      if (wen == 1'b0) begin
+        mem[addr] <= din;
+        dout <= 8'd0;
+      end
+      else begin
+        dout <= mem[addr];
+      end
     end
   end
 endmodule
