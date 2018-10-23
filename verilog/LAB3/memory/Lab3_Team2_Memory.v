@@ -19,7 +19,7 @@ module Memory (clk, ren, wen, addr, din, dout);
         dout <= 8'd0;
       end
       else begin
-        dout <= mem[addr];
+        dout <= 8'd0;
       end
     end
   end
