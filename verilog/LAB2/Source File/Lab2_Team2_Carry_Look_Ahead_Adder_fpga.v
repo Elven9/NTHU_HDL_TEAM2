@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module RippleCarryAdder_FPGA(a, b, Port, Dp, control);
+module RippleCarryAdder_FPGA(cin, a, b, Port, Dp, control);
 output [6:0] Port;
 output Dp;
 output [3:0] control;
@@ -8,7 +8,6 @@ output [3:0] control;
 input [3:0] a, b;
 wire [3:0] sum;
 wire cout;
-reg cin;
 
 Carry_Look_Ahead_Adder fa (
   .a (a),
