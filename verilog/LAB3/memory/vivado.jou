@@ -70,3 +70,16 @@ close_sim
 launch_simulation
 open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg
 source memory_t.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg
+source memory_t.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg
+source memory_t.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg
+source memory_t.tcl
+close_sim

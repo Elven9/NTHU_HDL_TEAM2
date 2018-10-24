@@ -990,3 +990,181 @@ addr: 32 ,dout:  32
 addr: 32 ,dout:  32
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'memory_t_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 947.980 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto d1a85f64bc2f4c37bbe64726eadc31bb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot memory_t_behav xil_defaultlib.memory_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.memory_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot memory_t_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/xsim.dir/memory_t_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim/xsim.dir/memory_t_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Oct 23 20:41:18 2018. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2018.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Oct 23 20:41:18 2018...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 947.980 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "memory_t_behav -key {Behavioral:sim_1:Functional:memory_t} -tclbatch {memory_t.tcl} -view {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg
+source memory_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 46 ns : File "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" Line 83
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'memory_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 947.980 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto d1a85f64bc2f4c37bbe64726eadc31bb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot memory_t_behav xil_defaultlib.memory_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.memory_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot memory_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "memory_t_behav -key {Behavioral:sim_1:Functional:memory_t} -tclbatch {memory_t.tcl} -view {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg
+source memory_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 46 ns : File "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" Line 83
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'memory_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'memory_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj memory_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module memory_t
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto d1a85f64bc2f4c37bbe64726eadc31bb --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot memory_t_behav xil_defaultlib.memory_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.memory_t
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot memory_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "memory_t_behav -key {Behavioral:sim_1:Functional:memory_t} -tclbatch {memory_t.tcl} -view {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/memory_t_behav.wcfg
+source memory_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 46 ns : File "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB3/memory/Lab3_Team2_Memory_t.v" Line 92
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'memory_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 23 21:31:01 2018...
