@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Oct 24 17:09:18 2018
+# Process ID: 8044
+# Current directory: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/synth_1
+# Command line: vivado.exe -log Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.tcl
+# Log file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/synth_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.vds
+# Journal file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.tcl -notrace

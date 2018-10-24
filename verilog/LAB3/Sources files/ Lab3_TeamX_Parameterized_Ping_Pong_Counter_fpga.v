@@ -1,13 +1,13 @@
 `timescale 10ns/1ps
 
-module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip, max, min, out, an);
+module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip, max, min, an, out);
     input clk, rst;
     input enable;
     input flip;
     input [4-1:0] max;
     input [4-1:0] min;
-    output [4-1:0] out;
     output [3:0] an;
+    output [6:0] out;
 
     wire filtered_rst, filterd_flip;
     wire rst_n;
@@ -20,7 +20,7 @@ module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip,
     reg [6:0] current_out, next_out;
     reg [3:0] current_an, next_an;
 
-    Parameterized_Ping_Pong_Counter gate1(.clk(count_clk),
+    Parameterized_Ping_Pong_Counter gate1(.clk(clk),
                                           .rst_n(rst_n),
                                           .enable(enable),
                                           .flip(filterd_flip),
@@ -29,14 +29,13 @@ module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip,
                                           .direction(direction),
                                           .out(counter_out));
     // Debounce Reset and Flip Siginal.
-    switch_pulse pulse1 (.clk(clk), .inSignal(rst_n), .filteredSignal(filtered_rst));
+    switch_pulse pulse1 (.clk(clk), .inSignal(rst), .filteredSignal(filtered_rst));
     switch_pulse pulse2 (.clk(clk), .inSignal(flip), .filteredSignal(filterd_flip));
 
     assign rst_n = !filtered_rst;
 
     // clock_divider
     clock_divider display (.rst(rst_n), .clk(clk), .out_clk(display_clk));
-    clock_divider_count count (.rst(rst_n), .clk(clk), .out_clk(count_clk));
 
     // 7 Segament
     assign digit1 = counter_out >= 10 ? counter_out - 10 : counter_out;
@@ -49,7 +48,7 @@ module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip,
     always @ ( posedge display_clk ) begin
         if (rst_n == 0) begin
             current_out <= 7'b1111111;
-            current_an <= 4'1110;
+            current_an <= 4'b1110;
         end
         else begin
             current_out <= next_out;
@@ -81,12 +80,14 @@ module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip,
             end
         endcase
     end
-
+    
+    assign an = current_an;
+    assign out = current_out;
 
 endmodule //  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga
 
 module direction_display (dir, outport);
-    int dir;
+    input dir;
     output [6:0] outport;
 
     assign outport = dir ? 7'b1100011 : 7'b1011100;
@@ -109,6 +110,7 @@ endmodule
 
 module clock_divider(rst, clk, out_clk);
     input clk;
+    input rst;
     output out_clk;
     reg [16:0] count, next_count;
     reg outClk, nextOutClk;
@@ -116,9 +118,11 @@ module clock_divider(rst, clk, out_clk);
     always @ ( posedge clk ) begin
         if (rst == 0) begin
             count <= 0;
+            outClk <= 0;
         end
         else begin
             count <= next_count;
+            outClk <= nextOutClk;
         end
     end
 
@@ -132,33 +136,8 @@ module clock_divider(rst, clk, out_clk);
             nextOutClk = outClk;
         end
     end
-endmodule
-
-module clock_divider_count(rst, clk, out_clk);
-    input clk;
-    output out_clk;
-    reg [25:0] count, next_count;
-    reg outClk, nextOutClk;
-
-    always @ ( posedge clk ) begin
-        if (rst == 0) begin
-            count <= 0;
-        end
-        else begin
-            count <= next_count;
-        end
-    end
-
-    always @ ( * ) begin
-        if (count == 26'b11111111111111111111111111) begin
-            next_count = 0;
-            nextOutClk = !outClk;
-        end
-        else begin
-            next_count = count + 1;
-            nextOutClk = outClk;
-        end
-    end
+    
+    assign out_clk = outClk;
 endmodule
 
 module switch_pulse (clk, inSignal, filteredSignal);
@@ -166,22 +145,22 @@ module switch_pulse (clk, inSignal, filteredSignal);
     input clk;
     output filteredSignal;
 
-    reg [4:0] delay;
+    reg [3:0] delay;
     wire debounceSignal;
 
     reg pulse1, pulse2;
 
     // Debounce;
-    always @ ( posedge inSignal ) begin
-        delay[4:1] <= delay[3:0];
+    always @ ( posedge clk ) begin
+        delay[3:1] <= delay[2:0];
         delay[0] <= inSignal;
     end
-    assign debounceSignal = delay == 5'b11111 ? 1 : 0;
+    assign debounceSignal = delay == 4'b1111 ? 1 : 0;
 
     // One Pulse;
     always @ ( posedge clk ) begin
         pulse1 <= debounceSignal;
-        pulse2 <= (!pulse1)&debounceSignal;
+        pulse2 <= (!pulse1) & debounceSignal;
     end
 
     assign filteredSignal = pulse2;
