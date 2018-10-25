@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Wed Oct 24 17:11:24 2018
+| Date             : Thu Oct 25 16:26:20 2018
 | Host             : DESKTOP-MHVU08F running 64-bit major release  (build 9200)
 | Command          : report_power -file Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_power_routed.rpt -pb Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_power_summary_routed.pb -rpx Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_power_routed.rpx
 | Design           : Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 12.625 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 12.627 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 12.435                           |
+| Dynamic (W)              | 12.438                           |
 | Device Static (W)        | 0.190                            |
 | Effective TJA (C/W)      | 5.0                              |
 | Max Ambient (C)          | 21.9                             |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.511 |      189 |       --- |             --- |
-|   LUT as Logic |     0.444 |       73 |     20800 |            0.35 |
+| Slice Logic    |     0.512 |      189 |       --- |             --- |
+|   LUT as Logic |     0.446 |       73 |     20800 |            0.35 |
 |   Register     |     0.031 |       72 |     41600 |            0.17 |
 |   CARRY4       |     0.029 |       10 |      8150 |            0.12 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       12 |       --- |             --- |
-| Signals        |     0.505 |      168 |       --- |             --- |
+| Signals        |     0.506 |      168 |       --- |             --- |
 | I/O            |    11.419 |       23 |       106 |           21.70 |
 | Static Power   |     0.190 |          |           |                 |
-| Total          |    12.625 |          |           |                 |
+| Total          |    12.627 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.169 |       1.064 |      0.105 |
+| Vccint    |       1.000 |     1.171 |       1.066 |      0.105 |
 | Vccaux    |       1.800 |     0.440 |       0.417 |      0.024 |
 | Vcco33    |       3.300 |     3.220 |       3.219 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,10 +138,10 @@ Table of Contents
 +-------------------------------------------------+-----------+
 | Name                                            | Power (W) |
 +-------------------------------------------------+-----------+
-| Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga |    12.435 |
+| Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga |    12.438 |
 |   display                                       |     0.283 |
-|   gate1                                         |     0.436 |
-|     gate_count_display                          |     0.240 |
+|   gate1                                         |     0.196 |
+|   gate_count_display                            |     0.240 |
 |   pulse1                                        |     0.039 |
 |   pulse2                                        |     0.013 |
 +-------------------------------------------------+-----------+

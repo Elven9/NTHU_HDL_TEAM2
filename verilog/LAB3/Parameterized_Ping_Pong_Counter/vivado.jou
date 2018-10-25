@@ -2,16 +2,45 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu Oct 25 14:59:30 2018
-# Process ID: 8868
+# Start of session at: Thu Oct 25 16:02:41 2018
+# Process ID: 2464
 # Current directory: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4488 C:\Users\elven\Desktop\Hardware Design Lab\NTHU_HDL_TEAM2\verilog\LAB3\Parameterized_Ping_Pong_Counter\Parameterized_Ping_Pong_Counter.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1552 C:\Users\elven\Desktop\Hardware Design Lab\NTHU_HDL_TEAM2\verilog\LAB3\Parameterized_Ping_Pong_Counter\Parameterized_Ping_Pong_Counter.xpr
 # Log file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/vivado.log
 # Journal file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.xpr}
 update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Parameterized_Ping_Pong_Counter_t [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation
+source Parameterized_Ping_Pong_Counter_t.tcl
+close_sim
+launch_simulation
+source Parameterized_Ping_Pong_Counter_t.tcl
+close_sim
+launch_simulation
+source Parameterized_Ping_Pong_Counter_t.tcl
+close_sim
+launch_simulation
+source Parameterized_Ping_Pong_Counter_t.tcl
+close_sim
+reset_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
 open_hw
 connect_hw_server
 open_hw_target
@@ -24,10 +53,46 @@ set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_T
 program_hw_devices [get_hw_devices xc7a35t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
 close_hw
-launch_simulation
-launch_simulation
-source Parameterized_Ping_Pong_Counter_t.tcl
-close_sim
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
 launch_simulation
 source Parameterized_Ping_Pong_Counter_t.tcl
 close_sim

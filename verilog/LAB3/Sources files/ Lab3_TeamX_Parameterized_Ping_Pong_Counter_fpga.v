@@ -10,7 +10,6 @@ module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip,
     output [6:0] out;
 
     wire filtered_rst, filterd_flip;
-    wire rst_n;
     wire display_clk, count_clk;
     wire [3:0] digit1, digit2;
     wire [3:0] counter_out;
@@ -19,11 +18,28 @@ module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip,
 
     reg [6:0] current_out, next_out;
     reg [3:0] current_an, next_an;
-
-    Parameterized_Ping_Pong_Counter gate1(.clk(clk),
-                                          .rst_n(rst_n),
+    
+    reg out_flip;
+    reg rst_n_to_counter;
+    wire rst_n;
+    
+    assign rst_n = !filtered_rst;
+    
+    clock_divider_count gate_count_display(.rst(rst_n), .clk(clk), .out_clk(count_clk));
+    
+    always @ (posedge count_clk , posedge filterd_flip) begin
+        if (filterd_flip == 1) out_flip = 1;
+        else out_flip = 0;
+    end
+    
+    always @ (posedge count_clk ,  posedge filtered_rst) begin
+        if (filtered_rst == 1) rst_n_to_counter = 0;
+        else rst_n_to_counter = 1;
+    end
+    Parameterized_Ping_Pong_Counter gate1(.clk(count_clk),
+                                          .rst_n(rst_n_to_counter),
                                           .enable(enable),
-                                          .flip(filterd_flip),
+                                          .flip(out_flip),
                                           .max(max),
                                           .min(min),
                                           .direction(direction),
@@ -31,8 +47,6 @@ module  Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga (clk, rst, enable, flip,
     // Debounce Reset and Flip Siginal.
     switch_pulse pulse1 (.clk(clk), .inSignal(rst), .filteredSignal(filtered_rst));
     switch_pulse pulse2 (.clk(clk), .inSignal(flip), .filteredSignal(filterd_flip));
-
-    assign rst_n = !filtered_rst;
 
     // clock_divider
     clock_divider display (.rst(rst_n), .clk(clk), .out_clk(display_clk));
@@ -164,4 +178,35 @@ module switch_pulse (clk, inSignal, filteredSignal);
     end
 
     assign filteredSignal = pulse2;
+endmodule
+
+module clock_divider_count(rst, clk, out_clk);
+    input clk;
+    input rst;
+    output out_clk;
+    reg [24:0] count, next_count;
+    reg outClk, nextOutClk;
+
+    always @ ( posedge clk ) begin
+        if (rst == 0) begin
+            count <= 0;
+            outClk <= 0;
+        end
+        else begin
+            count <= next_count;
+            outClk <= nextOutClk;
+        end
+    end
+
+    always @ ( * ) begin
+        if (count == 25'b1111111111111111111111111) begin
+            next_count = 0;
+            nextOutClk = !outClk;
+        end
+        else begin
+            next_count = count + 1;
+            nextOutClk = outClk;
+        end
+    end
+    assign out_clk = outClk;
 endmodule

@@ -21,43 +21,25 @@ module Parameterized_Ping_Pong_Counter_t ();
 
     initial begin
         clk = 0;
-        rst_n = 0;
+        rst_n = 1;
         max = 15;
         min = 0;
         flip = 0;
         enable = 1;
-        #50 rst_n = 1;
-        #1 rst_n = 0;
-        #1 rst_n = 1;
-        #1 rst_n = 0;
-        #1 rst_n = 1;
-        #1 rst_n = 0;
-        #1 rst_n = 1;
-        #1 rst_n = 0;
-        #1 rst_n = 1;
-        #1 rst_n = 0;
-        #1 rst_n = 1;
-        #1 rst_n = 0;
-        #1 rst_n = 1;
-        #50 rst_n = 0;
-        #1 flip = 1;
-        #2 flip = 0;
-        #2 flip = 1;
-        #2 flip = 0;
-        #2 flip = 1;
-        #2 flip = 0;
-        #2 flip = 1;
-        #2 flip = 0;
-        #2 flip = 1;
-        #2 flip = 0;
-        #2 flip = 1;
-        #2 flip = 0;
-        #2 flip = 1;
-        #2 flip = 0;
-        #2 flip = 1;
-        #100 flip = 0;
         
-        #1000 $finish;
+        #2 rst_n = 0;
+        #3 rst_n = 1;
+        
+        #5 flip = 1;
+        #2 flip = 0;
+        
+        #8 rst_n = 0;
+        #2 rst_n = 1;
+        
+        #10 enable = 0;
+        #10 enable = 1;
+        
+        #500 $finish;
     end
 
 endmodule // Parameterized_Ping_Pong_Counter_t

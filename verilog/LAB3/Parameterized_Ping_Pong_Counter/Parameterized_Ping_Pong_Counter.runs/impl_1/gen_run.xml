@@ -1,30 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1540372154">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1540455854">
   <File Type="BITSTR-BMM" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.tcl"/>
+  <File Type="OPT-TIMING" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_opted.rpt"/>
   <File Type="OPT-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_reports.tcl"/>
   <File Type="OPT-DRC" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.hwdef"/>
   <File Type="PWROPT-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_placed.dcp"/>
   <File Type="PLACE-IO" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bgn"/>
+  <File Type="PLACE-TIMING" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.mmi"/>
@@ -38,17 +50,24 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_routed.rpx"/>
-  <File Type="RDI-RDI" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.vdi"/>
+  <File Type="ROUTE-SIMILARITY" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.rbt"/>
   <File Type="BITSTR-NKY" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.nky"/>
   <File Type="BG-DRC" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.drc"/>
+  <File Type="RDI-RDI" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

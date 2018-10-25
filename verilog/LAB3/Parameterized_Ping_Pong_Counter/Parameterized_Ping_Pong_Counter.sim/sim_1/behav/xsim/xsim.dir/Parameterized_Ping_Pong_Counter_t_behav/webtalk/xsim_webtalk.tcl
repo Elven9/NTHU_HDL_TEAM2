@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim/xsim.dir/Parameterized_Ping_Pong_Counter_t_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Thu Oct 25 15:45:46 2018" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Thu Oct 25 16:35:34 2018" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2258646" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "1705c51a-fbe2-4a9b-a2ff-afeafe2cfb2d" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "a9526c1192a24678a1aec5d35fed7f9b" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "88" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "100" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz" -context "user_environment"
@@ -27,6 +27,6 @@ webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\
 webtalk_add_data -client xsim -key runtime -value "1 us" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "1" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Time -value "0.05_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "5584_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1815901159 -regid "" -xml C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim/xsim.dir/Parameterized_Ping_Pong_Counter_t_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim/xsim.dir/Parameterized_Ping_Pong_Counter_t_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim/xsim.dir/Parameterized_Ping_Pong_Counter_t_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Memory -value "5560_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 1005044222 -regid "" -xml C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim/xsim.dir/Parameterized_Ping_Pong_Counter_t_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim/xsim.dir/Parameterized_Ping_Pong_Counter_t_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim/xsim.dir/Parameterized_Ping_Pong_Counter_t_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

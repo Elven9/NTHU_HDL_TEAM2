@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "write_bitstream", "begin" );
+ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
          "-log Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.tcl -notrace" );
 

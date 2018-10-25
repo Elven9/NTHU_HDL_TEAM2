@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Oct 24 17:11:25 2018
+| Date         : Thu Oct 25 16:26:21 2018
 | Host         : DESKTOP-MHVU08F running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_clock_utilization_routed.rpt
 | Design       : Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga
@@ -66,12 +66,12 @@ Table of Contents
 4. Local Clock Details
 ----------------------
 
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------------+------------------------------+
-| Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                            | Net                          |
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------------+------------------------------||
-| 0        | FDRE/Q          | None       | SLICE_X63Y17/DFF | X1Y0         |           9 |               1 |              |       | display/outClk_reg/Q                  | display/CLK                  - Static -
-| 1        | FDRE/Q          | None       | SLICE_X2Y14/C5FF | X0Y0         |           7 |               1 |              |       | gate1/gate_count_display/outClk_reg/Q | gate1/gate_count_display/CLK - Static -
-+----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------------+------------------------------||
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+------------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                      | Net                    |
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+------------------------||
+| 0        | FDRE/Q          | None       | SLICE_X63Y17/DFF | X1Y0         |           9 |               1 |              |       | display/outClk_reg/Q            | display/CLK            - Static -
+| 1        | FDRE/Q          | None       | SLICE_X2Y14/C5FF | X0Y0         |           7 |               1 |              |       | gate_count_display/outClk_reg/Q | gate_count_display/CLK - Static -
++----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+---------------------------------+------------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
 *** Non-Clock Loads column represents the non-clock pin loads (pin count)
