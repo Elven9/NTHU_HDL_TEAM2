@@ -1,6 +1,5 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../../Sources files/ Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.v" \
 "../../../../../Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v" \
 "../../../../../Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v" \
 

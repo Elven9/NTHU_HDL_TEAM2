@@ -3,19 +3,12 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a9526c1192a24678a1aec5d35fed7f9b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Parameterized_Ping_Pong_Counter_t_behav xil_defaultlib.Parameterized_Ping_Pong_Counter_t xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 7 for port out [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v:18]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.clock_divider_count
-Compiling module xil_defaultlib.flip_delay
 Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter
-Compiling module xil_defaultlib.switch_pulse
-Compiling module xil_defaultlib.clock_divider
-Compiling module xil_defaultlib.segament_display
-Compiling module xil_defaultlib.direction_display
-Compiling module xil_defaultlib.Lab3_TeamX_Parameterized_Ping_Po...
 Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter_...
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot Parameterized_Ping_Pong_Counter_t_behav
