@@ -33,3 +33,4 @@ source Parameterized_Ping_Pong_Counter_t.tcl
 close_sim
 launch_simulation
 source Parameterized_Ping_Pong_Counter_t.tcl
+close_sim
