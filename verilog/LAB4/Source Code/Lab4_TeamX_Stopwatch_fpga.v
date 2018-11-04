@@ -187,6 +187,7 @@ module divide_tenth(num, out_num);
 
   always @(*) begin
     case (num)
+      0: out_num = 0;
       10: out_num = 1;
       20: out_num = 2;
       30: out_num = 3;
