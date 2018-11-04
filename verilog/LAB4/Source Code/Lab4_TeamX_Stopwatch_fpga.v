@@ -7,8 +7,8 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
   wire counter_clk, display_clk;
   reg relay_start, relay_reset;
 
-  wire [3:0] min, ten_sec, seg_min, seg_ten_sec;
-  wire [7:0] sec, seg_sec_d1, seg_sec_d2;
+  wire [3:0] min, ten_sec;
+  wire [7:0] sec, seg_sec_d1, seg_sec_d2, seg_min, seg_ten_sec;
 
   reg [6:0] cur_out, next_out;
   reg [3:0] cur_an, next_an;
@@ -48,8 +48,7 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
                             .ten_second(ten_sec));
 
   // Digit Process:
-  assign sec_d1 = sec[3:0] >= 10 ? sec - 10 : sec;
-  divide_tenth tenth(.num(sec - sec_d1), .out_num(sec_d2));
+  
 
   // Segment Convert
   segament_display ten_sec_gate (.display_number(ten_sec), .outport(seg_ten_sec));
@@ -185,34 +184,17 @@ module Time_Counter(clk, reset, start, minute, second, ten_second);
     endcase
   end
   
-  assign minute = cur_min;
-  assign second = cur_sec;
-  assign ten_second = cur_ten_sec;
+   assign minute = cur_min;
+   assign second = cur_sec;
+   assign ten_second = cur_ten_sec;
 
-endmodule
-
-module divide_tenth(num, out_num);
-  input [7:0] num;
-  output reg [3:0] out_num;
-
-  always @(*) begin
-    case (num)
-      0: out_num = 0;
-      10: out_num = 1;
-      20: out_num = 2;
-      30: out_num = 3;
-      40: out_num = 4;
-      50: out_num = 5;
-      default: out_num = 6;
-    endcase
-  end
 endmodule
 
 module clock_divider_count(rst, clk, out_clk);
     input clk;
     input rst;
     output out_clk;
-    reg [22:0] count, next_count;
+    reg [21:0] count, next_count;
     reg outClk, nextOutClk;
 
     always @ ( posedge clk ) begin
@@ -227,7 +209,7 @@ module clock_divider_count(rst, clk, out_clk);
     end
 
     always @ ( * ) begin
-        if (count == 25'b1111111111111111111111111) begin
+        if (count == 22'b1111111111111111111111) begin
             next_count = 0;
             nextOutClk = !outClk;
         end
