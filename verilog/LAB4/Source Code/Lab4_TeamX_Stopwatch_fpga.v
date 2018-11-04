@@ -16,6 +16,12 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
 
   wire [3:0] sec_d1, sec_d2;
 
+  wire filtered_rst, filterd_start;
+
+  // Debounce
+  switch_pulse pulse1 (.clk(clk), .inSignal(reset), .filteredSignal(filtered_rst));
+  switch_pulse pulse2 (.clk(clk), .inSignal(start), .filteredSignal(filterd_start));
+
   // Counter Clock
   clock_divider_count counter_clk_gate(.rst(reset), .clk(clk), .out_clk(counter_clk));
 
@@ -24,12 +30,12 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
 
   // Reset, Start Relay.
   always @ (posedge counter_clk , posedge reset) begin
-    if (reset == 1) relay_reset = 1;
+    if (filtered_rst == 1) relay_reset = 1;
     else relay_reset = 0;
   end
   
   always @ (posedge counter_clk ,  posedge start) begin
-    if (start == 1) relay_start = 1;
+    if (filterd_start == 1) relay_start = 1;
     else relay_start = 0;
   end
 
@@ -53,7 +59,7 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
   
   // Process Display
   always @ ( posedge display_clk ) begin
-    if (rst_n == 0) begin
+    if (filtered_rst = 1) begin
         cur_out <= 7'b1111111;
         cur_an <= 4'b1110;
         cur_dp <= 1;
@@ -273,4 +279,30 @@ module segament_display (display_number, outport);
     assign outport[5] = !(display_number == 0 || display_number == 4 || display_number == 5 || display_number == 6 || display_number == 8 || display_number == 9 || display_number == 10 || display_number == 11 || display_number == 12 || display_number == 14 || display_number == 15);
     assign outport[6] = !(display_number == 4 || display_number == 2 || display_number == 3 || display_number == 5 || display_number == 6 || display_number == 11 || display_number == 8 || display_number == 9 || display_number == 10 || display_number == 13 || display_number == 14 || display_number == 15);
 
+endmodule
+
+module switch_pulse (clk, inSignal, filteredSignal);
+    input inSignal;
+    input clk;
+    output filteredSignal;
+
+    reg [3:0] delay;
+    wire debounceSignal;
+
+    reg pulse1, pulse2;
+
+    // Debounce;
+    always @ ( posedge clk ) begin
+        delay[3:1] <= delay[2:0];
+        delay[0] <= inSignal;
+    end
+    assign debounceSignal = delay == 4'b1111 ? 1 : 0;
+
+    // One Pulse;
+    always @ ( posedge clk ) begin
+        pulse1 <= debounceSignal;
+        pulse2 <= (!pulse1) & debounceSignal;
+    end
+
+    assign filteredSignal = pulse2;
 endmodule
