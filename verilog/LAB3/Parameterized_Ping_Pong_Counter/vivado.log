@@ -1,0 +1,485 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Oct 25 16:02:41 2018
+# Process ID: 2464
+# Current directory: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1552 C:\Users\elven\Desktop\Hardware Design Lab\NTHU_HDL_TEAM2\verilog\LAB3\Parameterized_Ping_Pong_Counter\Parameterized_Ping_Pong_Counter.xpr
+# Log file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/vivado.log
+# Journal file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 798.727 ; gain = 68.047
+update_compile_order -fileset sources_1
+set_property top Parameterized_Ping_Pong_Counter_t [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Parameterized_Ping_Pong_Counter_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Parameterized_Ping_Pong_Counter_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter
+INFO: [VRFC 10-311] analyzing module clock_divider_count
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter_t
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a9526c1192a24678a1aec5d35fed7f9b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Parameterized_Ping_Pong_Counter_t_behav xil_defaultlib.Parameterized_Ping_Pong_Counter_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider_count
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter_...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Parameterized_Ping_Pong_Counter_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Parameterized_Ping_Pong_Counter_t_behav -key {Behavioral:sim_1:Functional:Parameterized_Ping_Pong_Counter_t} -tclbatch {Parameterized_Ping_Pong_Counter_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Parameterized_Ping_Pong_Counter_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Parameterized_Ping_Pong_Counter_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 847.113 ; gain = 9.941
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Parameterized_Ping_Pong_Counter_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Parameterized_Ping_Pong_Counter_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter
+INFO: [VRFC 10-311] analyzing module clock_divider_count
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter_t
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a9526c1192a24678a1aec5d35fed7f9b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Parameterized_Ping_Pong_Counter_t_behav xil_defaultlib.Parameterized_Ping_Pong_Counter_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider_count
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter_...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Parameterized_Ping_Pong_Counter_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Parameterized_Ping_Pong_Counter_t_behav -key {Behavioral:sim_1:Functional:Parameterized_Ping_Pong_Counter_t} -tclbatch {Parameterized_Ping_Pong_Counter_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Parameterized_Ping_Pong_Counter_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Parameterized_Ping_Pong_Counter_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 863.359 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Parameterized_Ping_Pong_Counter_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Parameterized_Ping_Pong_Counter_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter
+INFO: [VRFC 10-311] analyzing module clock_divider_count
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter_t
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a9526c1192a24678a1aec5d35fed7f9b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Parameterized_Ping_Pong_Counter_t_behav xil_defaultlib.Parameterized_Ping_Pong_Counter_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider_count
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter_...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Parameterized_Ping_Pong_Counter_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Parameterized_Ping_Pong_Counter_t_behav -key {Behavioral:sim_1:Functional:Parameterized_Ping_Pong_Counter_t} -tclbatch {Parameterized_Ping_Pong_Counter_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Parameterized_Ping_Pong_Counter_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Parameterized_Ping_Pong_Counter_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 866.355 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Parameterized_Ping_Pong_Counter_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Parameterized_Ping_Pong_Counter_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter
+INFO: [VRFC 10-311] analyzing module clock_divider_count
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter_t
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a9526c1192a24678a1aec5d35fed7f9b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Parameterized_Ping_Pong_Counter_t_behav xil_defaultlib.Parameterized_Ping_Pong_Counter_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.clock_divider_count
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter_...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Parameterized_Ping_Pong_Counter_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Parameterized_Ping_Pong_Counter_t_behav -key {Behavioral:sim_1:Functional:Parameterized_Ping_Pong_Counter_t} -tclbatch {Parameterized_Ping_Pong_Counter_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Parameterized_Ping_Pong_Counter_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Parameterized_Ping_Pong_Counter_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 873.621 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+set_property top Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 2
+[Thu Oct 25 16:15:16 2018] Launched synth_1...
+Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/synth_1/runme.log
+[Thu Oct 25 16:15:17 2018] Launched impl_1...
+Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Oct 25 16:17:47 2018] Launched impl_1...
+Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Oct 25 16:24:14 2018] Launched synth_1...
+Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/synth_1/runme.log
+[Thu Oct 25 16:24:14 2018] Launched impl_1...
+Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711964A
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711964A
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.
+ Targets(s) ", jsn-Basys3-210183711964A" may be locked by another hw_server.
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.runs/impl_1/Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Parameterized_Ping_Pong_Counter_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Parameterized_Ping_Pong_Counter_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter_t
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a9526c1192a24678a1aec5d35fed7f9b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Parameterized_Ping_Pong_Counter_t_behav xil_defaultlib.Parameterized_Ping_Pong_Counter_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter_...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Parameterized_Ping_Pong_Counter_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Parameterized_Ping_Pong_Counter_t_behav -key {Behavioral:sim_1:Functional:Parameterized_Ping_Pong_Counter_t} -tclbatch {Parameterized_Ping_Pong_Counter_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Parameterized_Ping_Pong_Counter_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Parameterized_Ping_Pong_Counter_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1565.980 ; gain = 6.496
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Parameterized_Ping_Pong_Counter_t' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj Parameterized_Ping_Pong_Counter_t_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Parameterized_Ping_Pong_Counter_t
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto a9526c1192a24678a1aec5d35fed7f9b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Parameterized_Ping_Pong_Counter_t_behav xil_defaultlib.Parameterized_Ping_Pong_Counter_t xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter
+Compiling module xil_defaultlib.Parameterized_Ping_Pong_Counter_...
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Parameterized_Ping_Pong_Counter_t_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB3/Parameterized_Ping_Pong_Counter/Parameterized_Ping_Pong_Counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Parameterized_Ping_Pong_Counter_t_behav -key {Behavioral:sim_1:Functional:Parameterized_Ping_Pong_Counter_t} -tclbatch {Parameterized_Ping_Pong_Counter_t.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Parameterized_Ping_Pong_Counter_t.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Parameterized_Ping_Pong_Counter_t_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1569.652 ; gain = 2.613
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 25 16:35:36 2018...
