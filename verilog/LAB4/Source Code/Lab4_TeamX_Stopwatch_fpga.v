@@ -54,48 +54,38 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
       sec_d2 = 0
     end
     else begin
-      sec_d1 = 0;
-      sec_d2 = 0;
-    end
-    if (sec >= 10 && sec <= 19) begin
-      sec_d1 = sec - 10;
-      sec_d2 = 1;
-    end
-    else begin
-      sec_d1 = 0;
-      sec_d2 = 0;
-    end
-    if (sec >= 20 && sec <= 29) begin
-      sec_d1 = sec - 20;
-      sec_d2 = 2;
-    end
-    else begin
-      sec_d1 = 0;
-      sec_d2 = 0;
-    end
-    if (sec >= 30 && sec <= 39) begin
-      sec_d1 = sec - 30;
-      sec_d2 = 3;
-    end
-    else begin
-      sec_d1 = 0;
-      sec_d2 = 0;
-    end
-    if (sec >= 40 && sec <= 49) begin
-      sec_d1 = sec - 40;
-      sec_d2 = 4;
-    end
-    else begin
-      sec_d1 = 0;
-      sec_d2 = 0;
-    end
-    if (sec >= 50 && sec <= 59) begin
-      sec_d1 = sec - 50;
-      sec_d2 = 5;
-    end
-    else begin
-      sec_d1 = 0;
-      sec_d2 = 0;
+      if (sec >= 10 && sec <= 19) begin
+        sec_d1 = sec - 10;
+        sec_d2 = 1;
+      end
+      else begin
+        if (sec >= 20 && sec <= 29) begin
+          sec_d1 = sec - 20;
+          sec_d2 = 2;
+        end
+        else begin
+          if (sec >= 30 && sec <= 39) begin
+            sec_d1 = sec - 30;
+            sec_d2 = 3;
+          end
+          else begin
+            if (sec >= 40 && sec <= 49) begin
+              sec_d1 = sec - 40;
+              sec_d2 = 4;
+            end
+            else begin
+              if (sec >= 50 && sec <= 59) begin
+                sec_d1 = sec - 50;
+                sec_d2 = 5;
+              end
+              else begin
+                sec_d1 = 0;
+                sec_d2 = 0;
+              end
+            end
+          end
+        end
+      end
     end
   end
   
