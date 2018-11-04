@@ -236,7 +236,7 @@ module clock_divider(rst, clk, out_clk);
     reg outClk, nextOutClk;
 
     always @ ( posedge clk ) begin
-        if (rst == 0) begin
+        if (rst == 1) begin
             count <= 0;
             outClk <= 0;
         end
