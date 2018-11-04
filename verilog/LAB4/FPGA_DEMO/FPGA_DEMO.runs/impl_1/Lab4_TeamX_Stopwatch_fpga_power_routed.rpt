@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sun Nov  4 18:12:27 2018
+| Date             : Sun Nov  4 18:35:03 2018
 | Host             : DESKTOP-MHVU08F running 64-bit major release  (build 9200)
 | Command          : report_power -file Lab4_TeamX_Stopwatch_fpga_power_routed.rpt -pb Lab4_TeamX_Stopwatch_fpga_power_summary_routed.pb -rpx Lab4_TeamX_Stopwatch_fpga_power_routed.rpx
 | Design           : Lab4_TeamX_Stopwatch_fpga
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 6.927        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 6.823        |
-| Device Static (W)        | 0.104        |
-| Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 50.4         |
-| Junction Temperature (C) | 59.6         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 12.056 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 11.879                           |
+| Device Static (W)        | 0.177                            |
+| Effective TJA (C/W)      | 5.0                              |
+| Max Ambient (C)          | 24.7                             |
+| Junction Temperature (C) | 85.3                             |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.124 |       67 |       --- |             --- |
-|   LUT as Logic |     0.099 |       30 |     20800 |            0.14 |
-|   CARRY4       |     0.012 |        4 |      8150 |            0.05 |
-|   Register     |     0.007 |       28 |     41600 |            0.07 |
+| Slice Logic    |     0.229 |       71 |       --- |             --- |
+|   LUT as Logic |     0.194 |       29 |     20800 |            0.14 |
+|   Register     |     0.016 |       29 |     41600 |            0.07 |
+|   CARRY4       |     0.013 |        4 |      8150 |            0.05 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.137 |       59 |       --- |             --- |
-| I/O            |     6.562 |       14 |       106 |           13.21 |
-| Static Power   |     0.104 |          |           |                 |
-| Total          |     6.927 |          |           |                 |
+|   Others       |     0.000 |        6 |       --- |             --- |
+| Signals        |     0.270 |       59 |       --- |             --- |
+| I/O            |    11.379 |       14 |       106 |           13.21 |
+| Static Power   |     0.177 |          |           |                 |
+| Total          |    12.056 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,16 +71,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.301 |       0.265 |      0.036 |
-| Vccaux    |       1.800 |     0.256 |       0.240 |      0.015 |
-| Vcco33    |       3.300 |     1.857 |       1.856 |      0.001 |
+| Vccint    |       1.000 |     0.603 |       0.507 |      0.095 |
+| Vccaux    |       1.800 |     0.439 |       0.417 |      0.022 |
+| Vcco33    |       3.300 |     3.220 |       3.219 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| Vccbram   |       1.000 |     0.002 |       0.000 |      0.002 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -138,8 +138,9 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| Lab4_TeamX_Stopwatch_fpga |     6.823 |
-|   display_gate            |     0.172 |
+| Lab4_TeamX_Stopwatch_fpga |    11.879 |
+|   display_gate            |     0.293 |
+|   pulse1                  |     0.036 |
 +---------------------------+-----------+
 
 

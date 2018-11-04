@@ -23,18 +23,18 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
   switch_pulse pulse2 (.clk(clk), .inSignal(start), .filteredSignal(filterd_start));
 
   // Counter Clock
-  clock_divider_count counter_clk_gate(.rst(reset), .clk(clk), .out_clk(counter_clk));
+  clock_divider_count counter_clk_gate(.rst(filtered_rst), .clk(clk), .out_clk(counter_clk));
 
   // Display Clock
-  clock_divider display_gate (.rst(reset), .clk(clk), .out_clk(display_clk));
+  clock_divider display_gate (.rst(filtered_rst), .clk(clk), .out_clk(display_clk));
 
   // Reset, Start Relay.
-  always @ (posedge counter_clk , posedge reset) begin
+  always @ (posedge counter_clk , posedge filtered_rst) begin
     if (filtered_rst == 1) relay_reset = 1;
     else relay_reset = 0;
   end
   
-  always @ (posedge counter_clk ,  posedge start) begin
+  always @ (posedge counter_clk ,  posedge filterd_start) begin
     if (filterd_start == 1) relay_start = 1;
     else relay_start = 0;
   end
@@ -59,7 +59,7 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
   
   // Process Display
   always @ ( posedge display_clk ) begin
-    if (filtered_rst = 1) begin
+    if (filtered_rst == 1) begin
         cur_out <= 7'b1111111;
         cur_an <= 4'b1110;
         cur_dp <= 1;

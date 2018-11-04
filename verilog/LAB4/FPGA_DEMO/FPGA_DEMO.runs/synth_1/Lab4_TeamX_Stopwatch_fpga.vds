@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov  4 18:10:11 2018
-# Process ID: 7520
+# Start of session at: Sun Nov  4 18:32:53 2018
+# Process ID: 6872
 # Current directory: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1
 # Command line: vivado.exe -log Lab4_TeamX_Stopwatch_fpga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Lab4_TeamX_Stopwatch_fpga.tcl
 # Log file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/Lab4_TeamX_Stopwatch_fpga.vds
@@ -15,31 +15,33 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 568 
+INFO: Helper process launched with PID 176 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 357.719 ; gain = 99.559
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 357.223 ; gain = 99.242
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Lab4_TeamX_Stopwatch_fpga' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:1]
-INFO: [Synth 8-6157] synthesizing module 'clock_divider_count' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:201]
-WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:210]
-INFO: [Synth 8-6155] done synthesizing module 'clock_divider_count' (1#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:201]
-INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:232]
-INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (2#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:232]
-INFO: [Synth 8-6157] synthesizing module 'Time_Counter' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:104]
-INFO: [Synth 8-226] default block is never used [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:133]
-WARNING: [Synth 8-3848] Net minute in module/entity Time_Counter does not have driver. [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:106]
-WARNING: [Synth 8-3848] Net second in module/entity Time_Counter does not have driver. [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:107]
-WARNING: [Synth 8-3848] Net ten_second in module/entity Time_Counter does not have driver. [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:106]
-INFO: [Synth 8-6155] done synthesizing module 'Time_Counter' (3#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:104]
-INFO: [Synth 8-6157] synthesizing module 'divide_tenth' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:184]
-INFO: [Synth 8-6155] done synthesizing module 'divide_tenth' (4#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:184]
-INFO: [Synth 8-6157] synthesizing module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:264]
-INFO: [Synth 8-6155] done synthesizing module 'segament_display' (5#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:264]
-WARNING: [Synth 8-689] width (4) of port connection 'outport' does not match port width (7) of module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:49]
-WARNING: [Synth 8-689] width (8) of port connection 'outport' does not match port width (7) of module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:50]
-WARNING: [Synth 8-689] width (8) of port connection 'outport' does not match port width (7) of module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:51]
-WARNING: [Synth 8-689] width (4) of port connection 'outport' does not match port width (7) of module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'Lab4_TeamX_Stopwatch_fpga' (6#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:1]
+INFO: [Synth 8-6157] synthesizing module 'switch_pulse' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:284]
+INFO: [Synth 8-6155] done synthesizing module 'switch_pulse' (1#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:284]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider_count' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:207]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:216]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider_count' (2#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:207]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:238]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (3#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:238]
+INFO: [Synth 8-6157] synthesizing module 'Time_Counter' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:110]
+INFO: [Synth 8-226] default block is never used [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:139]
+WARNING: [Synth 8-3848] Net minute in module/entity Time_Counter does not have driver. [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:112]
+WARNING: [Synth 8-3848] Net second in module/entity Time_Counter does not have driver. [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:113]
+WARNING: [Synth 8-3848] Net ten_second in module/entity Time_Counter does not have driver. [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:112]
+INFO: [Synth 8-6155] done synthesizing module 'Time_Counter' (4#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:110]
+INFO: [Synth 8-6157] synthesizing module 'divide_tenth' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:190]
+INFO: [Synth 8-6155] done synthesizing module 'divide_tenth' (5#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:190]
+INFO: [Synth 8-6157] synthesizing module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:270]
+INFO: [Synth 8-6155] done synthesizing module 'segament_display' (6#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:270]
+WARNING: [Synth 8-689] width (4) of port connection 'outport' does not match port width (7) of module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:55]
+WARNING: [Synth 8-689] width (8) of port connection 'outport' does not match port width (7) of module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:56]
+WARNING: [Synth 8-689] width (8) of port connection 'outport' does not match port width (7) of module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:57]
+WARNING: [Synth 8-689] width (4) of port connection 'outport' does not match port width (7) of module 'segament_display' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'Lab4_TeamX_Stopwatch_fpga' (7#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:1]
 WARNING: [Synth 8-3331] design Time_Counter has unconnected port minute[3]
 WARNING: [Synth 8-3331] design Time_Counter has unconnected port minute[2]
 WARNING: [Synth 8-3331] design Time_Counter has unconnected port minute[1]
@@ -60,7 +62,7 @@ WARNING: [Synth 8-3331] design Time_Counter has unconnected port clk
 WARNING: [Synth 8-3331] design Time_Counter has unconnected port reset
 WARNING: [Synth 8-3331] design Time_Counter has unconnected port start
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 412.617 ; gain = 154.457
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 412.043 ; gain = 154.063
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -73,10 +75,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 412.617 ; gain = 154.457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 412.043 ; gain = 154.063
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 412.617 ; gain = 154.457
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 412.043 ; gain = 154.063
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -92,23 +94,24 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 714.457 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 719.098 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 714.457 ; gain = 456.297
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 719.098 ; gain = 461.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 714.457 ; gain = 456.297
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 719.098 ; gain = 461.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 714.457 ; gain = 456.297
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 719.098 ; gain = 461.117
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "debounceSignal" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "nextOutClk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "out_num" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-802] inferred FSM for state register 'cur_an_reg' in module 'Lab4_TeamX_Stopwatch_fpga'
@@ -123,7 +126,7 @@ INFO: [Synth 8-5544] ROM "next_out" won't be mapped to Block RAM because address
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cur_an_reg' using encoding 'sequential' in module 'Lab4_TeamX_Stopwatch_fpga'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 714.457 ; gain = 456.297
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 719.098 ; gain = 461.117
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -142,13 +145,15 @@ Detailed RTL Component Info :
 +---Registers : 
 	               17 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
-	                1 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
 +---Muxes : 
 	   2 Input     17 Bit        Muxes := 1     
 	   4 Input      7 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   7 Input      3 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
@@ -172,6 +177,13 @@ Detailed RTL Component Info :
 	   4 Input      4 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
+Module switch_pulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
 Module clock_divider_count 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -207,17 +219,22 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-6014] Unused sequential element counter_clk_gate/outClk_reg was removed.  [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:211]
+WARNING: [Synth 8-6014] Unused sequential element pulse2/pulse2_reg was removed.  [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:304]
+WARNING: [Synth 8-6014] Unused sequential element counter_clk_gate/outClk_reg was removed.  [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v:217]
 INFO: [Synth 8-5546] ROM "display_gate/nextOutClk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "tenth/out_num" is below threshold of ROM address width. It will be mapped to LUTs
-WARNING: [Synth 8-3331] design Lab4_TeamX_Stopwatch_fpga has unconnected port start
 INFO: [Synth 8-3886] merging instance 'cur_out_reg[0]' (FDS) to 'cur_out_reg[3]'
+WARNING: [Synth 8-3332] Sequential element (pulse2/delay_reg[3]) is unused and will be removed from module Lab4_TeamX_Stopwatch_fpga.
+WARNING: [Synth 8-3332] Sequential element (pulse2/delay_reg[2]) is unused and will be removed from module Lab4_TeamX_Stopwatch_fpga.
+WARNING: [Synth 8-3332] Sequential element (pulse2/delay_reg[1]) is unused and will be removed from module Lab4_TeamX_Stopwatch_fpga.
+WARNING: [Synth 8-3332] Sequential element (pulse2/delay_reg[0]) is unused and will be removed from module Lab4_TeamX_Stopwatch_fpga.
+WARNING: [Synth 8-3332] Sequential element (pulse2/pulse1_reg) is unused and will be removed from module Lab4_TeamX_Stopwatch_fpga.
 INFO: [Synth 8-3886] merging instance 'cur_out_reg[1]' (FDS) to 'cur_out_reg[2]'
 INFO: [Synth 8-3886] merging instance 'cur_out_reg[2]' (FDS) to 'cur_out_reg[3]'
 INFO: [Synth 8-3886] merging instance 'cur_out_reg[3]' (FDS) to 'cur_out_reg[4]'
 INFO: [Synth 8-3886] merging instance 'cur_out_reg[4]' (FDS) to 'cur_out_reg[5]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 714.457 ; gain = 456.297
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 719.098 ; gain = 461.117
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -229,13 +246,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 736.195 ; gain = 478.035
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 734.418 ; gain = 476.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 736.270 ; gain = 478.109
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 734.492 ; gain = 476.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -247,7 +264,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 746.305 ; gain = 488.145
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 744.531 ; gain = 486.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -271,7 +288,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 746.305 ; gain = 488.145
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 744.531 ; gain = 486.551
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -284,7 +301,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 746.305 ; gain = 488.145
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 744.531 ; gain = 486.551
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -296,25 +313,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 746.305 ; gain = 488.145
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 744.531 ; gain = 486.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 746.305 ; gain = 488.145
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 744.531 ; gain = 486.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 746.305 ; gain = 488.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 744.531 ; gain = 486.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 746.305 ; gain = 488.145
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 744.531 ; gain = 486.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -332,30 +349,32 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |     4|
-|3     |LUT1   |     2|
+|3     |LUT1   |     1|
 |4     |LUT2   |     5|
 |5     |LUT3   |     1|
-|6     |LUT4   |     4|
-|7     |LUT6   |    18|
-|8     |FDRE   |    21|
-|9     |FDSE   |     2|
-|10    |IBUF   |     2|
-|11    |OBUF   |    12|
+|6     |LUT4   |     5|
+|7     |LUT5   |     1|
+|8     |LUT6   |    18|
+|9     |FDRE   |    27|
+|10    |FDSE   |     2|
+|11    |IBUF   |     2|
+|12    |OBUF   |    12|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------------+--------------+------+
 |      |Instance       |Module        |Cells |
 +------+---------------+--------------+------+
-|1     |top            |              |    72|
+|1     |top            |              |    79|
 |2     |  display_gate |clock_divider |    44|
+|3     |  pulse1       |switch_pulse  |    10|
 +------+---------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 746.305 ; gain = 488.145
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 744.531 ; gain = 486.551
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 746.305 ; gain = 186.305
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 746.305 ; gain = 488.145
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 744.531 ; gain = 179.496
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 744.531 ; gain = 486.551
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -365,11 +384,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-37 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+40 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 757.371 ; gain = 512.035
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 759.473 ; gain = 514.176
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/Lab4_TeamX_Stopwatch_fpga.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Lab4_TeamX_Stopwatch_fpga_utilization_synth.rpt -pb Lab4_TeamX_Stopwatch_fpga_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 757.371 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  4 18:11:00 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 759.473 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  4 18:33:40 2018...
