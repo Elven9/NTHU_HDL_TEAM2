@@ -184,6 +184,10 @@ module Time_Counter(clk, reset, start, minute, second, ten_second);
       end
     endcase
   end
+  
+  assign minute = cur_min;
+  assign second = cur_sec;
+  assign ten_second = cur_ten_sec;
 
 endmodule
 
