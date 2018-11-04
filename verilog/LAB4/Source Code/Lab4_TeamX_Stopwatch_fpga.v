@@ -234,7 +234,7 @@ module clock_divider_count(rst, clk, out_clk);
     input clk;
     input rst;
     output out_clk;
-    reg [21:0] count, next_count;
+    reg [23:0] count, next_count;
     reg outClk, nextOutClk;
 
     always @ ( posedge clk ) begin
@@ -249,7 +249,7 @@ module clock_divider_count(rst, clk, out_clk);
     end
 
     always @ ( * ) begin
-        if (count == 22'b1111111111111111111111) begin
+        if (count == 24'd5000000) begin
             next_count = 0;
             nextOutClk = !outClk;
         end

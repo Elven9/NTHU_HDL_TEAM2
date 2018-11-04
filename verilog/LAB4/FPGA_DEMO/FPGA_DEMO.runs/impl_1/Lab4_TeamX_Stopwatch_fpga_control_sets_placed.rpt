@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Nov  4 21:49:50 2018
+| Date         : Sun Nov  4 22:13:00 2018
 | Host         : DESKTOP-MHVU08F running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Lab4_TeamX_Stopwatch_fpga_control_sets_placed.rpt
 | Design       : Lab4_TeamX_Stopwatch_fpga
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    10 |
-| Unused register locations in slices containing registers |    28 |
+| Unused register locations in slices containing registers |    24 |
 +----------------------------------------------------------+-------+
 
 
@@ -49,29 +49,29 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              30 |            6 |
 | No           | No                    | Yes                    |               4 |            2 |
-| No           | Yes                   | No                     |             106 |           24 |
+| No           | Yes                   | No                     |             110 |           21 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              24 |            5 |
+| Yes          | Yes                   | No                     |              24 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------+---------------------------------+------------------------+------------------+----------------+
-|      Clock Signal     |          Enable Signal          |    Set/Reset Signal    | Slice Load Count | Bel Load Count |
-+-----------------------+---------------------------------+------------------------+------------------+----------------+
-|  counter_clk_gate/CLK |                                 |                        |                1 |              2 |
-|  counter_clk_gate/CLK |                                 | pulse2/pulse2          |                1 |              2 |
-|  counter_clk_gate/CLK |                                 | pulse1/filtered_rst    |                1 |              2 |
-|  display_gate/CLK     |                                 |                        |                1 |              4 |
-|  counter_clk_gate/CLK |                                 | time_counter/cur_min_0 |                2 |              8 |
-|  counter_clk_gate/CLK | time_counter/cur_min[3]_i_2_n_0 | time_counter/cur_min_0 |                2 |              8 |
-|  display_gate/CLK     |                                 | pulse1/filtered_rst    |                5 |             16 |
-|  counter_clk_gate/CLK | time_counter/cur_sec[7]_i_1_n_0 | time_counter/cur_min_0 |                3 |             16 |
-|  clk_IBUF_BUFG        |                                 |                        |                4 |             24 |
-|  clk_IBUF_BUFG        |                                 | pulse1/filtered_rst    |               17 |             82 |
-+-----------------------+---------------------------------+------------------------+------------------+----------------+
++-----------------------+---------------------------------+---------------------------------+------------------+----------------+
+|      Clock Signal     |          Enable Signal          |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-----------------------+---------------------------------+---------------------------------+------------------+----------------+
+|  counter_clk_gate/CLK |                                 |                                 |                1 |              2 |
+|  counter_clk_gate/CLK |                                 | pulse1/filtered_rst             |                1 |              2 |
+|  counter_clk_gate/CLK |                                 | pulse2/pulse2                   |                1 |              2 |
+|  display_gate/CLK     |                                 |                                 |                1 |              4 |
+|  counter_clk_gate/CLK |                                 | time_counter/cur_min[3]_i_1_n_0 |                1 |              8 |
+|  counter_clk_gate/CLK | time_counter/cur_min[3]_i_2_n_0 | time_counter/cur_min[3]_i_1_n_0 |                2 |              8 |
+|  display_gate/CLK     |                                 | pulse1/filtered_rst             |                8 |             16 |
+|  counter_clk_gate/CLK | time_counter/cur_sec[7]_i_1_n_0 | time_counter/cur_min[3]_i_1_n_0 |                4 |             16 |
+|  clk_IBUF_BUFG        |                                 |                                 |                4 |             24 |
+|  clk_IBUF_BUFG        |                                 | pulse1/filtered_rst             |               12 |             86 |
++-----------------------+---------------------------------+---------------------------------+------------------+----------------+
 
 
