@@ -51,7 +51,7 @@ module Lab4_TeamX_Stopwatch_fpga (clk, start, reset, an, out, dp);
   always @(*) begin
     if (sec >= 0 && sec <= 9) begin
       sec_d1 = sec[3:0];
-      sec_d2 = 0
+      sec_d2 = 0;
     end
     else begin
       sec_d1 = 0;

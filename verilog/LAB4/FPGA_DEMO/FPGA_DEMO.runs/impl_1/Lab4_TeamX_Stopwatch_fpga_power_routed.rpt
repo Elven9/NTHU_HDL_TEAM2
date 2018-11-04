@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sun Nov  4 21:21:20 2018
+| Date             : Sun Nov  4 21:50:25 2018
 | Host             : DESKTOP-MHVU08F running 64-bit major release  (build 9200)
 | Command          : report_power -file Lab4_TeamX_Stopwatch_fpga_power_routed.rpt -pb Lab4_TeamX_Stopwatch_fpga_power_summary_routed.pb -rpx Lab4_TeamX_Stopwatch_fpga_power_routed.rpx
 | Design           : Lab4_TeamX_Stopwatch_fpga
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 12.830 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 12.822 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 12.636                           |
-| Device Static (W)        | 0.195                            |
+| Dynamic (W)              | 12.628                           |
+| Device Static (W)        | 0.194                            |
 | Effective TJA (C/W)      | 5.0                              |
 | Max Ambient (C)          | 20.9                             |
 | Junction Temperature (C) | 89.1                             |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.622 |      233 |       --- |             --- |
-|   LUT as Logic |     0.563 |      115 |     20800 |            0.55 |
-|   Register     |     0.028 |       82 |     41600 |            0.20 |
-|   CARRY4       |     0.025 |       12 |      8150 |            0.15 |
+| Slice Logic    |     0.626 |      220 |       --- |             --- |
+|   LUT as Logic |     0.560 |      102 |     20800 |            0.49 |
+|   Register     |     0.032 |       82 |     41600 |            0.20 |
+|   CARRY4       |     0.028 |       10 |      8150 |            0.12 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       12 |       --- |             --- |
-| Signals        |     0.630 |      187 |       --- |             --- |
+| Signals        |     0.618 |      177 |       --- |             --- |
 | I/O            |    11.383 |       15 |       106 |           14.15 |
-| Static Power   |     0.195 |          |           |                 |
-| Total          |    12.830 |          |           |                 |
+| Static Power   |     0.194 |          |           |                 |
+| Total          |    12.822 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.373 |       1.264 |      0.109 |
+| Vccint    |       1.000 |     1.365 |       1.256 |      0.109 |
 | Vccaux    |       1.800 |     0.441 |       0.417 |      0.024 |
 | Vcco33    |       3.300 |     3.220 |       3.219 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -138,12 +138,12 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| Lab4_TeamX_Stopwatch_fpga |    12.636 |
-|   counter_clk_gate        |     0.282 |
-|   display_gate            |     0.251 |
+| Lab4_TeamX_Stopwatch_fpga |    12.628 |
+|   counter_clk_gate        |     0.333 |
+|   display_gate            |     0.291 |
 |   pulse1                  |     0.039 |
 |   pulse2                  |     0.016 |
-|   time_counter            |     0.365 |
+|   time_counter            |     0.295 |
 +---------------------------+-----------+
 
 
