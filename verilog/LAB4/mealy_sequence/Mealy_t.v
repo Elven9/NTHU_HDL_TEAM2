@@ -21,19 +21,36 @@ module Mealy_t;
     @ (negedge clk) rst_n = 1'b0;
     @ (posedge clk) // reset to S0
     @ (negedge clk) rst_n = 1'b1;
-    @ (posedge clk) // S0 -0-> S0
+    // 1. Correct Answer
     @ (negedge clk) in = 1'b1;
-    @ (posedge clk) // S0 -1-> S1
     @ (negedge clk) in = 1'b0;
-    @ (posedge clk) // S1 -0-> S1
     @ (negedge clk) in = 1'b0;
-    @ (posedge clk) // S1 -0-> S1
     @ (negedge clk) in = 1'b1;
-    @ (posedge clk) // S1 -1-> S2
-    @ (posedge clk) // S2 -1-> S1
-    @ (posedge clk) // S1 -1-> S2
+    // 2. Mock Set (4+1)
     @ (negedge clk) in = 1'b0;
-    @ (posedge clk) // S2 -0-> S3
+    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b0;
+    // 3. Correct Ans after Mock Set
+    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b1;
+    // 4. Check whether in nS2
+    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b1;
+    // 5. Check whether in nS3
+    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) in = 1'b1;
+    // 6. Final Correct Answer
+    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b1;
     @ (negedge clk) $finish;
   end
 
