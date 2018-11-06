@@ -20,9 +20,11 @@ module Mealy_t;
   initial begin
     @ (negedge clk) rst_n = 1'b0;
     @ (posedge clk) // reset to S0
-    @ (negedge clk) rst_n = 1'b1;
     // 1. Correct Answer
-    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) begin
+      rst_n = 1'b1;
+      in = 1'b1;
+    end
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b1;
@@ -37,16 +39,21 @@ module Mealy_t;
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b1;
     // 4. Check whether in nS2
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b1;
+    @ (negedge clk) in = 1'b0;
+    @ (negedge clk) in = 1'b1;
+    // 5. Check whether in nS2
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b1;
-    // 5. Check whether in nS3
+    // 6. Check whether in nS3
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b1;
-    // 6. Final Correct Answer
+    // 7. Final Correct Answer
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b0;

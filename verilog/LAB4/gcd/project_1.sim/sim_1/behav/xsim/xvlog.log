@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/gcd/Lab4_Team2_Greatest_Common_Divisor.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Greatest_Common_Divisor
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/gcd/Lab4_Team2_Greatest_Common_Divisor_t.v.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Mealy_t
