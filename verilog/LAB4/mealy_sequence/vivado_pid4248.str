@@ -2083,3 +2083,4 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 256, 220); // n (o, ck
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_ANALYSIS_MSG_RESET
 // TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
