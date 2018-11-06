@@ -30,9 +30,9 @@ module Mealy_t;
     @ (negedge clk) rst_n = 1'b1;
     @ (posedge clk)
     @ (negedge clk) begin
+      start = 1'b1;
       a = 8'd20;
       b = 8'd15;
-      start = 1'b1;
     end
     @ (negedge clk) start = 1'b0;
     @ (negedge clk)
@@ -48,6 +48,24 @@ module Mealy_t;
     @ (posedge clk)
     @ (negedge done)
     @ (negedge clk)
+    @ (negedge clk)
+    @ (negedge clk) begin
+      start = 1'b1;
+      a = 8'd0;
+      b = 8'd16;
+    end
+    @ (negedge clk) start = 1'b0;
+    @ (negedge clk)
+    @ (negedge done)
+    @ (negedge clk)
+    @ (negedge clk) begin
+      start = 1'b1;
+      a = 8'd20;
+      b = 8'd0;
+    end
+    @ (negedge clk) start = 1'b0;
+    @ (negedge clk)
+    @ (negedge done)
     @ (negedge clk) $finish;
   end
 
