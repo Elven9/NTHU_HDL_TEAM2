@@ -38,7 +38,7 @@ module Mealy_t;
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b1;
-    // 4. Check whether in nS2
+    // 4. Check whether in nS1
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b0;
