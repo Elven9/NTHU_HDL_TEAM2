@@ -2,16 +2,20 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Nov  7 00:37:27 2018
-# Process ID: 2576
+# Start of session at: Tue Nov  6 23:54:51 2018
+# Process ID: 6724
 # Current directory: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/gcd
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11040 C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB4\gcd\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10524 C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB4\gcd\project_1.xpr
 # Log file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/gcd/vivado.log
 # Journal file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/gcd\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/gcd/project_1.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/gcd/Mealy_t_behav.wcfg
+source Mealy_t.tcl
+close_sim
 launch_simulation
 open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/gcd/Mealy_t_behav.wcfg
 source Mealy_t.tcl
