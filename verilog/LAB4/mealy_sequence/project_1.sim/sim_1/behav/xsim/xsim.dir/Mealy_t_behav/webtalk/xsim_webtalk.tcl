@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/mealy_sequence/project_1.sim/sim_1/behav/xsim/xsim.dir/Mealy_t_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sat Nov  3 23:20:54 2018" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Wed Nov  7 00:37:21 2018" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2258646" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "57a15a97-04d8-4468-aefe-f6fff9805ed3" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "f058371d1511454482dd3e2d51a0fcf1" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "6" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "14" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-4710HQ CPU @ 2.50GHz" -context "user_environment"
@@ -24,9 +24,9 @@ webtalk_add_data -client project -key system_ram -value "8.000 GB" -context "use
 webtalk_register_client -client xsim
 webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command_line_options"
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
-webtalk_add_data -client xsim -key runtime -value "38 ns" -context "xsim\\usage"
+webtalk_add_data -client xsim -key runtime -value "118 ns" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.00_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Memory -value "5524_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 2125281862 -regid "" -xml C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/mealy_sequence/project_1.sim/sim_1/behav/xsim/xsim.dir/Mealy_t_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/mealy_sequence/project_1.sim/sim_1/behav/xsim/xsim.dir/Mealy_t_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/mealy_sequence/project_1.sim/sim_1/behav/xsim/xsim.dir/Mealy_t_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.01_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Memory -value "5572_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2610647617 -regid "" -xml C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/mealy_sequence/project_1.sim/sim_1/behav/xsim/xsim.dir/Mealy_t_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/mealy_sequence/project_1.sim/sim_1/behav/xsim/xsim.dir/Mealy_t_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB4/mealy_sequence/project_1.sim/sim_1/behav/xsim/xsim.dir/Mealy_t_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
