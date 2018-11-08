@@ -59,8 +59,10 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../Source Code/Lab4_TeamX_Stopwatch_fpga.v">
+      <File Path="$PSRCDIR/sources_1/imports/Source Code/Lab4_Team2_Stopwatch_fpga.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Source Code/Lab4_Team2_Stopwatch_fpga.v"/>
+          <Attr Name="ImportTime" Val="1541659003"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

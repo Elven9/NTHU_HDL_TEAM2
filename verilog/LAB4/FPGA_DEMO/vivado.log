@@ -2,23 +2,29 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov  4 20:48:49 2018
-# Process ID: 1748
+# Start of session at: Thu Nov  8 14:39:41 2018
+# Process ID: 14040
 # Current directory: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9312 C:\Users\elven\Desktop\Hardware Design Lab\NTHU_HDL_TEAM2\verilog\LAB4\FPGA_DEMO\FPGA_DEMO.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10312 C:\Users\elven\Desktop\Hardware Design Lab\NTHU_HDL_TEAM2\verilog\LAB4\FPGA_DEMO\FPGA_DEMO.xpr
 # Log file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/vivado.log
 # Journal file: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO\vivado.jou
 #-----------------------------------------------------------
-start_gui
-open_project {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.xpr}
+start_guopen_project {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.xpr}
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v'.
 Scanning sources...
-Finished scanning sources
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 757.570 ; gain = 101.441
+FiFinished scanning sourceININFO: [IP_Flow 19-234] Refreshing IP repositorieININFO: [IP_Flow 19-1704] No user IP repositories specifieINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+opopen_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 747.477 ; gain = 93.26update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_TeamX_Stopwatch_fpga.v}}
+import_files -norecurse {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/Source Code/Lab4_Team2_Stopwatch_fpga.v}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Nov  8 14:43:56 2018] Launched synth_1...
+Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
+[Thu Nov  8 14:43:56 2018] Launched impl_1...
+Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
 open_hw
-update_compile_order -fileset sources_1
+open_hw: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 783.535 ; gain = 0.000
 connect_hw_server
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
 INFO: [Labtools 27-2222] Launching hw_server...
@@ -29,8 +35,10 @@ INFO: [Labtools 27-2221] Launch Output:
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 
+connect_hw_server: Time (s): cpu = 00:00:03 ; elapsed = 00:01:06 . Memory (MB): peak = 783.535 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
+open_hw_target: Time (s): cpu = 00:00:06 ; elapsed = 00:00:19 . Memory (MB): peak = 1450.156 ; gain = 666.621
 set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
 current_hw_device [get_hw_devices xc7a35t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
@@ -47,157 +55,10 @@ Resolution:
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 20:50:47 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_run impl_1
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2018.2
-open_run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1513.168 ; gain = 67.047
-INFO: [Common 17-344] 'open_run' was cancelled
-close_hw
-reset_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 20:54:02 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 20:54:02 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711964A
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-close_hw
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a35tcpg236-1
-INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2018.2
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.srcs/constrs_1/new/FPGA_MINI.xdc]
-Finished Parsing XDC File [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.srcs/constrs_1/new/FPGA_MINI.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1842.422 ; gain = 321.594
-close_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 21:11:34 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 21:11:35 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-close_hw
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 21:19:10 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 21:19:10 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
 set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
 set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
@@ -219,237 +80,6 @@ Resolution:
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
-close_hw
-open_run impl_1
-INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2018.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 2341.324 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 2341.324 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-INFO: [Common 17-344] 'open_run' was cancelled
-close_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 21:48:16 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 21:48:16 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-close_hw
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 21:55:39 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 21:55:39 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-close_hw
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 22:01:11 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 22:01:11 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-close_hw
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 22:06:29 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 22:06:29 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-close_hw
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 22:10:54 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 22:10:54 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Sun Nov  4 22:11:25 2018] Launched synth_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/synth_1/runme.log
-[Sun Nov  4 22:11:25 2018] Launched impl_1...
-Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183711964A
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-current_hw_device [get_hw_devices xc7a35t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB4/FPGA_DEMO/FPGA_DEMO.runs/impl_1/Lab4_TeamX_Stopwatch_fpga.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183711964A
 exit
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  4 22:26:43 2018...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  8 15:46:26 2018...
