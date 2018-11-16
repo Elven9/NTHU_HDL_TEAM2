@@ -12,7 +12,7 @@ parameter S3 = 4'd3;
 parameter nS2 = 4'd4;
 parameter nS3 = 4'd5;
 parameter rS1 = 4'd6;
-parameter rs2 = 4'd7;
+parameter rS2 = 4'd7;
 parameter rS3 = 4'd8;
 
 
@@ -57,7 +57,7 @@ always @ ( * ) begin
         dec = 1'b0;
       end
     S3:
-      if (in == 1'b1) begin
+      if (in == 1'b0) begin
         nextState = S0;
         dec = 1'b1;
       end
@@ -77,10 +77,12 @@ always @ ( * ) begin
       if (in == 1'b0) nextState = rS2;
       else nextState = nS2;
       dec = 1'b0;
+    end
     rS2: begin
       if (in == 1'b1) nextState = rS3;
       else nextState = nS3;
       dec = 1'b0;
+    end
     rS3: begin
       if (in == 1'b1) begin
         nextState = S0;
