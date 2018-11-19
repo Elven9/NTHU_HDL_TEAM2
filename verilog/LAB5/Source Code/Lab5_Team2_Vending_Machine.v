@@ -37,10 +37,10 @@ module VendingMachineFPGA(clk, RESET_in, CANCEL_in, coin_5_in, coin_10_in, coin_
   switch_pulse pulse3 (.clk(clk), .inSignal(coin_5_in), .filteredSignal(coin_5));
   switch_pulse pulse4 (.clk(clk), .inSignal(coin_10_in), .filteredSignal(coin_10));
   switch_pulse pulse5 (.clk(clk), .inSignal(coin_50_in), .filteredSignal(coin_50));
-  switch_pulse pulse6 (.clk(clk), .inSignal(key_down[8'h1C]), .filteredSignal(coffee));
-  switch_pulse pulse7 (.clk(clk), .inSignal(key_down[8'h1B]), .filteredSignal(coke));
-  switch_pulse pulse8 (.clk(clk), .inSignal(key_down[8'h23]), .filteredSignal(oolong));
-  switch_pulse pulse9 (.clk(clk), .inSignal(key_down[8'h2B]), .filteredSignal(water));
+  switch_pulse pulse6 (.clk(clk), .inSignal(key_down[9'b000011101]), .filteredSignal(coffee));
+  switch_pulse pulse7 (.clk(clk), .inSignal(key_down[9'b000011100]), .filteredSignal(coke));
+  switch_pulse pulse8 (.clk(clk), .inSignal(key_down[9'b000100011]), .filteredSignal(oolong));
+  switch_pulse pulse9 (.clk(clk), .inSignal(key_down[9'b000101100]), .filteredSignal(water));
 
   // Vending Machine
   wire [7:0] money;
