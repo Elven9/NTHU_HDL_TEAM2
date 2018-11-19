@@ -17,8 +17,6 @@ module VendingMachineFPGA(clk, RESET_in, CANCEL_in, coin_5_in, coin_10_in, coin_
   wire RESET, CANCEL, coin_5, coin_10, coin_50;
   wire coke, oolong, coffee, water;
 
-  // AN Display
-
   // Keyboard
   wire [511:0] key_down;
   wire [8:0] last_change;
