@@ -5,8 +5,8 @@ module Traffic_Light_Controller_t ();
 
     reg clk, rst_n;
     wire [2:0] hw_light, lr_light;
-    wire lr_has_car;
-    wire [3:0] state;
+    reg lr_has_car;
+    wire [2:0] state;
 
     Traffic_Light_Controller controller(.clk(clk),
                                         .rst_n(rst_n),
@@ -30,12 +30,12 @@ module Traffic_Light_Controller_t ();
         #`CYC lr_has_car = 0;
 
         #(`CYC * 20 ) lr_has_car = 1;
-        #`CYC lr_has_car = 0;
+        #(`CYC * 15 ) lr_has_car = 0;
 
         #(`CYC * 10 ) lr_has_car = 1;
         #(`CYC * 30 ) lr_has_car = 0;
 
-        #(`CYC * 300 ) $finish();
+        #(`CYC * 100 ) $finish();
 
     end
 

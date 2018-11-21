@@ -106,7 +106,7 @@ module Traffic_Light_Controller (clk, rst_n, lr_has_car, hw_light, lr_light, sta
         end
       end
       `LR_RED_HW_RED:begin
-        next_state = `LR_GREEN_25_CYCLE_PERIOD;
+        next_state = `HW_GREEN_25_CYCLE_PERIOD;
         next_hw_light = 3'b001;
       end
       default:begin

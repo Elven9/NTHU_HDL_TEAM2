@@ -2,12 +2,16 @@
 `define OPERATION 2'b01
 `define CANCEL 2'b10
 
-module VendingMachineFPGA(clk, RESET_in, CANCEL_in, coin_5_in, coin_10_in, coin_50_in, segment_7, avaliable_drink, an, PS2_DATA, PS2_CLK);
+module VendingMachineFPGA(clk, RESET_in, CANCEL_in, coin_5_in, coin_10_in, coin_50_in, segment_7, avaliable_drink, an, PS2_DATA, PS2_CLK, dp);
   input clk, RESET_in, CANCEL_in;
   input coin_5_in, coin_10_in, coin_50_in;
   output reg [6:0] segment_7;
   output [3:0] avaliable_drink;
   output reg [3:0] an;
+  output dp;
+  
+  // DP assignment
+  assign dp = 1'b1;
 
   // Keyboard
   inout wire PS2_DATA;
@@ -37,10 +41,10 @@ module VendingMachineFPGA(clk, RESET_in, CANCEL_in, coin_5_in, coin_10_in, coin_
   switch_pulse pulse3 (.clk(clk), .inSignal(coin_5_in), .filteredSignal(coin_5));
   switch_pulse pulse4 (.clk(clk), .inSignal(coin_10_in), .filteredSignal(coin_10));
   switch_pulse pulse5 (.clk(clk), .inSignal(coin_50_in), .filteredSignal(coin_50));
-  switch_pulse pulse6 (.clk(clk), .inSignal(key_down[9'b000011101]), .filteredSignal(coffee));
-  switch_pulse pulse7 (.clk(clk), .inSignal(key_down[9'b000011100]), .filteredSignal(coke));
-  switch_pulse pulse8 (.clk(clk), .inSignal(key_down[9'b000100011]), .filteredSignal(oolong));
-  switch_pulse pulse9 (.clk(clk), .inSignal(key_down[9'b000101100]), .filteredSignal(water));
+  OnePulse pulse6 (.clock(clk), .signal(key_down[9'b000011100]), .signal_single_pulse(coffee));
+  OnePulse pulse7 (.clock(clk), .signal(key_down[9'b000011011]), .signal_single_pulse(coke));
+  OnePulse pulse8 (.clock(clk), .signal(key_down[9'b000100011]), .signal_single_pulse(oolong));
+  OnePulse pulse9 (.clock(clk), .signal(key_down[9'b000101011]), .signal_single_pulse(water));
 
   // Vending Machine
   wire [7:0] money;
@@ -77,7 +81,7 @@ module VendingMachineFPGA(clk, RESET_in, CANCEL_in, coin_5_in, coin_10_in, coin_
         an <= 4'b1110;
     end
     else begin
-        segment_7 <= next_out;
+        segment_7 <= next_segment;
         an <= next_an;
     end
   end
@@ -89,11 +93,11 @@ module VendingMachineFPGA(clk, RESET_in, CANCEL_in, coin_5_in, coin_10_in, coin_
             next_an = 4'b1101;
         end
         4'b1101:begin
-            next_segment = 7'1111111;
+            next_segment = 7'b1111111;
             next_an = 4'b1011;
         end
         4'b1011:begin
-            next_segment = 7'1111111;
+            next_segment = 7'b1111111;
             next_an = 4'b0111;
         end
         4'b0111:begin
@@ -114,11 +118,13 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
   input coin_5, coin_10, coin_50;
   input coke, oolong, water, coffee;
   output [7:0] money;
-  output [3:0] avaliable_drink;
+  output reg [3:0] avaliable_drink;
 
   // Out Money Display
   reg [7:0] cur_m, next_m;
   reg [3:0] cur_ad, next_ad;
+  
+  assign money = cur_m;
 
   // State
   reg [1:0] state, next_state;
@@ -162,7 +168,9 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
           next_state = `OPERATION;
           if (coke) begin
             if (cur_m >= 8'b00100000) begin
-              next_m = { cur_m[7:4] - 2, cur[3:0] };
+              next_m[7:4] = cur_m[7:4] - 2;
+              next_m[3:0] = cur_m[3:0];
+              next_state = `CANCEL;
             end
             else begin
               next_m = cur_m;
@@ -170,7 +178,8 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
           end
           else if (oolong) begin
             if (cur_m >= 8'b00100101) begin
-              next_m = { cur_m[3:0] == 4'd5 ? cur_m[7:4] - 2 : cur_m[7:4] - 3, cur[3:0] == 4'd5 ? 4'd0 : 4'd5 };
+              next_m = { cur_m[3:0] == 4'd5 ? cur_m[7:4] - 2 : cur_m[7:4] - 3, cur_m[3:0] == 4'd5 ? 4'd0 : 4'd5 };
+              next_state = `CANCEL;
             end
             else begin
               next_m = cur_m;
@@ -178,7 +187,8 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
           end
           else if (water) begin
             if (cur_m >= 8'b00110000) begin
-              next_m = { cur_m[7:4] - 3, cur[3:0] };
+              next_m = { cur_m[7:4] - 3, cur_m[3:0] };
+              next_state = `CANCEL;
             end
             else begin
               next_m = cur_m;
@@ -186,7 +196,8 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
           end
           else if (coffee) begin
             if (cur_m >= 8'b01010101) begin
-              next_m = { cur_m[3:0] == 4'd5 ? cur_m[7:4] - 5 : cur_m[7:4] - 6, cur[3:0] == 4'd5 ? 4'd0 : 4'd5 };
+              next_m = { cur_m[3:0] == 4'd5 ? cur_m[7:4] - 5 : cur_m[7:4] - 6, cur_m[3:0] == 4'd5 ? 4'd0 : 4'd5 };
+              next_state = `CANCEL;
             end
             else begin
               next_m = cur_m;
@@ -194,6 +205,27 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
           end
           else begin
             next_m = cur_m;
+             // Add Money
+                       if (coin_5) begin
+                         next_m[3:0] = cur_m[7:4] == 8 || cur_m[3:0] == 4'd5 ? 0 : 4'd5;
+                         if (cur_m[3:0] == 4'd5) begin
+                           next_m[7:4] = cur_m >= 8'b01110101 ? 4'd8 : cur_m[7:4] + 1;
+                         end
+                         else begin
+                           next_m[7:4] = cur_m[7:4];
+                         end
+                       end
+                       else if (coin_10) begin
+                         next_m[3:0] = cur_m >= 8'b01110000 ? 0 : cur_m[3:0];
+                         next_m[7:4] = cur_m >= 8'b01110000 ? 4'd8 : cur_m[7:4] + 1;
+                       end
+                       else if (coin_50) begin
+                         next_m[3:0] = cur_m >= 8'b00110000 ? 0 : cur_m[3:0];
+                         next_m[7:4] = cur_m >= 8'b00110000 ? 4'd8 : cur_m[7:4] + 5;
+                       end
+                       else begin
+                         next_m = cur_m;
+                       end
           end
         end
       end
@@ -201,7 +233,9 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
         next_counter = counter == 100000000 ? 0 : counter + 1;
         if (cur_m > 0) begin
           if (counter == 100000000) begin
-            next_m = { cur_m[3:0] == 0 ? cur[7:4] - 1 : cur[7:4], cur_m[3:0] == 0 ? 5 : 0 };
+            next_m[7:4] = cur_m[3:0] == 0 ? cur_m[7:4] - 4'b0001 : cur_m[7:4];
+            next_m[3:0] = cur_m[3:0] == 0 ? 5 : 0;
+            next_counter = 0;
           end
           else begin
             next_m = cur_m;
@@ -215,37 +249,17 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
       default: state = next_state;
     endcase
 
-    // Add Money
-    if (coin_5) begin
-      next_m[3:0] = cur_m[3:0] == 4'd5 ? 0 : 4'd5;
-      if (cur_m[3:0] == 4'd5) begin
-        next_m[7:4] = cur_m[7:4] >= 4'd8 ? 4'd8 : cur_m[7:4] + 1;
-      end
-      else begin
-        next_m[7:4] = cur_m[7:4];
-      end
-    end
-    else if (coin_10) begin
-      next_m[7:4] = cur_m[7:4] >= 4'd8 ? 4'd8 : cur_m[7:4] + 1;
-    end
-    else if (coin_50) begin
-      next_m[7:4] = cur_m[7:4] >= 4'd3 ? 4'd8 : cur_m[7:4] + 5;
-    end
-    else begin
-      next_m = cur_m;
-    end
-
     // Avaliable Drink
-    if (cur_m[7:4] >= 2 && cur[3:0] >= 0) begin
+    if (cur_m[7:4] == 2 && cur_m[3:0] == 0) begin
       avaliable_drink = 4'b0100;
     end
-    else if (cur_m[7:4] >= 2 && cur[3:0] >= 5) begin
+    else if (cur_m[7:4] == 2 && cur_m[3:0] == 5) begin
       avaliable_drink = 4'b0110;
     end
-    else if (cur_m[7:4] >= 3 && cur[3:0] >= 0) begin
+    else if (cur_m[7:4] >= 3 && cur_m[7:4] <= 5 && !(cur_m[7:4] == 5 && cur_m[3:0] == 5)) begin
       avaliable_drink = 4'b0111;
     end
-    else if (cur_m[7:4] >= 5 && cur[3:0] >= 5) begin
+    else if (cur_m[7:4] >= 5) begin
       avaliable_drink = 4'b1111;
     end
     else begin
