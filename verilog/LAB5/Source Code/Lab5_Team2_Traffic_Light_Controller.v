@@ -1,25 +1,24 @@
 `timescale 1ns/1ps
 
 // Define State Name
-`define IDLE 4'b0000
-`define HW_GREEN_25_CYCLE_PERIOD 4'b0001
-`define HW_GREEN_FREE_PERIOD 4'b0010
-`define HW_YELLOW_5_CYCLE_PERIOD 4'b0011
-`define HW_RED_LR_RED 4'b0100
-`define LR_GREEN_25_CYCLE_PERIOD 4'b0101
-`define LR_GREEN_HAS_CAR_PERIOD 4'b0110
-`define LR_YELLOW_5_CYCLE_PERIOD 4'b0111
-`define LR_RED_HW_RED 4'b1000
+`define IDLE 3'b0000
+`define HW_GREEN_25_CYCLE_PERIOD 3'b0001
+`define HW_GREEN_FREE_PERIOD 3'b0010
+`define HW_YELLOW_5_CYCLE_PERIOD 3'b0011
+`define HW_RED_LR_RED 3'b0100
+`define LR_GREEN_25_CYCLE_PERIOD 3'b0101
+`define LR_YELLOW_5_CYCLE_PERIOD 3'b0110
+`define LR_RED_HW_RED 3'b111
 
 module Traffic_Light_Controller (clk, rst_n, lr_has_car, hw_light, lr_light, state);
   input clk, rst_n;
   input lr_has_car;
-  output reg [3:0] state;
+  output reg [2:0] state;
   output reg [3-1:0] hw_light;
   output reg [3-1:0] lr_light;
 
   // State
-  reg [3:0] next_state;
+  reg [2:0] next_state;
   reg [2:0] next_hw_light, next_lr_light;
 
   // Counter
@@ -89,21 +88,12 @@ module Traffic_Light_Controller (clk, rst_n, lr_has_car, hw_light, lr_light, sta
       end
       `LR_GREEN_25_CYCLE_PERIOD:begin
         if (count == 24) begin
-          next_state = lr_has_car ? `LR_GREEN_HAS_CAR_PERIOD : `LR_YELLOW_5_CYCLE_PERIOD;
-          next_count = 0;
-          next_lr_light = lr_has_car ? 3'b001 : 3'b010;
-        end
-        else begin
-          next_count = count + 1;
-        end
-      end
-      `LR_GREEN_HAS_CAR_PERIOD:begin
-        if (!lr_has_car) begin
           next_state = `LR_YELLOW_5_CYCLE_PERIOD;
+          next_count = 0;
           next_lr_light = 3'b010;
         end
         else begin
-          next_state = state;
+          next_count = count + 1;
         end
       end
       `LR_YELLOW_5_CYCLE_PERIOD:begin
