@@ -11,3 +11,7 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB5/mealyOne/project_1.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB5/mealyOne/Mealy_t_behav.wcfg
+source Mealy_t.tcl
