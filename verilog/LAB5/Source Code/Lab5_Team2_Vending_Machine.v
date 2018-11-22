@@ -206,26 +206,26 @@ module VendingMachine( clk, RESET, CANCEL, coin_5, coin_10, coin_50, coke, oolon
           else begin
             next_m = cur_m;
              // Add Money
-                       if (coin_5) begin
-                         next_m[3:0] = cur_m[7:4] == 8 || cur_m[3:0] == 4'd5 ? 0 : 4'd5;
-                         if (cur_m[3:0] == 4'd5) begin
-                           next_m[7:4] = cur_m >= 8'b01110101 ? 4'd8 : cur_m[7:4] + 1;
-                         end
-                         else begin
-                           next_m[7:4] = cur_m[7:4];
-                         end
-                       end
-                       else if (coin_10) begin
-                         next_m[3:0] = cur_m >= 8'b01110000 ? 0 : cur_m[3:0];
-                         next_m[7:4] = cur_m >= 8'b01110000 ? 4'd8 : cur_m[7:4] + 1;
-                       end
-                       else if (coin_50) begin
-                         next_m[3:0] = cur_m >= 8'b00110000 ? 0 : cur_m[3:0];
-                         next_m[7:4] = cur_m >= 8'b00110000 ? 4'd8 : cur_m[7:4] + 5;
-                       end
-                       else begin
-                         next_m = cur_m;
-                       end
+            if (coin_5) begin
+              next_m[3:0] = cur_m[7:4] == 8 || cur_m[3:0] == 4'd5 ? 0 : 4'd5;
+              if (cur_m[3:0] == 4'd5) begin
+                next_m[7:4] = cur_m >= 8'b01110101 ? 4'd8 : cur_m[7:4] + 1;
+              end
+              else begin
+                next_m[7:4] = cur_m[7:4];
+              end
+            end
+            else if (coin_10) begin
+              next_m[3:0] = cur_m >= 8'b01110000 ? 0 : cur_m[3:0];
+              next_m[7:4] = cur_m >= 8'b01110000 ? 4'd8 : cur_m[7:4] + 1;
+            end
+            else if (coin_50) begin
+              next_m[3:0] = cur_m >= 8'b00110000 ? 0 : cur_m[3:0];
+              next_m[7:4] = cur_m >= 8'b00110000 ? 4'd8 : cur_m[7:4] + 5;
+            end
+            else begin
+              next_m = cur_m;
+            end
           end
         end
       end
