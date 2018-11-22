@@ -31,7 +31,7 @@ module Mealy_t;
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b0;
-    // 2. Sliding ()
+    // 2. Sliding
     @ (negedge clk) in = 1'b1;
     @ (negedge clk) in = 1'b0;
     @ (negedge clk) in = 1'b1;
