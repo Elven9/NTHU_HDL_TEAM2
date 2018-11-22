@@ -1,0 +1,79 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Nov 21 17:32:41 2018
+| Host         : DESKTOP-MHVU08F running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file VendingMachineFPGA_control_sets_placed.rpt
+| Design       : VendingMachineFPGA
+| Device       : xc7a35t
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      8 |            3 |
+|     14 |            1 |
+|    16+ |            7 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              84 |           14 |
+| No           | No                    | Yes                    |             130 |           27 |
+| No           | Yes                   | No                     |              50 |           10 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             156 |           28 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------------------+------------------+------------------+----------------+
+|  Clock Signal  |                   Enable Signal                   | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+---------------------------------------------------+------------------+------------------+----------------+
+|  display/CLK   |                                                   |                  |                1 |              4 |
+|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/bits_count        | pulse1/SS[0]     |                1 |              8 |
+|  clk_IBUF_BUFG | key_de/op/E[0]                                    | pulse1/SS[0]     |                3 |              8 |
+|  clk_IBUF_BUFG | vm/next_m[5]                                      | pulse1/SS[0]     |                4 |              8 |
+|  display/CLK   |                                                   | pulse1/SS[0]     |                3 |             14 |
+|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_finish         | pulse1/SS[0]     |                1 |             16 |
+|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_valid          | pulse1/SS[0]     |                2 |             16 |
+|  clk_IBUF_BUFG | key_de/key                                        | pulse1/SS[0]     |                3 |             20 |
+|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | pulse1/SS[0]     |                4 |             22 |
+|  clk_IBUF_BUFG | vm/next_counter_0                                 | pulse1/SS[0]     |               10 |             58 |
+|  clk_IBUF_BUFG |                                                   |                  |               13 |             80 |
+|  clk_IBUF_BUFG |                                                   | pulse1/SS[0]     |               34 |            166 |
++----------------+---------------------------------------------------+------------------+------------------+----------------+
+
+
