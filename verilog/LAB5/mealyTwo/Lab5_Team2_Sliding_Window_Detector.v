@@ -11,7 +11,7 @@ module Sliding_Window_Detector (clk, rst_n, in, dec1, dec2);
   parameter S3 = 2'd3; // Trapped State
 
   reg [1:0] stateOne, nextStateOne;
-  reg [1:0] tripleOneCounter, nextCounter; 
+  reg [1:0] tripleOneCounter, nextCounter;
 
   parameter rS0 = 2'd0;
   parameter rS1 = 2'd1;
@@ -76,9 +76,10 @@ module Sliding_Window_Detector (clk, rst_n, in, dec1, dec2);
             dec1 = 1'b0;
             nextCounter = 0;
           end
-        s3:
+        S3: begin
           dec1 = 1'b0;
-          nextStateOne = s3;
+          nextStateOne = S3;
+        end
       endcase
     end
   end
@@ -121,6 +122,7 @@ module Sliding_Window_Detector (clk, rst_n, in, dec1, dec2);
           nextStateTwo = rS0;
           dec2 = 1'b0;
         end
+    endcase
   end
 
 endmodule
