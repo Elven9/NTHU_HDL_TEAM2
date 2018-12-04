@@ -27,8 +27,8 @@ module Traffic_Light_Controller (clk, rst_n, lr_has_car, hw_light, lr_light, sta
   always @(posedge clk) begin
     if (rst_n == 0) begin
       state <= `IDLE;
-      hw_light <= 3'b000;
-      lr_light <= 3'b000;
+      hw_light <= 3'b001;
+      lr_light <= 3'b100;
       count <= 0;
     end
     else begin
