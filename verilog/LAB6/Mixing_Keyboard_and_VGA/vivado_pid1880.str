@@ -1,0 +1,415 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 1880
+License: Customer
+
+Current time: 	Tue Dec 11 16:32:38 CST 2018
+Time zone: 	China Standard Time (Asia/Taipei)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 183 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	elven
+User home directory: C:/Users/elven
+User working directory: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA
+User country: 	TW
+User language: 	zh
+User locale: 	zh_TW
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/elven/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/elven/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/elven/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/vivado.log
+Vivado journal file location: 	C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/vivado.jou
+Engine tmp dir: 	C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/.Xil/Vivado-1880-DESKTOP-MHVU08F
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	148 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 484 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\elven\Desktop\Hardware Design Lab\NTHU_HDL_TEAM2\verilog\LAB6\Mixing_Keyboard_and_VGA\Mixing_Keyboard_and_VGA.xpr. Version: Vivado v2018.2 
+// [GUI Memory]: 52 MB (+51528kb) [00:00:10]
+// [Engine Memory]: 474 MB (+345381kb) [00:00:10]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 516 MB. GUI used memory: 32 MB. Current time: 12/11/18 4:32:41 PM CST
+// [Engine Memory]: 516 MB (+18982kb) [00:00:15]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 548 MB (+7254kb) [00:00:20]
+// [Engine Memory]: 583 MB (+7541kb) [00:00:24]
+// [GUI Memory]: 66 MB (+12256kb) [00:00:25]
+// Tcl Message: open_project {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/ip'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// Project name: Mixing_Keyboard_and_VGA; location: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 760.750 ; gain = 92.754 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (Lab6_Team2_Mixing_Keyboard_and_VGA.v) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (Lab6_Team2_Mixing_Keyboard_and_VGA.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (Lab6_Team2_Mixing_Keyboard_and_VGA.v), key_de : KeyboardDecoder (Lab6_Team2_Mixing_Keyboard_and_VGA.v)]", 2, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 609 MB. GUI used memory: 43 MB. Current time: 12/11/18 4:33:11 PM CST
+// [Engine Memory]: 619 MB (+7347kb) [00:01:20]
+// Elapsed time: 79 seconds
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 240, 88); // ce (w, ck)
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'c'); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 120, 176); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 120, 176, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Dec 11 16:34:36 2018] Launched synth_1... Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/runme.log [Tue Dec 11 16:34:36 2018] Launched impl_1... Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 1); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 1, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1249 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 635 MB. GUI used memory: 43 MB. Current time: 12/11/18 4:34:41 PM CST
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 385ms to process. Increasing delay to 2000 ms.
+// [GUI Memory]: 75 MB (+5760kb) [00:03:11]
+// [GUI Memory]: 79 MB (+159kb) [00:03:15]
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 119 seconds
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 112, 203); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 599, 200); // ce (w, ck)
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'v'); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 61, 262); // ce (w, ck)
+// Elapsed time: 16 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 190, 265); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 525, 140); // ce (w, ck)
+// [GUI Memory]: 86 MB (+3252kb) [00:04:46]
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 525, 140, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'c'); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 283, 128); // ce (w, ck)
+// Elapsed time: 20 seconds
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 530, 139); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 530, 139, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 527, 170); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 527, 170, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 521, 187); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 521, 187, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 533, 194); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 533, 194, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 285, 241); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 285, 241, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 157, 238); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 157, 238, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 86, 251); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 86, 251, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: RUN_COMPLETED
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'c'); // ce (w, ck)
+// ah (ck): Bitstream Generation Completed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 231, 294); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 81, 370); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 81, 370, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'c'); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 149, 184); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 149, 184, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'v'); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 242, 179); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 242, 179, false, false, false, false, true); // ce (w, ck) - Double Click
+// [GUI Memory]: 90 MB (+604kb) [00:05:49]
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 78, 201); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 78, 201, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 135, 195); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 135, 195, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 89, 216); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 89, 216, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 27, 68); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 27, 68, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 175, 64); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 212, 58); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 57, 255); // ce (w, ck)
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'c'); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 102, 262); // ce (w, ck)
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Lab6_Team2_Mixing_Keyboard_and_VGA.v", 'v'); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 234, 108); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 91, 116); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 250, 192); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 86, 220); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 259, 295); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 156, 319); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 156, 319, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 102, 329); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 102, 329, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 185, 310); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 229, 251); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183713258A 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,300 MB. GUI used memory: 53 MB. Current time: 12/11/18 4:39:58 PM CST
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [Engine Memory]: 1,300 MB (+681704kb) [00:07:32]
+dismissDialog("Auto Connect"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [GUI Memory]: 97 MB (+2409kb) [00:07:37]
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 11 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (ay, ck)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (ck): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+dismissDialog("Confirm Close"); // A (ck)
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+// Tcl Message: close_hw 
+// bx (ck):  CLose Hardware Manager : addNotify
+dismissDialog("CLose Hardware Manager"); // bx (ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 268, 94); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 106, 280); // ce (w, ck)
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 354, 290); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("Lab6_Team2_Mixing_Keyboard_and_VGA.v", 354, 290); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 4 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Dec 11 16:40:35 2018] Launched synth_1... Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/runme.log [Tue Dec 11 16:40:35 2018] Launched impl_1... Run output will be captured here: C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 270ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 274 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// PAPropertyPanels.initPanels (Lab6_Team2_Mixing_Keyboard_and_VGA.v) elapsed time: 0.2s
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183713258A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 27 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (ay, ck)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (ck): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
