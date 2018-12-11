@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1540455854">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1544075445">
   <File Type="BITSTR-BMM" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_timing_summary_init.rpt"/>
@@ -71,23 +71,15 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter.v">
+    <File Path="$PPRDIR/../Sources files/Lab3_Team2_Parameterized_Ping_Pong_Counter.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Sources files/ Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga.v">
+    <File Path="$PPRDIR/../Sources files/Lab3_Team2_Parameterized_Ping_Pong_Counter_fpga.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Sources files/Lab3_TeamX_Parameterized_Ping_Pong_Counter_t.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -96,6 +88,7 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

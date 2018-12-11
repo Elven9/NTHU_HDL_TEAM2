@@ -100,6 +100,7 @@ module Traffic_Light_Controller (clk, rst_n, lr_has_car, hw_light, lr_light, sta
         if (count == 4) begin
           next_state = `LR_RED_HW_RED;
           next_lr_light = 3'b100;
+          next_count = 0;
         end
         else begin
           next_count = count + 1;
