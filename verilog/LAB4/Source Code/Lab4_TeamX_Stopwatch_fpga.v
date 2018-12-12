@@ -216,10 +216,10 @@ module Time_Counter(clk, reset, start, minute, second, ten_second);
         end
       end 
       default: begin
-        next_state <= cur_state;
-        next_min <= cur_min;
-        next_sec <= cur_sec;
-        next_ten_sec <= cur_ten_sec;
+        next_state = cur_state;
+        next_min = cur_min;
+        next_sec = cur_sec;
+        next_ten_sec = cur_ten_sec;
       end
     endcase
   end

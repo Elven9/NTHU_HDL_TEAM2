@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Thu Oct 25 16:26:20 2018
+| Date             : Thu Dec  6 13:53:09 2018
 | Host             : DESKTOP-MHVU08F running 64-bit major release  (build 9200)
 | Command          : report_power -file Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_power_routed.rpt -pb Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_power_summary_routed.pb -rpx Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga_power_routed.rpx
 | Design           : Lab3_TeamX_Parameterized_Ping_Pong_Counter_fpga
