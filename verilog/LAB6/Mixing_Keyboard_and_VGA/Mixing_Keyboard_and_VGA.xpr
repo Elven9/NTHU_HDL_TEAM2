@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="1e15a99656954ca2967653e682b45f02"/>

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/blk_mem_gen_0_synth_1'
+HD_PWD='C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/blk_mem_gen_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
