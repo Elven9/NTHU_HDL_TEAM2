@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Dec 12 20:58:28 2018
-# Process ID: 9064
+# Start of session at: Thu Dec 13 14:18:53 2018
+# Process ID: 12872
 # Current directory: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/top.vds
@@ -15,14 +15,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6092 
+INFO: Helper process launched with PID 1844 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 386.969 ; gain = 99.320
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 387.129 ; gain = 99.160
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:1]
 	Parameter keyH bound to: 9'b000110011 
 	Parameter keyV bound to: 9'b000101010 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:409]
+	Parameter keyP bound to: 9'b001001101 
+INFO: [Synth 8-6157] synthesizing module 'switch_pulse' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:324]
+INFO: [Synth 8-6155] done synthesizing module 'switch_pulse' (1#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:324]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:436]
 	Parameter INIT bound to: 2'b00 
 	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
 	Parameter GET_SIGNAL_DOWN bound to: 2'b10 
@@ -30,31 +33,31 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/Administrat
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-9064-DESKTOP-2O2EO7D/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (1#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-9064-DESKTOP-2O2EO7D/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'OnePulse' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:536]
-INFO: [Synth 8-6155] done synthesizing module 'OnePulse' (2#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:536]
-INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:472]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (3#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:409]
-INFO: [Synth 8-6157] synthesizing module 'clock_divisor' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:393]
-INFO: [Synth 8-6155] done synthesizing module 'clock_divisor' (4#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:393]
-INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:114]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-12872-DESKTOP-2O2EO7D/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (2#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-12872-DESKTOP-2O2EO7D/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'OnePulse' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:563]
+INFO: [Synth 8-6155] done synthesizing module 'OnePulse' (3#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:563]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:499]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (4#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:436]
+INFO: [Synth 8-6157] synthesizing module 'clock_divisor' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:420]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divisor' (5#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:420]
+INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:115]
 	Parameter WIDTH bound to: 320 - type: integer 
 	Parameter HEIGHT bound to: 240 - type: integer 
 	Parameter INITIAL bound to: 2'b00 
 	Parameter STOP bound to: 2'b01 
 	Parameter MOVE bound to: 2'b10 
-INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:151]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:190]
-INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (5#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:114]
-INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-9064-DESKTOP-2O2EO7D/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (6#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-9064-DESKTOP-2O2EO7D/realtime/blk_mem_gen_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:323]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (7#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:323]
+INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:152]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (6#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:115]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-12872-DESKTOP-2O2EO7D/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (7#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-12872-DESKTOP-2O2EO7D/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:350]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (8#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:350]
 WARNING: [Synth 8-3848] Net data in module/entity top does not have driver. [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'top' (8#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 441.547 ; gain = 153.898
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 442.016 ; gain = 154.047
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -67,10 +70,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 441.547 ; gain = 153.898
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 442.016 ; gain = 154.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 441.547 ; gain = 153.898
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 442.016 ; gain = 154.047
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -90,16 +93,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 766.297 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 767.398 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 766.297 ; gain = 478.648
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 767.398 ; gain = 479.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 766.297 ; gain = 478.648
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 767.398 ; gain = 479.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -111,15 +114,16 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:
 Applied set_property DONT_TOUCH = true for key_de/inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for blk_mem_gen_0_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 766.297 ; gain = 478.648
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 767.398 ; gain = 479.430
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "debounceSignal" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
 INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-DSP Debug: swapped A/B pins for adder 000002306C121290
+DSP Debug: swapped A/B pins for adder 0000015C875E0930
 INFO: [Synth 8-5546] ROM "line_cnt" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -130,13 +134,13 @@ INFO: [Synth 8-5546] ROM "line_cnt" won't be mapped to RAM because it is too spa
             WAIT_RELEASE |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
-WARNING: [Synth 8-327] inferring latch for variable 'n_dir_x_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:193]
-WARNING: [Synth 8-327] inferring latch for variable 'n_dir_y_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:194]
-WARNING: [Synth 8-327] inferring latch for variable 'n_keep_dir_x_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:197]
-WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:200]
-WARNING: [Synth 8-327] inferring latch for variable 'n_keep_dir_y_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:199]
+WARNING: [Synth 8-327] inferring latch for variable 'n_dir_x_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:194]
+WARNING: [Synth 8-327] inferring latch for variable 'n_dir_y_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:195]
+WARNING: [Synth 8-327] inferring latch for variable 'n_keep_dir_x_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:198]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:201]
+WARNING: [Synth 8-327] inferring latch for variable 'n_keep_dir_y_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:200]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 766.297 ; gain = 478.648
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 767.398 ; gain = 479.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -158,8 +162,9 @@ Detailed RTL Component Info :
 	               10 Bit    Registers := 3     
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 6     
-	                1 Bit    Registers := 25    
+	                1 Bit    Registers := 19    
 +---Multipliers : 
 	                 9x32  Multipliers := 1     
 +---Muxes : 
@@ -169,8 +174,8 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit        Muxes := 2     
 	   2 Input      9 Bit        Muxes := 3     
 	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 35    
 	   4 Input      2 Bit        Muxes := 5     
-	   2 Input      2 Bit        Muxes := 34    
 	   6 Input      2 Bit        Muxes := 1     
 	   5 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 14    
@@ -187,6 +192,13 @@ Module top
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 3     
+Module switch_pulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
 Module OnePulse 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -255,10 +267,6 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element pulse6/signal_single_pulse_reg was removed.  [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:546]
-WARNING: [Synth 8-6014] Unused sequential element pulse7/signal_single_pulse_reg was removed.  [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:546]
-WARNING: [Synth 8-6014] Unused sequential element pulse8/signal_single_pulse_reg was removed.  [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:546]
-WARNING: [Synth 8-6014] Unused sequential element pulse9/signal_single_pulse_reg was removed.  [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:546]
 INFO: [Synth 8-5546] ROM "vga_inst/line_cnt" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port h_cnt[0]
 WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port v_cnt[0]
@@ -364,7 +372,7 @@ WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[413]) is unused 
 WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[412]) is unused and will be removed from module top.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 766.297 ; gain = 478.648
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 767.398 ; gain = 479.430
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -376,13 +384,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 766.781 ; gain = 479.133
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 772.457 ; gain = 484.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 787.219 ; gain = 499.570
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 792.766 ; gain = 504.797
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -394,7 +402,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 793.938 ; gain = 506.289
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 799.457 ; gain = 511.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -430,7 +438,7 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnec
 CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 793.938 ; gain = 506.289
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 799.457 ; gain = 511.488
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -443,7 +451,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 793.938 ; gain = 506.289
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 799.457 ; gain = 511.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -455,25 +463,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 793.938 ; gain = 506.289
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 799.457 ; gain = 511.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 793.938 ; gain = 506.289
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 799.457 ; gain = 511.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 793.938 ; gain = 506.289
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 799.457 ; gain = 511.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 793.938 ; gain = 506.289
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 799.457 ; gain = 511.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -498,13 +506,13 @@ Report Cell Usage:
 |5     |LUT1           |    72|
 |6     |LUT2           |   136|
 |7     |LUT3           |   267|
-|8     |LUT4           |   370|
-|9     |LUT5           |   118|
+|8     |LUT4           |   371|
+|9     |LUT5           |   119|
 |10    |LUT6           |   183|
 |11    |MUXF7          |     1|
 |12    |FDCE           |    51|
 |13    |FDPE           |     3|
-|14    |FDRE           |    50|
+|14    |FDRE           |    56|
 |15    |FDSE           |     2|
 |16    |LD             |    10|
 |17    |IBUF           |     2|
@@ -515,22 +523,23 @@ Report Instance Areas:
 +------+--------------------+----------------+------+
 |      |Instance            |Module          |Cells |
 +------+--------------------+----------------+------+
-|1     |top                 |                |  1493|
+|1     |top                 |                |  1501|
 |2     |  clk_wiz_0_inst    |clock_divisor   |    29|
 |3     |  key_de            |KeyboardDecoder |    80|
 |4     |    op              |OnePulse_2      |     3|
 |5     |  mem_addr_gen_inst |mem_addr_gen    |   134|
-|6     |  pulse10           |OnePulse        |     2|
-|7     |  pulse11           |OnePulse_0      |     2|
-|8     |  pulse5            |OnePulse_1      |     2|
-|9     |  vga_inst          |vga_controller  |   114|
+|6     |  pulse1            |OnePulse        |     2|
+|7     |  pulse2            |OnePulse_0      |     2|
+|8     |  pulse3            |OnePulse_1      |     2|
+|9     |  sw1               |switch_pulse    |     8|
+|10    |  vga_inst          |vga_controller  |   114|
 +------+--------------------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 793.938 ; gain = 506.289
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 799.457 ; gain = 511.488
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 12 critical warnings and 521 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 793.938 ; gain = 181.539
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 793.938 ; gain = 506.289
+Synthesis finished with 0 errors, 12 critical warnings and 513 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 799.457 ; gain = 186.105
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 799.457 ; gain = 511.488
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 197 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -541,11 +550,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 10 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-42 Infos, 112 Warnings, 12 Critical Warnings and 0 Errors encountered.
+45 Infos, 108 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 793.938 ; gain = 517.758
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 799.457 ; gain = 522.957
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 793.938 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 12 20:59:07 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 799.457 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 13 14:19:34 2018...

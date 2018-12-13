@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Dec 12 20:59:59 2018
+| Date         : Thu Dec 13 14:20:28 2018
 | Host         : DESKTOP-2O2EO7D running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -24,7 +24,7 @@ Table of Contents
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
 | Number of unique control sets                            |    20 |
-| Unused register locations in slices containing registers |    62 |
+| Unused register locations in slices containing registers |    58 |
 +----------------------------------------------------------+-------+
 
 
@@ -49,12 +49,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             100 |           18 |
-| No           | No                    | Yes                    |             152 |           29 |
-| No           | Yes                   | No                     |              24 |            7 |
+| No           | No                    | No                     |             112 |           20 |
+| No           | No                    | Yes                    |             152 |           33 |
+| No           | Yes                   | No                     |              24 |            6 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             130 |           23 |
-| Yes          | Yes                   | No                     |              20 |            3 |
+| Yes          | No                    | Yes                    |             130 |           24 |
+| Yes          | Yes                   | No                     |              20 |            2 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -64,26 +64,26 @@ Table of Contents
 +------------------------------------------------+---------------------------------------------------+-------------------------------+------------------+----------------+
 |                  Clock Signal                  |                   Enable Signal                   |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
 +------------------------------------------------+---------------------------------------------------+-------------------------------+------------------+----------------+
-|  clk_22_BUFG                                   |                                                   | pulse10/relay_v_reg           |                1 |              2 |
-|  clk_22_BUFG                                   |                                                   | pulse5/signal_single_pulse    |                1 |              2 |
-|  clk_22_BUFG                                   |                                                   | pulse11/relay_h_reg           |                1 |              2 |
-|  clk_wiz_0_inst/out_BUFG[0]                    |                                                   | rst_IBUF                      |                2 |              4 |
-|  mem_addr_gen_inst/n_keep_dir_x_reg[1]_i_2_n_0 |                                                   |                               |                1 |              8 |
-|  clk_IBUF_BUFG                                 | key_de/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF                      |                1 |              8 |
+|  clk_22_BUFG                                   |                                                   | pulse1/signal_single_pulse    |                1 |              2 |
+|  clk_22_BUFG                                   |                                                   | pulse2/relay_v_reg            |                1 |              2 |
+|  clk_22_BUFG                                   |                                                   | pulse3/relay_h_reg            |                1 |              2 |
+|  clk_wiz_0_inst/out_BUFG[0]                    |                                                   | sw1/AR[0]                     |                2 |              4 |
+|  clk_IBUF_BUFG                                 | key_de/inst/inst/Ps2Interface_i/bits_count        | sw1/AR[0]                     |                1 |              8 |
+|  mem_addr_gen_inst/n_keep_dir_x_reg[1]_i_2_n_0 |                                                   |                               |                3 |              8 |
 |  mem_addr_gen_inst/n_dir_x_reg[1]_i_2_n_0      |                                                   |                               |                2 |             12 |
-|  clk_IBUF_BUFG                                 | key_de/op/E[0]                                    | rst_IBUF                      |                3 |             14 |
-|  clk_IBUF_BUFG                                 | key_de/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF                      |                2 |             16 |
-|  clk_IBUF_BUFG                                 | key_de/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                      |                2 |             16 |
-|  clk_22_BUFG                                   | mem_addr_gen_inst/pos_y[7]_i_1_n_0                | rst_IBUF                      |                4 |             16 |
-|  clk_22_BUFG                                   | mem_addr_gen_inst/pos_x[8]_i_1_n_0                | rst_IBUF                      |                3 |             18 |
-|  clk_wiz_0_inst/out_BUFG[0]                    |                                                   |                               |                5 |             20 |
-|  clk_wiz_0_inst/out_BUFG[0]                    |                                                   | vga_inst/pixel_cnt[9]_i_1_n_0 |                5 |             20 |
-|  clk_wiz_0_inst/out_BUFG[0]                    | vga_inst/line_cnt                                 | vga_inst/line_cnt[9]_i_1_n_0  |                3 |             20 |
-|  clk_IBUF_BUFG                                 | key_de/key                                        | rst_IBUF                      |                3 |             20 |
-|  clk_IBUF_BUFG                                 | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF                      |                5 |             22 |
-|  clk_22_BUFG                                   |                                                   | rst_IBUF                      |                4 |             24 |
-|  clk_IBUF_BUFG                                 |                                                   |                               |               10 |             60 |
-|  clk_IBUF_BUFG                                 |                                                   | rst_IBUF                      |               22 |            122 |
+|  clk_IBUF_BUFG                                 | key_de/op/E[0]                                    | sw1/AR[0]                     |                3 |             14 |
+|  clk_22_BUFG                                   | mem_addr_gen_inst/pos_y[7]_i_1_n_0                | sw1/AR[0]                     |                3 |             16 |
+|  clk_IBUF_BUFG                                 | key_de/inst/inst/Ps2Interface_i/rx_finish         | sw1/AR[0]                     |                2 |             16 |
+|  clk_IBUF_BUFG                                 | key_de/inst/inst/Ps2Interface_i/rx_valid          | sw1/AR[0]                     |                2 |             16 |
+|  clk_22_BUFG                                   | mem_addr_gen_inst/pos_x[8]_i_1_n_0                | sw1/AR[0]                     |                4 |             18 |
+|  clk_IBUF_BUFG                                 | key_de/key                                        | sw1/AR[0]                     |                4 |             20 |
+|  clk_wiz_0_inst/out_BUFG[0]                    |                                                   |                               |                4 |             20 |
+|  clk_wiz_0_inst/out_BUFG[0]                    |                                                   | vga_inst/pixel_cnt[9]_i_1_n_0 |                4 |             20 |
+|  clk_wiz_0_inst/out_BUFG[0]                    | vga_inst/line_cnt                                 | vga_inst/line_cnt[9]_i_1_n_0  |                2 |             20 |
+|  clk_IBUF_BUFG                                 | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | sw1/AR[0]                     |                5 |             22 |
+|  clk_22_BUFG                                   |                                                   | sw1/AR[0]                     |                6 |             24 |
+|  clk_IBUF_BUFG                                 |                                                   |                               |               11 |             72 |
+|  clk_IBUF_BUFG                                 |                                                   | sw1/AR[0]                     |               24 |            122 |
 +------------------------------------------------+---------------------------------------------------+-------------------------------+------------------+----------------+
 
 

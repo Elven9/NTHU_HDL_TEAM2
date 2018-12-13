@@ -2,3 +2,6 @@ Running: xsim.dir/Mealy_t_behav/xsimk.exe -simmode gui -wdb Mealy_t_behav.wdb -s
 Design successfully loaded
 Design Loading Memory Usage: 4964 KB (Peak: 4964 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 5564 KB (Peak: 5564 KB)
+Simulation CPU Usage: 15 ms
