@@ -26,30 +26,31 @@ module top(
   // Keyboard
   wire [511:0] key_down;
   wire [8:0] last_change;
-  wire been_ready;
+  wire been_ready, filtered_rst;
+
+  switch_pulse sw1 (.clk(clk), .inSignal(rst), .filteredSignal(filtered_rst));
+
   KeyboardDecoder key_de (
     .key_down(key_down),
     .last_change(last_change),
     .key_valid(been_ready),
     .PS2_DATA(PS2_DATA),
     .PS2_CLK(PS2_CLK),
-    .rst(rst),
+    .rst(filtered_rst),
     .clk(clk)
   );
 
   reg right, left, up, down;
-  wire f_r, f_l, f_u, f_d, f_v, f_h, f_p;
+  wire f_v, f_h;
 
   parameter keyH = 9'b000110011;
   parameter keyV = 9'b000101010;
+  parameter keyP = 9'b001001101;
 
-  OnePulse pulse5 (.clock(clk), .signal(key_down[9'b001001101]), .signal_single_pulse(f_p));
-  OnePulse pulse6 (.clock(clk), .signal(key_down[9'b001101011]), .signal_single_pulse(f_l));
-  OnePulse pulse7 (.clock(clk), .signal(key_down[9'b001110100]), .signal_single_pulse(f_r));
-  OnePulse pulse8 (.clock(clk), .signal(key_down[9'b001110101]), .signal_single_pulse(f_u));
-  OnePulse pulse9 (.clock(clk), .signal(key_down[9'b001110010]), .signal_single_pulse(f_d));
-  OnePulse pulse10 (.clock(clk), .signal(key_down[keyV]), .signal_single_pulse(f_v));
-  OnePulse pulse11 (.clock(clk), .signal(key_down[keyH]), .signal_single_pulse(f_h));
+
+  OnePulse pulse1 (.clock(clk), .signal(key_down[keyP]), .signal_single_pulse(f_p));
+  OnePulse pulse2 (.clock(clk), .signal(key_down[keyV]), .signal_single_pulse(f_v));
+  OnePulse pulse3 (.clock(clk), .signal(key_down[keyH]), .signal_single_pulse(f_h));
 
   assign light = {key_down[9'b001101011], key_down[9'b001110100], key_down[9'b001110101], key_down[9'b001110010]};
 
@@ -77,7 +78,7 @@ module top(
 
   mem_addr_gen mem_addr_gen_inst(
     .clk(clk_22),
-    .rst(rst),
+    .rst(filtered_rst),
     .h_cnt(h_cnt),
     .v_cnt(v_cnt),
     .pixel_addr(pixel_addr),
@@ -101,7 +102,7 @@ module top(
 
   vga_controller   vga_inst(
     .pclk(clk_25MHz),
-    .reset(rst),
+    .reset(filtered_rst),
     .hsync(hsync),
     .vsync(vsync),
     .valid(valid),
@@ -318,6 +319,32 @@ module mem_addr_gen(
     else next_pos_y = pos_y;
   end
 
+endmodule
+
+module switch_pulse (clk, inSignal, filteredSignal);
+    input inSignal;
+    input clk;
+    output filteredSignal;
+
+    reg [3:0] delay;
+    wire debounceSignal;
+
+    reg pulse1, pulse2;
+
+    // Debounce;
+    always @ ( posedge clk ) begin
+        delay[3:1] <= delay[2:0];
+        delay[0] <= inSignal;
+    end
+    assign debounceSignal = delay == 4'b1111 ? 1 : 0;
+
+    // One Pulse;
+    always @ ( posedge clk ) begin
+        pulse1 <= debounceSignal;
+        pulse2 <= (!pulse1) & debounceSignal;
+    end
+
+    assign filteredSignal = pulse2;
 endmodule
 
 module vga_controller

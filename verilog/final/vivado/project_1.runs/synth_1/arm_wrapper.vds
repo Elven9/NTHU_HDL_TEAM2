@@ -1,0 +1,327 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec 26 12:48:39 2018
+# Process ID: 6796
+# Current directory: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1
+# Command line: vivado.exe -log arm_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_wrapper.tcl
+# Log file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/arm_wrapper.vds
+# Journal file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source arm_wrapper.tcl -notrace
+Command: synth_design -top arm_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1356 
+WARNING: [Synth 8-2254] instance name 'servo' matches net/port name [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:17]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 369.691 ; gain = 111.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'arm_wrapper' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:3]
+INFO: [Synth 8-6157] synthesizing module 'switch_pulse' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:81]
+INFO: [Synth 8-6155] done synthesizing module 'switch_pulse' (1#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:81]
+INFO: [Synth 8-6157] synthesizing module 'servo_controller' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:27]
+	Parameter START_POS bound to: 30'b000000000000011000011010100000 
+	Parameter MIDDLE_POS bound to: 30'b000000000000100100100111110000 
+	Parameter END_POS bound to: 30'b000000000000110000110101000000 
+	Parameter WAVE_LENGTH bound to: 30'b000000000111101000010010000000 
+INFO: [Synth 8-6155] done synthesizing module 'servo_controller' (2#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'arm_wrapper' (3#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:3]
+WARNING: [Synth 8-3331] design servo_controller has unconnected port isClockWise
+WARNING: [Synth 8-3331] design servo_controller has unconnected port isCounterClock
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 402.563 ; gain = 143.992
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 402.563 ; gain = 143.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 402.563 ; gain = 143.992
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.srcs/constrs_1/new/cos.xdc]
+Finished Parsing XDC File [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.srcs/constrs_1/new/cos.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.srcs/constrs_1/new/cos.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/arm_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/arm_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 724.004 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 724.004 ; gain = 465.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 724.004 ; gain = 465.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 724.004 ; gain = 465.434
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "debounceSignal" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 724.004 ; gain = 465.434
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 2     
++---Registers : 
+	               30 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module switch_pulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module servo_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     30 Bit       Adders := 2     
++---Registers : 
+	               30 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     30 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element pulse1/pulse2_reg was removed.  [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:101]
+WARNING: [Synth 8-6014] Unused sequential element pulse2/pulse2_reg was removed.  [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:101]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\servo__0/currentPos_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\servo__0/currentPos_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\servo__0/currentPos_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\servo__0/currentPos_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (pulse1/delay_reg[3]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse1/delay_reg[2]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse1/delay_reg[1]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse1/delay_reg[0]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse1/pulse1_reg) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse2/delay_reg[3]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse2/delay_reg[2]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse2/delay_reg[1]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse2/delay_reg[0]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (pulse2/pulse1_reg) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (servo__0/currentPos_reg[3]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (servo__0/currentPos_reg[2]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (servo__0/currentPos_reg[1]) is unused and will be removed from module arm_wrapper.
+WARNING: [Synth 8-3332] Sequential element (servo__0/currentPos_reg[0]) is unused and will be removed from module arm_wrapper.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 724.004 ; gain = 465.434
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 734.867 ; gain = 476.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 735.016 ; gain = 476.445
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 745.133 ; gain = 486.563
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 745.133 ; gain = 486.563
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 745.133 ; gain = 486.563
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 745.133 ; gain = 486.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 745.133 ; gain = 486.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 745.133 ; gain = 486.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 745.133 ; gain = 486.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    24|
+|3     |LUT1   |    27|
+|4     |LUT2   |    11|
+|5     |LUT3   |     4|
+|6     |LUT4   |    20|
+|7     |LUT5   |     3|
+|8     |LUT6   |    35|
+|9     |FDRE   |    49|
+|10    |FDSE   |     6|
+|11    |IBUF   |     2|
+|12    |OBUF   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+-----------------+------+
+|      |Instance   |Module           |Cells |
++------+-----------+-----------------+------+
+|1     |top        |                 |   183|
+|2     |  pulse3   |switch_pulse     |     8|
+|3     |  servo__0 |servo_controller |   171|
++------+-----------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 745.133 ; gain = 486.563
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 745.133 ; gain = 165.121
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 745.133 ; gain = 486.563
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 757.195 ; gain = 511.449
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/arm_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file arm_wrapper_utilization_synth.rpt -pb arm_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 757.195 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 26 12:49:09 2018...

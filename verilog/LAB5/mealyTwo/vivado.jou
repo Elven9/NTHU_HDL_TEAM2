@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Nov 23 01:43:44 2018
-# Process ID: 4300
+# Start of session at: Thu Dec  6 00:15:04 2018
+# Process ID: 15764
 # Current directory: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB5/mealyTwo
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11840 C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB5\mealyTwo\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13404 C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\LAB5\mealyTwo\project_1.xpr
 # Log file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB5/mealyTwo/vivado.log
 # Journal file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB5/mealyTwo\vivado.jou
 #-----------------------------------------------------------
