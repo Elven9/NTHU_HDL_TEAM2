@@ -71,9 +71,11 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.cache/wt [current_project]
   set_property parent.project_path C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.xpr [current_project]
+  set_property ip_repo_paths C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/ip [current_project]
   set_property ip_output_repo C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/arm_wrapper.dcp
+  read_ip -quiet C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
   read_xdc C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.srcs/constrs_1/new/cos.xdc
   link_design -top arm_wrapper -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb

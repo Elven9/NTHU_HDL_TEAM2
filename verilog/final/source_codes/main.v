@@ -3,18 +3,39 @@
 module arm_wrapper (
   input clk,
   input buttonMiddle,
-  input buttonLeft,
-  input buttonRight,
+  inout wire PS2_DATA,
+  inout wire PS2_CLK,
   output servo
 );
 
-
-  wire isClockWise, isCounterClock, rst;
-  switch_pulse pulse1 (.clk(clk), .inSignal(buttonLeft), .filteredSignal(isClockWise));
-  switch_pulse pulse2 (.clk(clk), .inSignal(buttonRight), .filteredSignal(isCounterClock));
+  // Reset Button
+  wire rst;
   switch_pulse pulse3 (.clk(clk), .inSignal(buttonMiddle), .filteredSignal(rst));
 
-  servo_controller servo (
+  // Keyboard
+  wire [511:0] key_down;
+  wire [8:0] last_change;
+  wire been_ready;
+  KeyboardDecoder key_de (
+    .key_down(key_down),
+    .last_change(last_change),
+    .key_valid(been_ready),
+    .PS2_DATA(PS2_DATA),
+    .PS2_CLK(PS2_CLK),
+    .rst(rst),
+    .clk(clk)
+  );
+
+  // Check ClockWise or CounterClock, which depend on pressed button
+  wire isClockWise, isCounterClock;
+  parameter buttonUp = 9'b001110101;
+  parameter buttonDown = 9'b001110010;
+
+  assign isClockWise = key_down[buttonUp];
+  assign isCounterClock = key_down[buttonDown];
+
+  // Connect to servo_controller
+  servo_controller ser (
     .clk(clk),
     .rst(rst),
     .isClockWise(isClockWise),
@@ -24,82 +45,3 @@ module arm_wrapper (
 
 endmodule
 
-module servo_controller (
-  input clk,
-  input rst,
-  input isClockWise,
-  input isCounterClock,
-  output reg servo
-  );
-
-  parameter START_POS = 30'd10_0000, MIDDLE_POS = 30'd15_0000, END_POS = 30'd20_0000, WAVE_LENGTH = 30'd200_0000;
-  reg [29:0] count;
-  reg [29:0] currentPos, nextPos;
-  reg dir, nextDir;
-
-  always @(posedge clk) begin
-    if (rst) begin
-      count <= 30'd0;
-      currentPos <= START_POS;
-      servo <= 1'b0;
-      dir <= 1'b0;
-    end
-    else begin
-      count <= (count < WAVE_LENGTH) ? count + 1'b1 : 30'd0;
-      currentPos <= nextPos;
-      servo <= (count < currentPos) ? 1'b1 : 1'b0;
-      dir <= nextDir;
-    end
-  end
-
-  always @(*) begin
-    if (dir == 1'b0) begin
-      if (currentPos >= END_POS) begin
-        nextDir = 1'b1;
-        nextPos = currentPos - 30'd10_0000;
-      end
-      else begin
-        nextDir = 1'b0;
-        nextPos = currentPos + 30'd10_0000;
-      end
-    end
-    else begin
-      if (currentPos <= START_POS) begin
-        nextDir = 1'b0;
-        nextPos = currentPos + 30'd10_0000;
-      end
-      else begin
-        nextDir = 1'b1;
-        nextPos = currentPos - 30'd10_0000;
-      end
-    end
-  end
-
-endmodule
-
-
-module switch_pulse (clk, inSignal, filteredSignal);
-    input inSignal;
-    input clk;
-    output filteredSignal;
-
-    reg [3:0] delay;
-    wire debounceSignal;
-
-    reg pulse1, pulse2;
-
-    // Debounce;
-    always @ ( posedge clk ) begin
-        delay[3:1] <= delay[2:0];
-        delay[0] <= inSignal;
-    end
-    assign debounceSignal = delay == 4'b1111 ? 1 : 0;
-
-    // One Pulse;
-    always @ ( posedge clk ) begin
-        pulse1 <= debounceSignal;
-        pulse2 <= (!pulse1) & debounceSignal;
-    end
-
-    assign filteredSignal = pulse2;
-endmodule
