@@ -65,20 +65,19 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.xpr [current_project]
-  set_property ip_repo_paths C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/ip [current_project]
-  set_property ip_output_repo C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.cache/ip [current_project]
+  set_property webtalk.parent_dir {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.xpr} [current_project]
+  set_property ip_repo_paths {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/ip}} [current_project]
+  set_property ip_output_repo {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/top.dcp
-  read_ip -quiet C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
-  read_ip -quiet C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-  read_xdc C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/LAB6/Basys3_Master.xdc
+  add_files -quiet {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/top.dcp}}
+  read_ip -quiet {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
+  read_ip -quiet {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci}}
+  read_xdc {{C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Basys3_Master.xdc}}
   link_design -top top -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
