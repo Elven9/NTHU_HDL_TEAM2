@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Dec 28 01:02:06 2018
+# Process ID: 4616
+# Current directory: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9480 C:\Users\Administrator\verilog\NTHU_HDL_TEAM2\verilog\final\vivado\project_1.xpr
+# Log file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/vivado.log
+# Journal file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/impl_1/arm_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/impl_1/arm_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/impl_1/arm_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/impl_1/arm_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/impl_1/arm_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+add_files -norecurse {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/keyboard.v C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/servo.v C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/switchPulse.v C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/onePulse.v C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/clockDivider.v C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/impl_1/arm_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/impl_1/arm_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/impl_1/arm_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
