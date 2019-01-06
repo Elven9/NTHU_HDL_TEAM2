@@ -6,7 +6,7 @@ module servo_controller (
   output reg servo
   );
 
-  parameter START_POS = 30'd10_0000, END_POS = 30'd20_0000, WAVE_LENGTH = 30'd200_0000;
+  parameter START_POS = 30'd5_0000, END_POS = 30'd25_0000, MID_POS = 30'd15_0000 ,WAVE_LENGTH = 30'd200_0000;
   parameter ONE_MOVE = 30'd5000;
   reg [29:0] count;
   reg [29:0] currentPos, nextPos;
@@ -38,7 +38,7 @@ module servo_controller (
   // Make moter move slower
   always @(posedge slow_clk) begin
     if (relay_rst) begin
-      currentPos <= START_POS;
+      currentPos <= MID_POS;
     end
     else begin
       currentPos <= nextPos;

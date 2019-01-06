@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Dec 28 01:41:34 2018
+| Date         : Sun Jan  6 22:19:52 2019
 | Host         : DESKTOP-2O2EO7D running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file arm_wrapper_control_sets_placed.rpt
 | Design       : arm_wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    10 |
-| Unused register locations in slices containing registers |    20 |
+| Number of unique control sets                            |    25 |
+| Unused register locations in slices containing registers |    62 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,10 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      2 |            1 |
-|      8 |            1 |
-|    16+ |            8 |
+|      2 |            4 |
+|      4 |            1 |
+|      8 |            3 |
+|    16+ |           17 |
 +--------+--------------+
 
 
@@ -46,31 +47,46 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              16 |            4 |
-| No           | No                    | Yes                    |             128 |           30 |
-| No           | Yes                   | No                     |             106 |           19 |
-| Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              82 |           14 |
-| Yes          | Yes                   | No                     |              56 |            7 |
+| No           | No                    | No                     |              20 |            5 |
+| No           | No                    | Yes                    |             164 |           32 |
+| No           | Yes                   | No                     |             432 |           77 |
+| Yes          | No                    | No                     |              32 |            4 |
+| Yes          | No                    | Yes                    |              98 |           18 |
+| Yes          | Yes                   | No                     |             248 |           31 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------+---------------------------------------------------+----------------------+------------------+----------------+
-|   Clock Signal  |                   Enable Signal                   |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
-+-----------------+---------------------------------------------------+----------------------+------------------+----------------+
-|  ser/cd1/outClk |                                                   | pulse3/rst           |                1 |              2 |
-|  clk_IBUF_BUFG  | key_de/inst/inst/Ps2Interface_i/bits_count        | pulse3/rst           |                1 |              8 |
-|  clk_IBUF_BUFG  |                                                   |                      |                4 |             16 |
-|  clk_IBUF_BUFG  | key_de/inst/inst/Ps2Interface_i/rx_valid          | pulse3/rst           |                2 |             16 |
-|  clk_IBUF_BUFG  | key_de/inst/inst/Ps2Interface_i/rx_finish         | pulse3/rst           |                2 |             16 |
-|  clk_IBUF_BUFG  | key_de/key                                        | pulse3/rst           |                4 |             20 |
-|  clk_IBUF_BUFG  | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | pulse3/rst           |                5 |             22 |
-|  clk_IBUF_BUFG  |                                                   | ser/count[0]_i_1_n_0 |                6 |             42 |
-|  ser/cd1/outClk | ser/currentPos[2]_i_1_n_0                         | ser/relay_rst        |                7 |             56 |
-|  clk_IBUF_BUFG  |                                                   | pulse3/rst           |               42 |            190 |
-+-----------------+---------------------------------------------------+----------------------+------------------+----------------+
++-------------------------+---------------------------------------------------+--------------------------------+------------------+----------------+
+|       Clock Signal      |                   Enable Signal                   |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++-------------------------+---------------------------------------------------+--------------------------------+------------------+----------------+
+|  ser4/cd1/relay_rst_reg |                                                   | pulse3/rst                     |                1 |              2 |
+|  ser2/cd1/relay_rst_reg |                                                   | pulse3/rst                     |                1 |              2 |
+|  ser3/cd1/relay_rst_reg |                                                   | pulse3/rst                     |                1 |              2 |
+|  ser1/cd1/outClk        |                                                   | pulse3/rst                     |                1 |              2 |
+|  load_BUFG              |                                                   |                                |                1 |              4 |
+|  load_BUFG              |                                                   | I_RS232RX/counter[3]_i_1_n_0   |                1 |              8 |
+|  load_BUFG              | I_RS232RX/counter12_out                           | I_RS232RX/Bit[3]_i_1_n_0       |                1 |              8 |
+|  clk_IBUF_BUFG          | key_de/inst/inst/Ps2Interface_i/bits_count        | pulse3/rst                     |                2 |              8 |
+|  load_BUFG              | I_RS232RX/Read_data[7]_i_2_n_0                    | I_RS232RX/Read_data[7]_i_1_n_0 |                2 |             16 |
+|  clk_IBUF_BUFG          |                                                   |                                |                4 |             16 |
+|  clk_IBUF_BUFG          | key_de/inst/inst/Ps2Interface_i/rx_finish         | pulse3/rst                     |                2 |             16 |
+|  clk_IBUF_BUFG          | key_de/inst/inst/Ps2Interface_i/rx_valid          | pulse3/rst                     |                2 |             16 |
+|  clk_IBUF_BUFG          | key_de/op/E[0]                                    | pulse3/rst                     |                3 |             16 |
+|  clk_IBUF_BUFG          | key_de/key                                        | pulse3/rst                     |                4 |             20 |
+|  clk_IBUF_BUFG          | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | pulse3/rst                     |                5 |             22 |
+|  load_BUFG              | I_RS232RX/Read_data[7]_i_1_n_0                    |                                |                4 |             32 |
+|  clk_IBUF_BUFG          |                                                   | ser4/count[0]_i_1__2_n_0       |                6 |             42 |
+|  clk_IBUF_BUFG          |                                                   | ser2/count[0]_i_1__0_n_0       |                6 |             42 |
+|  clk_IBUF_BUFG          |                                                   | ser3/count[0]_i_1__1_n_0       |                6 |             42 |
+|  clk_IBUF_BUFG          |                                                   | ser1/count[0]_i_1_n_0          |                6 |             42 |
+|  ser4/cd1/relay_rst_reg | ser4/currentPos[2]_i_1__0_n_0                     | ser4/relay_rst_reg_n_0         |                7 |             56 |
+|  ser2/cd1/relay_rst_reg | ser2/currentPos[2]_i_1__1_n_0                     | ser2/relay_rst_reg_n_0         |                7 |             56 |
+|  ser3/cd1/relay_rst_reg | ser3/currentPos[2]_i_1__2_n_0                     | ser3/relay_rst_reg_n_0         |                7 |             56 |
+|  ser1/cd1/outClk        | ser1/currentPos[2]_i_1_n_0                        | ser1/relay_rst                 |                7 |             56 |
+|  clk_IBUF_BUFG          |                                                   | pulse3/rst                     |               80 |            412 |
++-------------------------+---------------------------------------------------+--------------------------------+------------------+----------------+
 
 

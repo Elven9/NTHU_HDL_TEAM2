@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Dec 28 01:40:20 2018
-# Process ID: 7872
+# Start of session at: Sun Jan  6 22:18:34 2019
+# Process ID: 13028
 # Current directory: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1
 # Command line: vivado.exe -log arm_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_wrapper.tcl
 # Log file: C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/arm_wrapper.vds
@@ -15,13 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6428 
+INFO: Helper process launched with PID 11160 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 384.902 ; gain = 97.098
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 385.262 ; gain = 97.051
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'arm_wrapper' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:3]
-	Parameter buttonUp bound to: 9'b001110101 
-	Parameter buttonDown bound to: 9'b001110010 
+	Parameter buttonUp bound to: 36'b000010101000011101000100100000101101 
+	Parameter buttonDown bound to: 36'b000011100000011011000100011000101011 
 INFO: [Synth 8-6157] synthesizing module 'switch_pulse' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/switchPulse.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'switch_pulse' (1#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/switchPulse.v:1]
 INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/keyboard.v:1]
@@ -32,24 +32,32 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/Administrat
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/.Xil/Vivado-7872-DESKTOP-2O2EO7D/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (2#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/.Xil/Vivado-7872-DESKTOP-2O2EO7D/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/.Xil/Vivado-13028-DESKTOP-2O2EO7D/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (2#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/.Xil/Vivado-13028-DESKTOP-2O2EO7D/realtime/KeyboardCtrl_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'OnePulse' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/onePulse.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'OnePulse' (3#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/onePulse.v:1]
 INFO: [Synth 8-226] default block is never used [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/keyboard.v:64]
 INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (4#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/keyboard.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UART_rs232_rx' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/rx.v:1]
+	Parameter IDLE bound to: 1'b0 
+	Parameter READ bound to: 1'b1 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/rx.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'UART_rs232_rx' (5#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'UART_BaudRate_generator' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/rate.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'UART_BaudRate_generator' (6#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/rate.v:8]
 INFO: [Synth 8-6157] synthesizing module 'servo_controller' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/servo.v:1]
-	Parameter START_POS bound to: 30'b000000000000011000011010100000 
-	Parameter END_POS bound to: 30'b000000000000110000110101000000 
+	Parameter START_POS bound to: 30'b000000000000001100001101010000 
+	Parameter END_POS bound to: 30'b000000000000111101000010010000 
+	Parameter MID_POS bound to: 30'b000000000000100100100111110000 
 	Parameter WAVE_LENGTH bound to: 30'b000000000111101000010010000000 
 	Parameter ONE_MOVE bound to: 30'b000000000000000001001110001000 
 INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/clockDivider.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (5#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/clockDivider.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (7#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/clockDivider.v:2]
 WARNING: [Synth 8-567] referenced signal 'currentPos' should be on the sensitivity list [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/servo.v:49]
-INFO: [Synth 8-6155] done synthesizing module 'servo_controller' (6#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/servo.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'arm_wrapper' (7#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'servo_controller' (8#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/servo.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'arm_wrapper' (9#1) [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 438.793 ; gain = 150.988
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 439.859 ; gain = 151.648
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -62,10 +70,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 438.793 ; gain = 150.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 439.859 ; gain = 151.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 438.793 ; gain = 150.988
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 439.859 ; gain = 151.648
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -83,16 +91,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 757.090 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 771.723 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.090 ; gain = 469.285
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 771.723 ; gain = 483.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.090 ; gain = 469.285
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 771.723 ; gain = 483.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -103,7 +111,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Us
 Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for key_de/inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.090 ; gain = 469.285
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 771.723 ; gain = 483.512
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "debounceSignal" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
@@ -112,6 +120,8 @@ INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'State_reg' in module 'UART_rs232_rx'
+INFO: [Synth 8-5544] ROM "read_enable" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "nextOutClk" won't be mapped to RAM because address size (30) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -122,8 +132,16 @@ INFO: [Synth 8-5545] ROM "nextOutClk" won't be mapped to RAM because address siz
             WAIT_RELEASE |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
+WARNING: [Synth 8-327] inferring latch for variable 'read_enable_reg' [C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/rx.v:72]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                                0 |                               00
+                    READ |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'State_reg' using encoding 'sequential' in module 'UART_rs232_rx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 757.090 ; gain = 469.285
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 771.723 ; gain = 483.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -136,20 +154,25 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     30 Bit       Adders := 3     
+	   2 Input     30 Bit       Adders := 12    
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
 	              512 Bit    Registers := 1     
-	               30 Bit    Registers := 1     
+	               30 Bit    Registers := 4     
 	               10 Bit    Registers := 1     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 11    
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 22    
 +---Muxes : 
 	   2 Input    512 Bit        Muxes := 1     
-	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     30 Bit        Muxes := 4     
 	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 28    
 	   4 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -182,6 +205,19 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 8     
 	   4 Input      1 Bit        Muxes := 7     
+Module UART_rs232_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
 Module clock_divider 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -217,9 +253,18 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "ser/cd1/nextOutClk" won't be mapped to RAM because address size (30) is larger than maximum supported(25)
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\ser/currentPos_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\ser/currentPos_reg[1] )
+INFO: [Synth 8-5545] ROM "ser1/cd1/nextOutClk" won't be mapped to RAM because address size (30) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ser2/cd1/nextOutClk" won't be mapped to RAM because address size (30) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ser3/cd1/nextOutClk" won't be mapped to RAM because address size (30) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "ser4/cd1/nextOutClk" won't be mapped to RAM because address size (30) is larger than maximum supported(25)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\ser1/currentPos_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_1/\ser1/currentPos_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\ser2/currentPos_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_3/\ser2/currentPos_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\ser3/currentPos_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_5/\ser3/currentPos_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_7/\ser4/currentPos_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_7/\ser4/currentPos_reg[1] )
 WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[511]) is unused and will be removed from module arm_wrapper.
 WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[510]) is unused and will be removed from module arm_wrapper.
 WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[509]) is unused and will be removed from module arm_wrapper.
@@ -322,7 +367,7 @@ WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[413]) is unused 
 WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[412]) is unused and will be removed from module arm_wrapper.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 757.090 ; gain = 469.285
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 771.723 ; gain = 483.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -334,13 +379,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 765.309 ; gain = 477.504
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 771.723 ; gain = 483.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 765.457 ; gain = 477.652
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 771.723 ; gain = 483.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -352,7 +397,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 785.488 ; gain = 497.684
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 793.949 ; gain = 505.738
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -376,7 +421,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.488 ; gain = 497.684
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 793.949 ; gain = 505.738
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -389,7 +434,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.488 ; gain = 497.684
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 793.949 ; gain = 505.738
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -401,25 +446,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.488 ; gain = 497.684
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 793.949 ; gain = 505.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.488 ; gain = 497.684
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 793.949 ; gain = 505.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.488 ; gain = 497.684
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 793.949 ; gain = 505.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.488 ; gain = 497.684
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 793.949 ; gain = 505.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -437,41 +482,49 @@ Report Cell Usage:
 |      |Cell           |Count |
 +------+---------------+------+
 |1     |KeyboardCtrl_0 |     1|
-|2     |BUFG           |     1|
-|3     |CARRY4         |    39|
-|4     |LUT1           |    51|
-|5     |LUT2           |    19|
-|6     |LUT3           |    32|
-|7     |LUT4           |    34|
-|8     |LUT5           |    43|
-|9     |LUT6           |    10|
-|10    |FDCE           |    17|
-|11    |FDPE           |     1|
-|12    |FDRE           |    83|
-|13    |FDSE           |     6|
-|14    |IBUF           |     2|
-|15    |OBUF           |     1|
+|2     |BUFG           |     2|
+|3     |CARRY4         |   160|
+|4     |LUT1           |   118|
+|5     |LUT2           |    56|
+|6     |LUT3           |   134|
+|7     |LUT4           |   135|
+|8     |LUT5           |   164|
+|9     |LUT6           |    45|
+|10    |FDCE           |    39|
+|11    |FDPE           |     5|
+|12    |FDRE           |   326|
+|13    |FDSE           |    32|
+|14    |IBUF           |     3|
+|15    |OBUF           |    12|
 +------+---------------+------+
 
 Report Instance Areas: 
-+------+---------+-----------------+------+
-|      |Instance |Module           |Cells |
-+------+---------+-----------------+------+
-|1     |top      |                 |   351|
-|2     |  key_de |KeyboardDecoder  |    77|
-|3     |    op   |OnePulse         |     5|
-|4     |  pulse3 |switch_pulse     |     8|
-|5     |  ser    |servo_controller |   262|
-|6     |    cd1  |clock_divider    |    77|
-+------+---------+-----------------+------+
++------+------------+------------------------+------+
+|      |Instance    |Module                  |Cells |
++------+------------+------------------------+------+
+|1     |top         |                        |  1243|
+|2     |  I_BAUDGEN |UART_BaudRate_generator |    30|
+|3     |  I_RS232RX |UART_rs232_rx           |    54|
+|4     |  key_de    |KeyboardDecoder         |    70|
+|5     |    op      |OnePulse                |     3|
+|6     |  pulse3    |switch_pulse            |     8|
+|7     |  ser1      |servo_controller        |   266|
+|8     |    cd1     |clock_divider_5         |    77|
+|9     |  ser2      |servo_controller_0      |   266|
+|10    |    cd1     |clock_divider_4         |    77|
+|11    |  ser3      |servo_controller_1      |   266|
+|12    |    cd1     |clock_divider_3         |    77|
+|13    |  ser4      |servo_controller_2      |   266|
+|14    |    cd1     |clock_divider           |    77|
++------+------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.488 ; gain = 497.684
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 793.949 ; gain = 505.738
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 511 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 785.488 ; gain = 179.387
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 785.488 ; gain = 497.684
+Synthesis finished with 0 errors, 0 critical warnings and 507 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 793.949 ; gain = 173.875
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 793.949 ; gain = 505.738
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 41 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 163 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -479,11 +532,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-41 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+58 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 787.059 ; gain = 510.723
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 793.949 ; gain = 517.207
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/vivado/project_1.runs/synth_1/arm_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file arm_wrapper_utilization_synth.rpt -pb arm_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 787.059 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 28 01:40:55 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 793.949 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jan  6 22:19:12 2019...
