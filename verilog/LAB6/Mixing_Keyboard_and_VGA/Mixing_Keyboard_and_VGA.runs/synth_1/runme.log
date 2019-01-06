@@ -557,3 +557,563 @@ INFO: [Common 17-1381] The checkpoint 'C:/Users/Administrator/verilog/NTHU_HDL_T
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 799.457 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Thu Dec 13 14:19:34 2018...
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15644 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 386.855 ; gain = 99.121
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:1]
+	Parameter keyH bound to: 9'b000110011 
+	Parameter keyV bound to: 9'b000101010 
+	Parameter keyP bound to: 9'b001001101 
+INFO: [Synth 8-6157] synthesizing module 'switch_pulse' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:324]
+INFO: [Synth 8-6155] done synthesizing module 'switch_pulse' (1#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:324]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:436]
+	Parameter INIT bound to: 2'b00 
+	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
+	Parameter GET_SIGNAL_DOWN bound to: 2'b10 
+	Parameter WAIT_RELEASE bound to: 2'b11 
+	Parameter IS_INIT bound to: 8'b10101010 
+	Parameter IS_EXTEND bound to: 8'b11100000 
+	Parameter IS_BREAK bound to: 8'b11110000 
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-16060-DESKTOP-MHVU08F/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (2#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-16060-DESKTOP-MHVU08F/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'OnePulse' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:563]
+INFO: [Synth 8-6155] done synthesizing module 'OnePulse' (3#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:563]
+INFO: [Synth 8-226] default block is never used [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:499]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (4#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:436]
+INFO: [Synth 8-6157] synthesizing module 'clock_divisor' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:420]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divisor' (5#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:420]
+INFO: [Synth 8-6157] synthesizing module 'mem_addr_gen' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:115]
+	Parameter WIDTH bound to: 320 - type: integer 
+	Parameter HEIGHT bound to: 240 - type: integer 
+	Parameter INITIAL bound to: 2'b00 
+	Parameter STOP bound to: 2'b01 
+	Parameter MOVE bound to: 2'b10 
+INFO: [Synth 8-226] default block is never used [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:152]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:191]
+INFO: [Synth 8-6155] done synthesizing module 'mem_addr_gen' (6#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:115]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-16060-DESKTOP-MHVU08F/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (7#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/.Xil/Vivado-16060-DESKTOP-MHVU08F/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:350]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (8#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:350]
+WARNING: [Synth 8-3848] Net data in module/entity top does not have driver. [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 441.805 ; gain = 154.070
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 441.805 ; gain = 154.070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 441.805 ; gain = 154.070
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
+Finished Parsing XDC File [c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
+Parsing XDC File [c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'blk_mem_gen_0_inst'
+Finished Parsing XDC File [c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'blk_mem_gen_0_inst'
+Parsing XDC File [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.146 . Memory (MB): peak = 767.797 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:54 . Memory (MB): peak = 767.797 ; gain = 480.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:54 . Memory (MB): peak = 767.797 ; gain = 480.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  {c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  {c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  {c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  {c:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc}, line 4).
+Applied set_property DONT_TOUCH = true for key_de/inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for blk_mem_gen_0_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:54 . Memory (MB): peak = 767.797 ; gain = 480.063
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "debounceSignal" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+DSP Debug: swapped A/B pins for adder 0000015D3653D7A0
+INFO: [Synth 8-5546] ROM "line_cnt" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                               00 |                               00
+         WAIT_FOR_SIGNAL |                               01 |                               01
+         GET_SIGNAL_DOWN |                               10 |                               10
+            WAIT_RELEASE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
+WARNING: [Synth 8-327] inferring latch for variable 'n_dir_x_reg' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:194]
+WARNING: [Synth 8-327] inferring latch for variable 'n_dir_y_reg' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:195]
+WARNING: [Synth 8-327] inferring latch for variable 'n_keep_dir_x_reg' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:198]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:201]
+WARNING: [Synth 8-327] inferring latch for variable 'n_keep_dir_y_reg' [C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Source Code/Lab6_Team2_Mixing_Keyboard_and_VGA.v:200]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:55 . Memory (MB): peak = 767.797 ; gain = 480.063
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	              512 Bit    Registers := 1     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 19    
++---Multipliers : 
+	                 9x32  Multipliers := 1     
++---Muxes : 
+	   2 Input    512 Bit        Muxes := 1     
+	   4 Input     17 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 35    
+	   4 Input      2 Bit        Muxes := 5     
+	   6 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 14    
+	   4 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module switch_pulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module OnePulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module KeyboardDecoder 
+Detailed RTL Component Info : 
++---Registers : 
+	              512 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input    512 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 7     
+Module mem_addr_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
++---Multipliers : 
+	                 9x32  Multipliers := 1     
++---Muxes : 
+	   4 Input     17 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 31    
+	   6 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module vga_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_inst/line_cnt" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port h_cnt[0]
+WARNING: [Synth 8-3331] design mem_addr_gen has unconnected port v_cnt[0]
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[511]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[510]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[509]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[508]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[507]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[506]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[505]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[504]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[503]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[502]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[501]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[500]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[499]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[498]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[497]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[496]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[495]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[494]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[493]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[492]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[491]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[490]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[489]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[488]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[487]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[486]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[485]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[484]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[483]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[482]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[481]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[480]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[479]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[478]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[477]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[476]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[475]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[474]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[473]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[472]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[471]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[470]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[469]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[468]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[467]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[466]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[465]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[464]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[463]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[462]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[461]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[460]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[459]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[458]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[457]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[456]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[455]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[454]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[453]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[452]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[451]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[450]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[449]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[448]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[447]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[446]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[445]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[444]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[443]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[442]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[441]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[440]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[439]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[438]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[437]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[436]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[435]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[434]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[433]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[432]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[431]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[430]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[429]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[428]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[427]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[426]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[425]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[424]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[423]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[422]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[421]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[420]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[419]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[418]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[417]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[416]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[415]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[414]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[413]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (key_de/key_down_reg[412]) is unused and will be removed from module top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:01:02 . Memory (MB): peak = 767.797 ; gain = 480.063
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:18 . Memory (MB): peak = 774.258 ; gain = 486.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:01:18 . Memory (MB): peak = 794.426 ; gain = 506.691
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:01:19 . Memory (MB): peak = 801.172 ; gain = 513.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[11]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[10]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[9]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[8]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module blk_mem_gen_0_inst has unconnected pin dina[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:20 . Memory (MB): peak = 801.172 ; gain = 513.438
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:20 . Memory (MB): peak = 801.172 ; gain = 513.438
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:20 . Memory (MB): peak = 801.172 ; gain = 513.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:20 . Memory (MB): peak = 801.172 ; gain = 513.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:20 . Memory (MB): peak = 801.172 ; gain = 513.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:20 . Memory (MB): peak = 801.172 ; gain = 513.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |blk_mem_gen_0  |         1|
+|2     |KeyboardCtrl_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |KeyboardCtrl_0 |     1|
+|2     |blk_mem_gen_0  |     1|
+|3     |BUFG           |     2|
+|4     |CARRY4         |   184|
+|5     |LUT1           |    72|
+|6     |LUT2           |   136|
+|7     |LUT3           |   267|
+|8     |LUT4           |   371|
+|9     |LUT5           |   119|
+|10    |LUT6           |   183|
+|11    |MUXF7          |     1|
+|12    |FDCE           |    51|
+|13    |FDPE           |     3|
+|14    |FDRE           |    56|
+|15    |FDSE           |     2|
+|16    |LD             |    10|
+|17    |IBUF           |     2|
+|18    |OBUF           |    18|
++------+---------------+------+
+
+Report Instance Areas: 
++------+--------------------+----------------+------+
+|      |Instance            |Module          |Cells |
++------+--------------------+----------------+------+
+|1     |top                 |                |  1501|
+|2     |  clk_wiz_0_inst    |clock_divisor   |    29|
+|3     |  key_de            |KeyboardDecoder |    80|
+|4     |    op              |OnePulse_2      |     3|
+|5     |  mem_addr_gen_inst |mem_addr_gen    |   134|
+|6     |  pulse1            |OnePulse        |     2|
+|7     |  pulse2            |OnePulse_0      |     2|
+|8     |  pulse3            |OnePulse_1      |     2|
+|9     |  sw1               |switch_pulse    |     8|
+|10    |  vga_inst          |vga_controller  |   114|
++------+--------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:20 . Memory (MB): peak = 801.172 ; gain = 513.438
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 12 critical warnings and 513 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:45 . Memory (MB): peak = 801.172 ; gain = 187.445
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:21 . Memory (MB): peak = 801.172 ; gain = 513.438
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 197 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  LD => LDCE: 10 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 108 Warnings, 12 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:29 . Memory (MB): peak = 801.172 ; gain = 524.906
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/elven/Desktop/Hardware Design Lab/NTHU_HDL_TEAM2/verilog/LAB6/Mixing_Keyboard_and_VGA/Mixing_Keyboard_and_VGA.runs/synth_1/top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:00 ; elapsed = 00:00:32 . Memory (MB): peak = 801.172 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.185 . Memory (MB): peak = 801.172 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 13 15:19:04 2018...
