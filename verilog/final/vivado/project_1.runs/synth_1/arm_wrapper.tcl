@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -35,6 +34,8 @@ read_verilog -library xil_defaultlib {
   C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/clockDivider.v
   C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/keyboard.v
   C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/onePulse.v
+  C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/rate.v
+  C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/rx.v
   C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/servo.v
   C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/switchPulse.v
   C:/Users/Administrator/verilog/NTHU_HDL_TEAM2/verilog/final/source_codes/main.v
