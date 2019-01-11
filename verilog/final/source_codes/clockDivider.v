@@ -1,32 +1,34 @@
-// Generate .1s clock
-module clock_divider(rst, clk, out_clk);
-    input clk;
-    input rst;
-    output out_clk;
-    reg [29:0] count, next_count;
-    reg outClk, nextOutClk;
+// Generate 20ms clock
+module clock_divider (
+  input rst,
+  input clk,
+  output out_clk
+);
 
-    always @ ( posedge clk ) begin
-        if (rst == 1) begin
-            count <= 0;
-            outClk <= 0;
-        end
-        else begin
-            count <= next_count;
-            outClk <= nextOutClk;
-        end
+  reg [29:0] count, nextCount;
+  reg outClk, nextOutClk;
+
+  always @ ( posedge clk ) begin
+    if (rst) begin
+      count <= 0;
+      outClk <= 0;
     end
-
-    always @ ( * ) begin
-        if (count == 30'd5000000) begin
-            next_count = 0;
-            nextOutClk = !outClk;
-        end
-        else begin
-            next_count = count + 1;
-            nextOutClk = outClk;
-        end
+    else begin
+      count <= nextCount;
+      outClk <= nextOutClk;
     end
+  end
 
-    assign out_clk = outClk;
+  always @ ( * ) begin
+    if (count == 30'd5000000) begin
+      nextCount = 0;
+      nextOutClk = !outClk;
+    end
+    else begin
+      nextCount = count + 1;
+      nextOutClk = outClk;
+    end
+  end
+
+  assign out_clk = outClk;
 endmodule

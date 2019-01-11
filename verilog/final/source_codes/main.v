@@ -14,11 +14,11 @@ module arm_wrapper (
   wire rst;
   switch_pulse pulse3 (.clk(clk), .inSignal(buttonMiddle), .filteredSignal(rst));
 
-  // ------------------------------------------- Keyboard
+  ///////////////// Keyboard START //////////////////////////
   wire [511:0] key_down;
   wire [8:0] last_change;
   wire been_ready;
-  KeyboardDecoder key_de (
+  keyboard_decoder key_de (
     .key_down(key_down),
     .last_change(last_change),
     .key_valid(been_ready),
@@ -43,9 +43,9 @@ module arm_wrapper (
     9'b0_0010_1011 // F
   };
 
-  // -----------------------------  keyboard END
+  ///////////////// Keyboard END //////////////////////////
 
-  // -----------------------------  Bluetooth Module
+  ///////////////// Bluetooth Module Start /////////////////////////
 
   wire rxEn;
   wire tick; // Baud rate clock
@@ -59,26 +59,27 @@ module arm_wrapper (
 
   // Make connections between Rx module and TOP inputs and outputs and the other modules
   UART_rs232_rx I_RS232RX(
-    .Clk(clk),
-    .Rst_n(rst),
-    .RxEn(rxEn),
-    .RxData(rxData),
-    .RxDone(rxDone),
-    .Rx(rx),
-    .Tick(tick),
+    .clk(clk),
+    .rst_n(rst),
+    .rxEn(rxEn),
+    .rxData(rxData),
+    .rxDone(rxDone),
+    .rx(rx),
+    .tick(tick),
     .NBits(NBits)
   );
 
   // Make connections between tick generator module and TOP inputs and outputs and the other modules
   UART_BaudRate_generator I_BAUDGEN(
-    .Clk(clk),
-    .Rst_n(rst),
-    .Tick(tick),
-    .BaudRate(baudRate)
+    .clk(clk),
+    .rst_n(rst),
+    .tick(tick),
+    .baudRate(baudRate)
   );
 
-  // -----------------------------  Bluetooth End
+  ///////////////// Bluetooth Module End /////////////////////////
 
+  // Controllers hub
   assign isClockWiseQ = key_down[buttonUp[0]] || rxData == 8'd1;
   assign isClockWiseW = key_down[buttonUp[1]] || rxData == 8'd3;
   assign isClockWiseE = key_down[buttonUp[2]] || rxData == 8'd5;

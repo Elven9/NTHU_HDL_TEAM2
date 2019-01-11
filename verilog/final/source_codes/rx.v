@@ -1,149 +1,101 @@
-module UART_rs232_rx (Clk, Rst_n, RxEn, RxData, RxDone, Rx, Tick, NBits);   //Define my module as UART_rs232_rx
+module UART_rs232_rx (
+  input clk,
+  input rst_n,
+  input rxEn,
+  input rx,
+  input tick,
+  input [3:0] NBits   // Define my module as UART_rs232_rx
+  output reg [7:0] rxData, // Define 8 bits output (this will eb the 1byte received data)
+  output reg rxDone
+);
 
-input Clk, Rst_n, RxEn,Rx,Tick;   //Define 1 bit inputs
-input [3:0]NBits;     //Define 4 bits inputs
+  //Variabels used for state machine...
+  parameter IDLE = 1'b0, READ = 1'b1;  // We haev 2 states for the state Machine state 0 and 1 (READ adn IDLE)
 
+  reg [1:0] state, next;   // Create some registers for the states
+  reg read_enable;         // Variable that will enable or NOT the data in read
+  reg start_bit;           // Variable used to notify when the start bit was detected (first falling edge of rX)
+  reg [4:0] Bit;           // Variable used for the bit by bit read loop (in this case 8 bits so 8 loops)
+  reg [3:0] counter;       // Counter variable used to count the tick pulses up to 16
+  reg [7:0] read_data;     // Register where we store the rx input bits before assigning it to the rxData output
 
-output RxDone;        //Define 1 bit output
-output [7:0]RxData;     //Define 8 bits output (this will eb the 1byte received data)
-
-
-//Variabels used for state machine...
-parameter  IDLE = 1'b0, READ = 1'b1;  //We haev 2 states for the State Machine state 0 and 1 (READ adn IDLE)
-reg [1:0] State, Next;      //Create some registers for the states
-reg  read_enable = 1'b0;    //Variable that will enable or NOT the data in read
-reg  start_bit = 1'b1;      //Variable used to notify when the start bit was detected (first falling edge of RX)
-reg  RxDone = 1'b0;     //Variable used to notify when the data read process is done
-reg [4:0]Bit = 5'b00000;    //Variable used for the bit by bit read loop (in this case 8 bits so 8 loops)
-reg [3:0] counter = 4'b0000;    //Counter variable used to count the tick pulses up to 16
-reg [7:0] Read_data= 8'b00000000; //Register where we store the Rx input bits before assigning it to the RxData output
-reg [7:0] RxData;     //We register the output as well so we store the value
-
-
-
-
-
-///////////////////////////////STATE MACHINE////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////Reset////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-always @ (posedge Clk or posedge Rst_n) begin    //It is good to always have a reset always
-  if (Rst_n)  State <= IDLE;        //If reset pin is low, we get to the initial state which is IDLE
-  else    State <= Next;        //If not we go to the next state
-end
+  // Designate reset signal
+  always @ (posedge clk or posedge rst_n) begin    //It is good to always have a reset always
+    if (rst_n)  state <= IDLE;        //If reset pin is low, we get to the initial state which is IDLE
+    else    state <= next;        //If not we go to the next state
+  end
 
 
+  /* This is easy. Each time "state or rx or rxEn or rxDone" will change their value
+  we decide which is the next step. 
+    - Obviously we get to IDLE only when rxDone is high, meaning that the read process is done.
+    - Also, while we are into IDEL, we get to READ state only if rx input gets low meaning, we've detected a start bit */
+  always @ (state or rx or rxEn or rxDone) begin
+    case(state) 
+      IDLE:
+        if(!rx & rxEn) next = READ;   // If rx is low (Start bit detected) we start the read process
+        else next = IDLE;
+      READ:
+        if(rxDone) next = IDLE;       // If rxDone is high, than we get back to IDLE and wait for rx input to go low (start bit detect)
+        else next = READ;
+      default next = IDLE;
+    endcase
+  end
 
 
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////Next step decision//////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-/*This is easy. Each time "State or Rx or RxEn or RxDone" will change their value
-we decide which is the next step. 
-  - Obviously we get to IDLE only when RxDone is high
-meaning that the read process is done.
-  - Also, while we are into IDEL, we get to READ state only if Rx input gets low meaning
-we've detected a start bit*/
-always @ (State or Rx or RxEn or RxDone) begin
-  case(State) 
-    IDLE:
-      if(!Rx & RxEn) begin 
-        Next = READ;   //If Rx is low (Start bit detected) we start the read process
+  ///////////////////////////ENABLE READ OR NOT///////////////////////////////
+  always @ (state or rxDone) begin
+    case (state)
+      READ: begin
+        read_enable <= 1'b1;      //If we are in the Read state, we enable the read process so in the "tick always" we start getting the bits
       end
-      else      Next = IDLE;
-    READ:
-      if(RxDone)    Next = IDLE;   //If RxDone is high, than we get back to IDLE and wait for Rx input to go low (start bit detect)
-      else      Next = READ;
-    default       Next = IDLE;
-  endcase
-end
+        
+      IDLE: begin
+        read_enable <= 1'b0;      //If we get back to IDLE, we desable the read process so the "tick always" could continue without geting rx bits
+      end
+    endcase
+  end
 
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////
-///////////////////////////ENABLE READ OR NOT///////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-always @ (State or RxDone) begin
-  case (State)
-    READ: begin
-      read_enable <= 1'b1;      //If we are in the Read state, we enable the read process so in the "Tick always" we start getting the bits
-    end
+  ///////////////////////////Read the input data//////////////////////////////
+  /*Finally, each time we detect a tick pulse,we increase a couter.
+  - When the counter is 8 (4'b1000) we are in the middle of the start bit
+  - When the counter is 16 (4'b1111) we are in the middle of one of the bits
+  - We store the data by shifting the rx input bit into the read_data register 
+  using this line of code: read_data <= {rx,read_data[7:1]};
+  */
+  always @ (posedge tick) begin
+    if (read_enable) begin
+      rxDone <= 1'b0;             // Set the rxDone register to low since the process is still going
+      counter <= counter+1;           // Increase the counter by 1 with each tick detected
       
-    IDLE: begin
-      read_enable <= 1'b0;      //If we get back to IDLE, we desable the read process so the "Tick always" could continue without geting Rx bits
+      if ((counter == 4'b1000) & (start_bit)) begin // Counter is 8? Then we set the start bit to 1. 
+        start_bit <= 1'b0;
+        counter <= 4'b0000;
+      end
+      
+      if ((counter == 4'b1111) & (!start_bit) & (Bit < NBits)) begin // We make a loop (8 loops in this case) and we read all 8 bits
+        Bit <= Bit+1;
+        read_data <= {rx,read_data[7:1]};
+        counter <= 4'b0000;
+      end
+
+      if ((counter == 4'b1111) & (Bit == NBits)  & (rx)) begin   // Then we count to 16 once again and detect the stop bit (rx input must be high)
+        Bit <= 4'b0000;
+        rxDone <= 1'b1;
+        rxData[7:0] <= read_data[7:0];
+        read_data[7:0] <= 8'd0;
+        counter <= 4'b0000;
+        start_bit <= 1'b1;            // We reset all values for next data input and set rxDone to high
+      end
     end
-  endcase
-end
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////
-///////////////////////////Read the input data//////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-/*Finally, each time we detect a Tick pulse,we increase a couter.
-- When the counter is 8 (4'b1000) we are in the middle of the start bit
-- When the counter is 16 (4'b1111) we are in the middle of one of the bits
-- We store the data by shifting the Rx input bit into the Read_data register 
-using this line of code: Read_data <= {Rx,Read_data[7:1]};
-*/
-always @ (posedge Tick) begin
-  if (read_enable) begin
-    RxDone <= 1'b0;             //Set the RxDone register to low since the process is still going
-    counter <= counter+1;           //Increase the counter by 1 with each Tick detected
-    
-    if ((counter == 4'b1000) & (start_bit)) begin //Counter is 8? Then we set the start bit to 1. 
-      start_bit <= 1'b0;
-      counter <= 4'b0000;
-    end
-    
-    if ((counter == 4'b1111) & (!start_bit) & (Bit < NBits)) begin //We make a loop (8 loops in this case) and we read all 8 bits
-      Bit <= Bit+1;
-      Read_data <= {Rx,Read_data[7:1]};
-      counter <= 4'b0000;
-    end
-
-    if ((counter == 4'b1111) & (Bit == NBits)  & (Rx)) begin   //Then we count to 16 once again and detect the stop bit (Rx input must be high)
+    else begin
+      rxDone <= 1'b0;
+      counter <= 4'd0;
       Bit <= 4'b0000;
-      RxDone <= 1'b1;
-      RxData[7:0] <= Read_data[7:0];
-      Read_data[7:0] <= 8'd0;
-      counter <= 4'b0000;
-      start_bit <= 1'b1;            //We reset all values for next data input and set RxDone to high
+      start_bit <= 1'b1;
     end
   end
-  else begin
-    RxDone <= 1'b0;
-    counter <= 4'd0;
-    Bit <= 4'b0000;
-    start_bit <= 1'b1;
-  end
-end
 
-////////////////////////////////////////////////////////////////////////////
-//////////////////////////////Output assign/////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-/*Finally, we assign the Read_data register values to the RxData output and
-that will be our final received value.*/
-// always @ (posedge Clk) begin
-
-//   if (NBits == 4'b1000) begin
-//     RxData[7:0] <= Read_data[7:0];  
-//   end
-
-//   if (NBits == 4'b0111) begin
-//     RxData[7:0] <= {1'b0,Read_data[7:1]}; 
-//   end
-
-//   if (NBits == 4'b0110) begin
-//     RxData[7:0] <= {1'b0,1'b0,Read_data[7:2]};  
-//   end
-// end
-
-//End of the RX mdoule
+//End of the rX mdoule
 endmodule
 

@@ -1,4 +1,4 @@
-module KeyboardDecoder(
+module keyboard_decoder (
   output reg [511:0] key_down,
   output wire [8:0] last_change,
   output reg key_valid,
@@ -6,7 +6,7 @@ module KeyboardDecoder(
   inout wire PS2_CLK,
   input wire rst,
   input wire clk
-    );
+);
 
   parameter [1:0] INIT      = 2'b00;
   parameter [1:0] WAIT_FOR_SIGNAL = 2'b01;
@@ -31,22 +31,22 @@ module KeyboardDecoder(
   assign last_change = {key[9], key[7:0]};
 
   KeyboardCtrl_0 inst (
-  .key_in(key_in),
-  .is_extend(is_extend),
-  .is_break(is_break),
-  .valid(valid),
-  .err(err),
-  .PS2_DATA(PS2_DATA),
-  .PS2_CLK(PS2_CLK),
-  .rst(rst),
-  .clk(clk)
-);
+    .key_in(key_in),
+    .is_extend(is_extend),
+    .is_break(is_break),
+    .valid(valid),
+    .err(err),
+    .PS2_DATA(PS2_DATA),
+    .PS2_CLK(PS2_CLK),
+    .rst(rst),
+    .clk(clk)
+  );
 
-OnePulse op (
-  .signal_single_pulse(pulse_been_ready),
-  .signal(been_ready),
-  .clock(clk)
-);
+  one_pulse op (
+    .signal_single_pulse(pulse_been_ready),
+    .signal(been_ready),
+    .clock(clk)
+  );
 
   always @ (posedge clk, posedge rst) begin
     if (rst) begin
